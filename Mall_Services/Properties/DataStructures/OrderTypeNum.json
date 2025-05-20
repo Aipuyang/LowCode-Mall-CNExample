@@ -1,0 +1,66 @@
+﻿{
+  "id": "0a32e66f20d64cf28d63951b9d48f710",
+  "widget": "model",
+  "props": {
+    "name": "OrderTypeNum",
+    "displayName": "各枚举类型数量"
+  },
+  "children": [
+    {
+      "id": "8a75bce246d94e079d593c3045c630a2",
+      "widget": "field",
+      "props": {
+        "displayName": "TobePay",
+        "name": "TobePay",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "fa15d9fd99a74439a758cbc76731be33",
+      "widget": "field",
+      "props": {
+        "displayName": "TobeRec",
+        "name": "TobeRec",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "b026afbea2ac4925a58b0aacfbdf5ae9",
+      "widget": "field",
+      "props": {
+        "displayName": "Evaluated",
+        "name": "Evaluated",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "dbf7fec26a66491c80965ea7ed72c51d",
+      "widget": "field",
+      "props": {
+        "displayName": "Completed",
+        "name": "Completed",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "38c5c3dc99ac4d7caf1ab3ec2864e690",
+      "widget": "field",
+      "props": {
+        "displayName": "Cancelled",
+        "name": "Cancelled",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ],
+  "references": {}
+}

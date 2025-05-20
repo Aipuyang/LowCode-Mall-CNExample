@@ -1,0 +1,268 @@
+﻿{
+  "id": "page_8560694d1c5d4141a18d9046a597fb89",
+  "widget": "page",
+  "version": "1.0.0",
+  "props": {
+    "ref": "page_8560694d1c5d4141a18d9046a597fb89",
+    "name": "Add",
+    "isSetupScript": true,
+    "title": "添加收货地址",
+    "params": [],
+    "rules": []
+  },
+  "children": [
+    {
+      "id": "formContainer_6066ef5ad3254d548b60e11fd8a1cec0",
+      "widget": "formContainer",
+      "props": {
+        "ref": "formContainer_6066ef5ad3254d548b60e11fd8a1cec0",
+        "labelAlign": "left",
+        "labelWidth": "90px",
+        "layout": "horizontal",
+        "set": {
+          "id": "function_e4c54721156c4fa891bbdc30e39f53d7",
+          "widget": "function",
+          "children": [
+            {
+              "id": "actionApi_3beb74c669e34952bbf45c8b8a3aa45a",
+              "widget": "action_api",
+              "props": {
+                "target": "&(ref)0aa3668d975d4f03bef95b0b5c8af289.[d70306de7262417680756cbbdbab010f_add_func]"
+              }
+            }
+          ],
+          "props": {}
+        },
+        "model": {
+          "formModel": "$(ref)0aa3668d975d4f03bef95b0b5c8af289.[d70306de7262417680756cbbdbab010f_add_func].params"
+        },
+        "events": {
+          "finish": {
+            "id": "event_811ef58d046c9b8",
+            "widget": "event",
+            "children": [
+              {
+                "widget": "action_frame",
+                "id": "action_37307854d0cc208",
+                "props": {
+                  "target": "navigator.back"
+                }
+              }
+            ]
+          }
+        }
+      },
+      "children": [
+        {
+          "id": "formItem_192bad59b8914cd4ab7995172bdb1aa9",
+          "widget": "formItem",
+          "props": {
+            "ref": "formItem_192bad59b8914cd4ab7995172bdb1aa9",
+            "label": "Id",
+            "labelAlign": "",
+            "name": {
+              "kind": "Field",
+              "value": "&(self)[formContainer_6066ef5ad3254d548b60e11fd8a1cec0].set.[actionApi_3beb74c669e34952bbf45c8b8a3aa45a].target.params.[d70306de7262417680756cbbdbab010f_add_params].[4b9ef8d9045a4da68ebe67bd91070f22]"
+            },
+            "hide": true
+          },
+          "children": [
+            {
+              "id": "numberInput_35e039add952452e8a9a353981e8ea2f",
+              "widget": "numberInput",
+              "props": {
+                "ref": "numberInput_35e039add952452e8a9a353981e8ea2f",
+                "value": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_6066ef5ad3254d548b60e11fd8a1cec0].set.[actionApi_3beb74c669e34952bbf45c8b8a3aa45a].target.params.[d70306de7262417680756cbbdbab010f_add_params].[4b9ef8d9045a4da68ebe67bd91070f22]"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "formItem_b1d2d072baa84506b9e1c10e8f5d049c",
+          "widget": "formItem",
+          "props": {
+            "ref": "formItem_b1d2d072baa84506b9e1c10e8f5d049c",
+            "label": "地区",
+            "labelAlign": "",
+            "name": {
+              "kind": "Field",
+              "value": "&(self)[formContainer_6066ef5ad3254d548b60e11fd8a1cec0].set.[actionApi_3beb74c669e34952bbf45c8b8a3aa45a].target.params.[d70306de7262417680756cbbdbab010f_add_params].[291786b025bf476bb79fb3607f1a0001]"
+            }
+          },
+          "children": [
+            {
+              "id": "input_8234b823b30b4c0ca00f03e1f9916e16",
+              "widget": "input",
+              "props": {
+                "ref": "input_8234b823b30b4c0ca00f03e1f9916e16",
+                "value": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_6066ef5ad3254d548b60e11fd8a1cec0].set.[actionApi_3beb74c669e34952bbf45c8b8a3aa45a].target.params.[d70306de7262417680756cbbdbab010f_add_params].[291786b025bf476bb79fb3607f1a0001]"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "formItem_be0554a3ec9e49aab5e612894b6309cc",
+          "widget": "formItem",
+          "props": {
+            "ref": "formItem_be0554a3ec9e49aab5e612894b6309cc",
+            "label": "详细地址",
+            "labelAlign": "",
+            "name": {
+              "kind": "Field",
+              "value": "&(self)[formContainer_6066ef5ad3254d548b60e11fd8a1cec0].set.[actionApi_3beb74c669e34952bbf45c8b8a3aa45a].target.params.[d70306de7262417680756cbbdbab010f_add_params].[cbf89d4dd92c4c7a84c7ffaf39df6752]"
+            }
+          },
+          "children": [
+            {
+              "id": "input_925b767381ed4d16b463c9ec72f47d7a",
+              "widget": "input",
+              "props": {
+                "ref": "input_925b767381ed4d16b463c9ec72f47d7a",
+                "value": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_6066ef5ad3254d548b60e11fd8a1cec0].set.[actionApi_3beb74c669e34952bbf45c8b8a3aa45a].target.params.[d70306de7262417680756cbbdbab010f_add_params].[cbf89d4dd92c4c7a84c7ffaf39df6752]"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "formItem_046905bd2f3c443ea7c47ecad6d61e71",
+          "widget": "formItem",
+          "props": {
+            "ref": "formItem_046905bd2f3c443ea7c47ecad6d61e71",
+            "label": "收件人",
+            "labelAlign": "",
+            "name": {
+              "kind": "Field",
+              "value": "&(self)[formContainer_6066ef5ad3254d548b60e11fd8a1cec0].set.[actionApi_3beb74c669e34952bbf45c8b8a3aa45a].target.params.[d70306de7262417680756cbbdbab010f_add_params].[9c860fecbe604d0a93872fe24acc2f09]"
+            }
+          },
+          "children": [
+            {
+              "id": "input_d17e1590589e489cb4b2fa22bd39a48e",
+              "widget": "input",
+              "props": {
+                "ref": "input_d17e1590589e489cb4b2fa22bd39a48e",
+                "value": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_6066ef5ad3254d548b60e11fd8a1cec0].set.[actionApi_3beb74c669e34952bbf45c8b8a3aa45a].target.params.[d70306de7262417680756cbbdbab010f_add_params].[9c860fecbe604d0a93872fe24acc2f09]"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "formItem_9bf9e03e0ae249c087a2f6b34cc8fe15",
+          "widget": "formItem",
+          "props": {
+            "ref": "formItem_9bf9e03e0ae249c087a2f6b34cc8fe15",
+            "label": "电话号码",
+            "labelAlign": "",
+            "name": {
+              "kind": "Field",
+              "value": "&(self)[formContainer_6066ef5ad3254d548b60e11fd8a1cec0].set.[actionApi_3beb74c669e34952bbf45c8b8a3aa45a].target.params.[d70306de7262417680756cbbdbab010f_add_params].[9a8d28250570497e8d9384fe778e97e6]"
+            }
+          },
+          "children": [
+            {
+              "id": "input_cf8c39bd061940a983092791af87b44c",
+              "widget": "input",
+              "props": {
+                "ref": "input_cf8c39bd061940a983092791af87b44c",
+                "value": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_6066ef5ad3254d548b60e11fd8a1cec0].set.[actionApi_3beb74c669e34952bbf45c8b8a3aa45a].target.params.[d70306de7262417680756cbbdbab010f_add_params].[9a8d28250570497e8d9384fe778e97e6]"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "flex_1da05a6ea5fe4775a0900c25a871b56f",
+          "widget": "flex",
+          "props": {
+            "ref": "flex_1da05a6ea5fe4775a0900c25a871b56f",
+            "justify": "space-between",
+            "style": {
+              "marginTop": "24px",
+              "marginRight": "16px",
+              "marginLeft": "16px",
+              "marginBottom": "16px",
+              "display": "flex"
+            },
+            "vertical": true,
+            "gap": {
+              "custom": true,
+              "number": 15
+            }
+          },
+          "children": [
+            {
+              "id": "button_d17633e95f9c48bf813e2776d937b0f1",
+              "widget": "button",
+              "props": {
+                "style": {
+                  "flexGrow": 1,
+                  "backgroundColor": "#FF6321FF",
+                  "borderStyle": "none"
+                },
+                "block": true,
+                "size": "normal",
+                "ref": "button_d17633e95f9c48bf813e2776d937b0f1",
+                "htmlType": "submit",
+                "label": "保存",
+                "type": "primary",
+                "nativeType": "submit",
+                "shape": "round"
+              },
+              "children": []
+            },
+            {
+              "id": "button_bf734265ec2844519b1f7a9424043105",
+              "widget": "button",
+              "props": {
+                "style": {
+                  "width": "%",
+                  "marginRight": "20px",
+                  "flexGrow": 1
+                },
+                "ref": "button_bf734265ec2844519b1f7a9424043105",
+                "htmlType": "button",
+                "label": "取消",
+                "block": true,
+                "size": "normal",
+                "events": {
+                  "onClick": {
+                    "id": "event_76945eefe6ea4d32b4fc809438d79cd2",
+                    "type": "event",
+                    "children": [
+                      {
+                        "id": "actionFrame_a2a39920f89d4cfa902ac6b9f25d640c",
+                        "widget": "action_frame",
+                        "props": {
+                          "target": "navigator.back"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "shape": "round"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": {
+    "0aa3668d975d4f03bef95b0b5c8af289": "..\\..\\Mall_Services\\Services\\DeliveryAddress.sdlg"
+  }
+}

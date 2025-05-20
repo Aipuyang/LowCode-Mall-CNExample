@@ -1,0 +1,167 @@
+﻿{
+  "id": "753cf135c451455091b46b2f8dbaa95f",
+  "widget": "staticdatasource",
+  "props": {
+    "name": "Static"
+  },
+  "children": [
+    {
+      "id": "063bda2796fd4b4687b9928e22d532e8",
+      "widget": "model_static",
+      "props": {
+        "name": "MallImage",
+        "value": "[\r\n    {\r\n      \"Desc\": \"电脑桌\",\r\n      \"ImgUrl\": \"/static/images/diannaozhuo.jpg\",\r\n\t  \"Price\": 119\r\n    },\r\n\t{\r\n      \"Desc\": \"墙壁挂件\",\r\n      \"ImgUrl\": \"/static/images/guabi.jpg\",\r\n\t  \"Price\": 19\r\n    },\r\n\t{\r\n      \"Desc\": \"剃须刀\",\r\n      \"ImgUrl\": \"/static/images/tixudao.jpg\",\r\n\t  \"Price\": 39\r\n    },\r\n\t{\r\n      \"Desc\": \"衣服\",\r\n      \"ImgUrl\": \"/static/images/yifu.jpg\",\r\n\t  \"Price\": 59\r\n    }\r\n]",
+        "group": "Default",
+        "isJsonModel": true
+      },
+      "children": [
+        {
+          "id": "7c6f9baa1ac04e0395bd9268a72756f8",
+          "widget": "field",
+          "props": {
+            "name": "Desc",
+            "dataType": "String",
+            "defaultValue": "电脑桌"
+          }
+        },
+        {
+          "id": "12d75d6081394689a2c15f533249335a",
+          "widget": "field",
+          "props": {
+            "name": "ImgUrl",
+            "dataType": "String",
+            "defaultValue": "/static/images/diannaozhuo.jpg"
+          }
+        },
+        {
+          "id": "afdd4e7b0fd8462292a16014ab6398bc",
+          "widget": "field",
+          "props": {
+            "name": "Price",
+            "dataType": "Int32",
+            "defaultValue": "119"
+          }
+        }
+      ]
+    },
+    {
+      "id": "94dab3c2bcd348b787158496855bf3ef",
+      "widget": "model_static",
+      "props": {
+        "name": "ProductType",
+        "value": "[\r\n    {\r\n      \"Type\": \"鞋/箱包\"\r\n    },\r\n\t{\r\n      \"Type\": \"办公文具\"\r\n    },\r\n\t{\r\n      \"Type\": \"儿童玩具\"\r\n    },\r\n\t{\r\n      \"Type\": \"饮料\"\r\n    },\r\n\t{\r\n      \"Type\": \"衣服\"\r\n    },\r\n\t{\r\n      \"Type\": \"文创商品\"\r\n    },\r\n\t{\r\n      \"Type\": \"移动设备\"\r\n    },\r\n\t{\r\n      \"Type\": \"电脑\"\r\n    },\r\n\t{\r\n      \"Type\": \"手办\"\r\n    },\r\n\t{\r\n      \"Type\": \"配件\"\r\n    }\r\n]",
+        "group": "Default",
+        "isJsonModel": true
+      },
+      "children": [
+        {
+          "id": "08ea35ee2abb4e4db9c5dde60dd5690f",
+          "widget": "field",
+          "props": {
+            "name": "Type",
+            "dataType": "String",
+            "defaultValue": "鞋/箱包"
+          }
+        }
+      ]
+    },
+    {
+      "id": "5609b74a436d4ebf8e68a4960a491712",
+      "widget": "model_static",
+      "props": {
+        "name": "ShoppingCart",
+        "value": "[\r\n    {\r\n      \"Desc\": \"电脑桌\",\r\n      \"ImgUrl\": \"/static/images/diannaozhuo.jpg\",\r\n\t  \"Price\": 119,\r\n\t  \"Selected\": true,\r\n\t  \"Num\": 2\r\n    },\r\n\t{\r\n      \"Desc\": \"墙壁挂件\",\r\n      \"ImgUrl\": \"/static/images/guabi.jpg\",\r\n\t  \"Price\": 19,\r\n\t  \"Selected\": false,\r\n\t  \"Num\": 1\r\n    },\r\n\t{\r\n      \"Desc\": \"剃须刀\",\r\n      \"ImgUrl\": \"/static/images/tixudao.jpg\",\r\n\t  \"Price\": 39,\r\n\t  \"Selected\": false,\r\n\t  \"Num\": 1\r\n    },\r\n\t{\r\n      \"Desc\": \"衣服\",\r\n      \"ImgUrl\": \"/static/images/yifu.jpg\",\r\n\t  \"Price\": 59,\r\n\t  \"Selected\": false,\r\n\t  \"Num\": 3\r\n    }\r\n]",
+        "group": "Default",
+        "isJsonModel": true,
+        "isCollection": true
+      },
+      "children": [
+        {
+          "id": "7e616298cce74be7a3325f9a2dc9a5aa",
+          "widget": "field",
+          "props": {
+            "name": "Desc",
+            "dataType": "String",
+            "defaultValue": "电脑桌"
+          }
+        },
+        {
+          "id": "d46198e989d44d36961deac0f544a1dd",
+          "widget": "field",
+          "props": {
+            "name": "ImgUrl",
+            "dataType": "String",
+            "defaultValue": "/static/images/diannaozhuo.jpg"
+          }
+        },
+        {
+          "id": "e48995061a9e46518512b4ec59c2b6f9",
+          "widget": "field",
+          "props": {
+            "name": "Price",
+            "dataType": "Int32",
+            "defaultValue": "119"
+          }
+        },
+        {
+          "id": "63f82e6ff9b74637a99977b5c007556f",
+          "widget": "field",
+          "props": {
+            "name": "Selected",
+            "dataType": "Boolean",
+            "defaultValue": "True"
+          }
+        },
+        {
+          "id": "6f645fe597344c91b4973af1e2674cbc",
+          "widget": "field",
+          "props": {
+            "name": "Num",
+            "dataType": "Int32",
+            "defaultValue": "2"
+          }
+        }
+      ]
+    },
+    {
+      "id": "d37c240fee1648d7b712e97c8d8d2161",
+      "widget": "model_static",
+      "props": {
+        "name": "Favorites",
+        "value": "[\r\n    {\r\n      \"Desc\": \"小米14\",\r\n      \"ImgUrl\": \"/static/images/diannaozhuo.jpg\",\r\n\t  \"Price\": 4199\r\n    },\r\n\t{\r\n      \"Desc\": \"漫步者耳机\",\r\n      \"ImgUrl\": \"/static/images/diannaozhuo.jpg\",\r\n\t  \"Price\": 129\r\n    },\r\n\t{\r\n      \"Desc\": \"暖水壶\",\r\n      \"ImgUrl\": \"/static/images/diannaozhuo.jpg\",\r\n\t  \"Price\": 59.8\r\n    },\r\n\t{\r\n      \"Desc\": \"擦车毛巾\",\r\n      \"ImgUrl\": \"/static/images/diannaozhuo.jpg\",\r\n\t  \"Price\": 9.9\r\n    }\r\n]",
+        "group": "Default",
+        "isJsonModel": true,
+        "isCollection": true
+      },
+      "children": [
+        {
+          "id": "4f909a9b4dbb4435824d8b0622225150",
+          "widget": "field",
+          "props": {
+            "name": "Desc",
+            "dataType": "String",
+            "defaultValue": "小米14"
+          }
+        },
+        {
+          "id": "dd1f32dabe214d38a879a67643f8995f",
+          "widget": "field",
+          "props": {
+            "name": "ImgUrl",
+            "dataType": "String",
+            "defaultValue": "/static/images/diannaozhuo.jpg"
+          }
+        },
+        {
+          "id": "42ff9d680f9f4160b060b474cb8f7669",
+          "widget": "field",
+          "props": {
+            "name": "Price",
+            "dataType": "Int32",
+            "defaultValue": "4199"
+          }
+        }
+      ]
+    }
+  ]
+}

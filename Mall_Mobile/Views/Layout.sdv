@@ -1,0 +1,109 @@
+﻿{
+  "id": "page_mobile_layout_130168118485622",
+  "widget": "page_layout",
+  "props": {
+    "ref": "page_mobile_layout_130168118485622",
+    "title": "天气预报",
+    "menu": {
+      "items": [
+        {
+          "id": "layoutMenuItem_704738654721350",
+          "widget": "layout_menuItem",
+          "props": {
+            "ref": "layoutMenuItem_855601906438871",
+            "label": "首页",
+            "icon": "vant://wap-home",
+            "badge": {
+              "badgeType": "not"
+            },
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)69bafde9b91b481bbf33c3f4305902c9"
+            }
+          }
+        },
+        {
+          "id": "layout_menuItem_0fec9c1416bc7b6",
+          "widget": "layout_menuItem",
+          "props": {
+            "ref": "layout_menuItem_fb067679eb138a7",
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)f9948fdd9f0c430ba8c9a11b778226e0"
+            },
+            "badge": {
+              "badgeType": "not",
+              "content": "Hot",
+              "showZero": false
+            },
+            "label": "分类",
+            "icon": "vant://cluster"
+          }
+        },
+        {
+          "id": "layoutMenuItem_218505322945590",
+          "widget": "layout_menuItem",
+          "props": {
+            "ref": "layoutMenuItem_218975032124528",
+            "label": "购物车",
+            "icon": "vant://shopping-cart",
+            "badge": {
+              "badgeType": "badge",
+              "content": {
+                "kind": "Field",
+                "value": ""
+              },
+              "max": 50
+            },
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)2e2c21af212348e9bf964356645bdfde"
+            }
+          }
+        },
+        {
+          "id": "layoutMenuItem_827371899509693",
+          "widget": "layout_menuItem",
+          "props": {
+            "ref": "layoutMenuItem_287661830222807",
+            "label": "订单",
+            "icon": "vant://todo-list",
+            "badge": {
+              "badgeType": "not"
+            },
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)47446924851b468d8df59cb52dc3adaa"
+            }
+          }
+        },
+        {
+          "id": "layout_menuItem_e6886a20f312618",
+          "widget": "layout_menuItem",
+          "props": {
+            "style": {},
+            "ref": "layout_menuItem_d7116de7a75700c",
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)9a3ba22712534a05b1d4cfd90e664dfa"
+            },
+            "label": "我的",
+            "icon": "vant://manager"
+          }
+        }
+      ]
+    },
+    "style": {
+      "height": "px"
+    },
+    "activeColor": "#FF6321FF"
+  },
+  "children": [],
+  "references": {
+    "2e2c21af212348e9bf964356645bdfde": "ShoppingCart.sdv",
+    "9a3ba22712534a05b1d4cfd90e664dfa": "My.sdv",
+    "69bafde9b91b481bbf33c3f4305902c9": "TopPage.sdv",
+    "47446924851b468d8df59cb52dc3adaa": "..\\MinePage\\MyOrders.sdv",
+    "f9948fdd9f0c430ba8c9a11b778226e0": "Category.sdv"
+  }
+}

@@ -1,0 +1,62 @@
+{
+    "id": "mairState_937871360741775",
+    "widget": "enum",
+    "props": {
+        "name": "AirState",
+        "displayName": "空气质量",
+        "converters": [
+        {
+          "id": "mairLabelConverter_616609570906545",
+          "widget": "converter",
+          "props": {
+            "name": "空气质量显示信息",
+            "ref": "AirState_Display",
+            "input": "enum",
+            "output": "Text",
+            "items": [
+            {
+                "source": "&(self)[mairState_937871360741775].[mExcellent_332611669445890]",
+                "target": "优"
+            },
+            {
+                "source": "&(self)[mairState_937871360741775].[684127632467196]",
+                "target": "良"
+            },
+            {
+                "source": "&(self)[mairState_937871360741775].[633735473098529]",
+                "target": "差"
+            }
+          ]
+        }
+      }
+      ]
+    },
+    "children": [
+        {
+            "id": "mExcellent_332611669445890",
+            "widget": "enum_field",
+            "props": {
+                "name": "Excellent",
+                "displayName": "优"
+            }
+        },
+        {
+            "id": "684127632467196",
+            "widget": "enum_field",
+            "props": {
+                "name": "Good",
+                "displayName": "良",
+                "value": 1
+            }
+        },
+        {
+            "id": "633735473098529",
+            "widget": "enum_field",
+            "props": {
+                "name": "Difference",
+                "displayName": "差",
+                "value": 2
+            }
+        }
+    ]
+}

@@ -1,0 +1,969 @@
+﻿{
+  "id": "187d5ee065d848499f4e407faf9bc735_api",
+  "widget": "api",
+  "version": "1.0.0",
+  "props": {
+    "name": "Favorite",
+    "description": "Favorite",
+    "route": "api/[controller]"
+  },
+  "children": [
+    {
+      "id": "15715d3682b04ed6890f720752c722a2",
+      "widget": "filter",
+      "props": {
+        "displayName": "FilterByProductid",
+        "name": "FilterByProductid",
+        "sources": [
+          {
+            "id": "a8263614538a4bc3be42a0846ef6c828",
+            "type": "table",
+            "name": "Favorite",
+            "target": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7]"
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "a6af485f7bc14296b70594fc7454c787",
+          "widget": "field",
+          "props": {
+            "displayName": "param",
+            "name": "param",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "87f29c1a135a488293c9a5e8d203b38c",
+          "widget": "condition",
+          "props": {
+            "type": "Field",
+            "operator": "EQ",
+            "parameter": "&(self)[a6af485f7bc14296b70594fc7454c787]",
+            "field": "&(self)[15715d3682b04ed6890f720752c722a2].sources.[a8263614538a4bc3be42a0846ef6c828].[32a54e5742254a16ba0b6baacb90a422]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "00946b3d44784fe1983ee817b0a358e7_add_func",
+      "widget": "function",
+      "props": {
+        "name": "Add",
+        "openApi": true,
+        "requestMethod": "POST",
+        "route": "Add"
+      },
+      "children": [
+        {
+          "id": "be785aaef62242f2beba7ec2623419c7",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[9d7cec14a1144de797379192749ef607]"
+          },
+          "children": [
+            {
+              "id": "00946b3d44784fe1983ee817b0a358e7_add_params",
+              "widget": "field",
+              "props": {
+                "name": "model",
+                "dataType": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7]",
+                "parameterFrom": "Body"
+              }
+            }
+          ]
+        },
+        {
+          "id": "9d7cec14a1144de797379192749ef607",
+          "widget": "insert",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "新增",
+            "next": "$(self)[00946b3d44784fe1983ee817b0a358e7_add_end]",
+            "source": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7]",
+            "sourceValue": "$(self)[be785aaef62242f2beba7ec2623419c7].[00946b3d44784fe1983ee817b0a358e7_add_params]"
+          }
+        },
+        {
+          "id": "00946b3d44784fe1983ee817b0a358e7_add_end",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[9d7cec14a1144de797379192749ef607].result.[9d7cec14a1144de797379192749ef607_success]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "00946b3d44784fe1983ee817b0a358e7_del_func",
+      "widget": "function",
+      "props": {
+        "name": "Delete",
+        "openApi": true,
+        "requestMethod": "DELETE",
+        "route": "Delete"
+      },
+      "children": [
+        {
+          "id": "06988727fe7a40c792950aa2ed22c495",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[91a5c12ee5b7466db3db311fcba320e5]"
+          },
+          "children": [
+            {
+              "id": "00946b3d44784fe1983ee817b0a358e7_del_params_1",
+              "widget": "field",
+              "props": {
+                "name": "id",
+                "dataType": "Int32",
+                "parameterFrom": "Route"
+              }
+            }
+          ]
+        },
+        {
+          "id": "91a5c12ee5b7466db3db311fcba320e5",
+          "widget": "delete",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "删除",
+            "next": "$(self)[00946b3d44784fe1983ee817b0a358e7_del_end]",
+            "source": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7]",
+            "filter": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7].PrimaryKeys"
+          },
+          "children": [
+            {
+              "id": "75c13b41cf084490bfa230fa254c4cfe",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[91a5c12ee5b7466db3db311fcba320e5].filter.[faff0a1a96284a87a09c80e53200ed35]",
+                "type": "Field",
+                "value": "&(self)[06988727fe7a40c792950aa2ed22c495].[00946b3d44784fe1983ee817b0a358e7_del_params_1]"
+              }
+            }
+          ]
+        },
+        {
+          "id": "00946b3d44784fe1983ee817b0a358e7_del_end",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[91a5c12ee5b7466db3db311fcba320e5].result.[91a5c12ee5b7466db3db311fcba320e5_success]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "00946b3d44784fe1983ee817b0a358e7_update_func",
+      "widget": "function",
+      "props": {
+        "name": "Update",
+        "openApi": true,
+        "requestMethod": "PUT",
+        "route": "Update"
+      },
+      "children": [
+        {
+          "id": "43428bf0a7114738a77e7fca7ba8f004",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[ec680963bea947e3b46e2c1c13113e78]"
+          },
+          "children": [
+            {
+              "id": "00946b3d44784fe1983ee817b0a358e7_update_params",
+              "widget": "field",
+              "props": {
+                "name": "model",
+                "dataType": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7]",
+                "parameterFrom": "Body"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ec680963bea947e3b46e2c1c13113e78",
+          "widget": "update",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "更新",
+            "next": "$(self)[00946b3d44784fe1983ee817b0a358e7_update_end]",
+            "source": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7]",
+            "sourceValue": "$(self)[43428bf0a7114738a77e7fca7ba8f004].[00946b3d44784fe1983ee817b0a358e7_update_params]",
+            "filter": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7].PrimaryKeys"
+          },
+          "children": [
+            {
+              "id": "44fb602b833b4120aad047c4d4b4a5d1",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[ec680963bea947e3b46e2c1c13113e78].source.[32a54e5742254a16ba0b6baacb90a422]",
+                "type": "Field",
+                "value": "&(self)[43428bf0a7114738a77e7fca7ba8f004].[00946b3d44784fe1983ee817b0a358e7_update_params].[32a54e5742254a16ba0b6baacb90a422]"
+              }
+            },
+            {
+              "id": "b4dd6aadf727450ab6a6362ece545cad",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[ec680963bea947e3b46e2c1c13113e78].source.[9ac7f34f598b43a9a0f5038051832e41]",
+                "type": "Field",
+                "value": "&(self)[43428bf0a7114738a77e7fca7ba8f004].[00946b3d44784fe1983ee817b0a358e7_update_params].[9ac7f34f598b43a9a0f5038051832e41]"
+              }
+            },
+            {
+              "id": "5b5492fb81864fe08f23014e6431de79",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[ec680963bea947e3b46e2c1c13113e78].filter.[faff0a1a96284a87a09c80e53200ed35]",
+                "type": "Field",
+                "value": "&(self)[43428bf0a7114738a77e7fca7ba8f004].[00946b3d44784fe1983ee817b0a358e7_update_params].[faff0a1a96284a87a09c80e53200ed35]"
+              }
+            }
+          ]
+        },
+        {
+          "id": "00946b3d44784fe1983ee817b0a358e7_update_end",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[ec680963bea947e3b46e2c1c13113e78].result.[ec680963bea947e3b46e2c1c13113e78_success]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "00946b3d44784fe1983ee817b0a358e7_get_func",
+      "widget": "function",
+      "props": {
+        "name": "Get",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "Get"
+      },
+      "children": [
+        {
+          "id": "4f8254d76ea64ada823efa6accf08749",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[ae55a4fd1af842cfa9ca9f002dd1592b]"
+          },
+          "children": [
+            {
+              "id": "00946b3d44784fe1983ee817b0a358e7_get_params_1",
+              "widget": "field",
+              "props": {
+                "name": "id",
+                "dataType": "Int32",
+                "parameterFrom": "Route"
+              }
+            }
+          ]
+        },
+        {
+          "id": "ae55a4fd1af842cfa9ca9f002dd1592b",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "查询",
+            "strategy": "first",
+            "next": "$(self)[00946b3d44784fe1983ee817b0a358e7_get_end]",
+            "filter": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7].PrimaryKeys"
+          },
+          "children": [
+            {
+              "id": "06da0ef9d1234d76acf8de20ddd09a92",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "d8217b9f0d6d42cdb198d97e2cc94a74",
+                    "type": "table",
+                    "name": "Favorite",
+                    "target": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "13fcb2dfdde244fe996b0e92ae7e9929",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[ae55a4fd1af842cfa9ca9f002dd1592b].filter.[faff0a1a96284a87a09c80e53200ed35]",
+                "type": "Field",
+                "value": "&(self)[4f8254d76ea64ada823efa6accf08749].[00946b3d44784fe1983ee817b0a358e7_get_params_1]"
+              }
+            }
+          ]
+        },
+        {
+          "id": "00946b3d44784fe1983ee817b0a358e7_get_end",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[ae55a4fd1af842cfa9ca9f002dd1592b].result.[00946b3d44784fe1983ee817b0a358e7]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "00946b3d44784fe1983ee817b0a358e7_list_func",
+      "widget": "function",
+      "props": {
+        "name": "GetList",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "GetList"
+      },
+      "children": [
+        {
+          "id": "0664f0eae7564272b7714b2ee856a742",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[6d1909ab032145569393a7433cba4393]"
+          }
+        },
+        {
+          "id": "6d1909ab032145569393a7433cba4393",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "查询",
+            "strategy": "list",
+            "next": "$(self)[00946b3d44784fe1983ee817b0a358e7_list_end]"
+          },
+          "children": [
+            {
+              "id": "9b9003d4ed1b4fc8a3263489fddc24fe",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "be557bf3472c4d00993f1281848828c7",
+                    "type": "table",
+                    "name": "Favorite",
+                    "target": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7]"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "00946b3d44784fe1983ee817b0a358e7_list_end",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[6d1909ab032145569393a7433cba4393].result.[00946b3d44784fe1983ee817b0a358e7]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "00946b3d44784fe1983ee817b0a358e7_page_func",
+      "widget": "function",
+      "props": {
+        "name": "GetPage",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "GetPage"
+      },
+      "children": [
+        {
+          "id": "c03c58ffb6e74641ab8726f5f8f7e6cb",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[4d77fa853a7f46faa7fc1477a224c91a]"
+          },
+          "children": [
+            {
+              "id": "00946b3d44784fe1983ee817b0a358e7_page_params",
+              "widget": "field",
+              "props": {
+                "name": "pageParameter",
+                "dataType": "$(ref)032fbeca80b34acba889bc82af4deba6",
+                "parameterFrom": "Query"
+              }
+            }
+          ]
+        },
+        {
+          "id": "4d77fa853a7f46faa7fc1477a224c91a",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 255,
+            "name": "查询",
+            "strategy": "page",
+            "next": "$(self)[00946b3d44784fe1983ee817b0a358e7_page_end]",
+            "filter": "none",
+            "enableTotal": true,
+            "pageNum": "&(self)[c03c58ffb6e74641ab8726f5f8f7e6cb].[00946b3d44784fe1983ee817b0a358e7_page_params].[62475dd3f2df4135a8d31830e5aab9ed]",
+            "pageSize": "&(self)[c03c58ffb6e74641ab8726f5f8f7e6cb].[00946b3d44784fe1983ee817b0a358e7_page_params].[6162f2cbdcea40ee9f5845791dd9359c]"
+          },
+          "children": [
+            {
+              "id": "6f405df697064cadb492b308ee6cc882",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "1caaa96b309a475cbf8c05181889b9ee",
+                    "type": "table",
+                    "name": "Favorite",
+                    "target": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "203045dcb6444a20838c2fa7e2c60b3d",
+              "widget": "assign_cascade_field",
+              "props": {
+                "source": "&(self)[6f405df697064cadb492b308ee6cc882].sources.[1caaa96b309a475cbf8c05181889b9ee].[ab6188e7b3e34049a94a661d3ace829b_e0a5969355294f53afeee88f8f6ce5f6_principal]",
+                "sourceValue": "&(self)[6f405df697064cadb492b308ee6cc882].sources.[1caaa96b309a475cbf8c05181889b9ee].[ab6188e7b3e34049a94a661d3ace829b_e0a5969355294f53afeee88f8f6ce5f6_principal]"
+              }
+            },
+            {
+              "id": "1d561ad6f4bf4b8eb4e570c3b84e5643",
+              "widget": "orderbys",
+              "props": {
+                "items": [
+                  {
+                    "direction": "Desc",
+                    "type": "Field",
+                    "field": "&(self)[6f405df697064cadb492b308ee6cc882].sources.[1caaa96b309a475cbf8c05181889b9ee].[70d4ff1ace1f43b29ba83d495c946420]"
+                  }
+                ]
+              }
+            }
+          ]
+        },
+        {
+          "id": "00946b3d44784fe1983ee817b0a358e7_page_end",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 375,
+            "name": "结束",
+            "conditionType": "Expression",
+            "type": "Field",
+            "isPageResult": true,
+            "result": "$(ref)856bbd6b855b4b9abb8d36fbd447da52",
+            "genericsConstraint": "&(self)[4d77fa853a7f46faa7fc1477a224c91a].result.[00946b3d44784fe1983ee817b0a358e7]"
+          },
+          "children": [
+            {
+              "id": "15e553388320416dae91e00a9a16f63c",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[00946b3d44784fe1983ee817b0a358e7_page_end].result.[4be4523a12d6413f8bacb065db44fb22]",
+                "type": "Field",
+                "value": "&(self)[4d77fa853a7f46faa7fc1477a224c91a].result.[00946b3d44784fe1983ee817b0a358e7]"
+              }
+            },
+            {
+              "id": "26b21c34644e41dcb562c39b89f2bc38",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[00946b3d44784fe1983ee817b0a358e7_page_end].result.[b04e0619191b412baf363228d2347a6a]",
+                "type": "Field",
+                "value": "&(self)[4d77fa853a7f46faa7fc1477a224c91a].result.[4d77fa853a7f46faa7fc1477a224c91a_total]"
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "0a5446354d624ec097335a7513a95daf",
+      "widget": "function",
+      "props": {
+        "name": "FavoriteAdd",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "FavoriteAdd",
+        "authStrategy": "",
+        "x": -87.552,
+        "y": 132.736
+      },
+      "children": [
+        {
+          "id": "eff79efafdff45ee92433f4053b118c8",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[b199739f3aa94d6ebc0c30fc8f247ed0]"
+          },
+          "children": [
+            {
+              "id": "904d0f45a7ae4504b219398fac7bf732",
+              "widget": "field",
+              "props": {
+                "displayName": "model",
+                "name": "model",
+                "dataType": "$(ref)676d36bf782d442cbf3731225811380a",
+                "defaultValueType": "Value",
+                "parameterFrom": "Query"
+              }
+            }
+          ]
+        },
+        {
+          "id": "b199739f3aa94d6ebc0c30fc8f247ed0",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 248.6,
+            "name": "查询已收藏",
+            "filter": "$(self)[15715d3682b04ed6890f720752c722a2]",
+            "strategy": "first",
+            "next": "$(self)[0a06c4644ebd4e3d9ccad1d9300f8b1a]"
+          },
+          "children": [
+            {
+              "id": "f76a7de51b854247afa4bfdb049f2cb9",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "fed55ed8abb44df1b42709dab4c19597",
+                    "type": "table",
+                    "name": "Favorite",
+                    "target": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "83aa820d28a74606beb47de9e76a14e2",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[b199739f3aa94d6ebc0c30fc8f247ed0].filter.[a6af485f7bc14296b70594fc7454c787]",
+                "type": "Field",
+                "value": "&(self)[eff79efafdff45ee92433f4053b118c8].[904d0f45a7ae4504b219398fac7bf732].[33a2ef8198e84999870cac49699ec720]"
+              }
+            }
+          ]
+        },
+        {
+          "id": "0a06c4644ebd4e3d9ccad1d9300f8b1a",
+          "widget": "variable",
+          "props": {
+            "x": 165,
+            "y": 362.2,
+            "name": "返回值",
+            "next": "$(self)[ac48f1fcecc747e0a47b1737cf981a57]"
+          },
+          "children": [
+            {
+              "id": "71da0b6c8a40424484a823dd6e4612f0",
+              "widget": "variable_field",
+              "props": {
+                "name": "res",
+                "dataType": "String",
+                "type": "Field"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "ac48f1fcecc747e0a47b1737cf981a57",
+          "widget": "if",
+          "props": {
+            "x": 165,
+            "y": 475.8,
+            "name": "是否已收藏",
+            "next": "$(self)[1abb717a1c9849a0b59e13d113dcc180]"
+          },
+          "children": [
+            {
+              "id": "79cf1061b1384a1e9ebc69cd013a2779",
+              "widget": "if_conditions",
+              "props": {},
+              "children": [
+                {
+                  "id": "51e243d3362843b3b9f812f9d0d9fc41",
+                  "widget": "if_condition",
+                  "props": {
+                    "expression": "$(exp)IsNotNull(&(self)[b199739f3aa94d6ebc0c30fc8f247ed0].result.[00946b3d44784fe1983ee817b0a358e7])",
+                    "type": "Expression",
+                    "operator": "EQ",
+                    "rightSelectorType": "Field"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "13dad610de484752aeead043caa649b1",
+              "widget": "if_branch",
+              "props": {
+                "name": "True",
+                "next": "$(self)[1b04e32d4ee04b8882f63c8d1d7fd7a1]",
+                "type": true
+              },
+              "children": [
+                {
+                  "id": "1b04e32d4ee04b8882f63c8d1d7fd7a1",
+                  "widget": "delete",
+                  "props": {
+                    "x": -39,
+                    "y": 579.8,
+                    "name": "删除收藏",
+                    "next": "$(self)[8ef99876e382458980b9627bf49e42c4]",
+                    "source": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7]",
+                    "filter": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7].PrimaryKeys"
+                  },
+                  "children": [
+                    {
+                      "id": "e5445660addf456fa797856af7916b7b",
+                      "widget": "assign_filter",
+                      "props": {
+                        "field": "&(self)[1b04e32d4ee04b8882f63c8d1d7fd7a1].filter.[faff0a1a96284a87a09c80e53200ed35]",
+                        "type": "Field",
+                        "value": "&(self)[b199739f3aa94d6ebc0c30fc8f247ed0].result.[00946b3d44784fe1983ee817b0a358e7].[faff0a1a96284a87a09c80e53200ed35]"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "8ef99876e382458980b9627bf49e42c4",
+                  "widget": "adapter",
+                  "props": {
+                    "x": -39,
+                    "y": 693.4,
+                    "name": "数据适配",
+                    "next": "$(self)[48df84015ae243429d26f3a3575445e3]"
+                  },
+                  "children": [
+                    {
+                      "id": "db2227f58d214deeac1297eee81de009",
+                      "widget": "assign_field",
+                      "props": {
+                        "type": "Value",
+                        "field": "&(self)[0a06c4644ebd4e3d9ccad1d9300f8b1a].[71da0b6c8a40424484a823dd6e4612f0]",
+                        "value": "delete"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "21bccf8e998b474cb560a1fd431324f8",
+              "widget": "if_branch",
+              "props": {
+                "name": "False",
+                "next": "$(self)[e43136fe48a74d2c9a58ab03220640dc]",
+                "type": false
+              },
+              "children": [
+                {
+                  "id": "e43136fe48a74d2c9a58ab03220640dc",
+                  "widget": "insert",
+                  "props": {
+                    "x": 369,
+                    "y": 579.8,
+                    "name": "新增收藏",
+                    "next": "$(self)[6f1d32c780804e6dac201644ad6e1fd4]",
+                    "source": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7]"
+                  },
+                  "children": [
+                    {
+                      "id": "d5197202afa8448ea90f08bcccf8c740",
+                      "widget": "assign_field",
+                      "props": {
+                        "field": "&(self)[e43136fe48a74d2c9a58ab03220640dc].source.[32a54e5742254a16ba0b6baacb90a422]",
+                        "value": "&(self)[eff79efafdff45ee92433f4053b118c8].[904d0f45a7ae4504b219398fac7bf732].[33a2ef8198e84999870cac49699ec720]",
+                        "type": "Field"
+                      }
+                    }
+                  ]
+                },
+                {
+                  "id": "6f1d32c780804e6dac201644ad6e1fd4",
+                  "widget": "adapter",
+                  "props": {
+                    "x": 369,
+                    "y": 693.4,
+                    "name": "数据适配1",
+                    "next": "$(self)[48df84015ae243429d26f3a3575445e3]"
+                  },
+                  "children": [
+                    {
+                      "id": "4cbf6efc1813421d8e0dc6e795b69ede",
+                      "widget": "assign_field",
+                      "props": {
+                        "type": "Value",
+                        "field": "&(self)[0a06c4644ebd4e3d9ccad1d9300f8b1a].[71da0b6c8a40424484a823dd6e4612f0]",
+                        "value": "add"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "48df84015ae243429d26f3a3575445e3",
+              "widget": "back",
+              "props": {
+                "x": 243.6,
+                "y": 940.6
+              }
+            }
+          ]
+        },
+        {
+          "id": "1abb717a1c9849a0b59e13d113dcc180",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 1044.6,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[0a06c4644ebd4e3d9ccad1d9300f8b1a].[71da0b6c8a40424484a823dd6e4612f0]",
+            "isCollection": false
+          }
+        }
+      ]
+    },
+    {
+      "id": "2ba3a42a144d435cb56c58b1ebd0494d",
+      "widget": "function",
+      "props": {
+        "name": "Judge",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "Judge",
+        "authStrategy": "",
+        "x": -106.4,
+        "y": 117.6
+      },
+      "children": [
+        {
+          "id": "d8ecbb2756094e919acabe8c03163bc5",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[79db7750293443a490a285ea45b624f5]"
+          },
+          "children": [
+            {
+              "id": "58e16e375e2e43e7a7e482d2afb4fd31",
+              "widget": "field",
+              "props": {
+                "displayName": "productid",
+                "name": "productid",
+                "dataType": "Int32",
+                "defaultValueType": "Value",
+                "parameterFrom": "Query"
+              }
+            }
+          ]
+        },
+        {
+          "id": "79db7750293443a490a285ea45b624f5",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 248.6,
+            "name": "查询",
+            "filter": "$(self)[15715d3682b04ed6890f720752c722a2]",
+            "strategy": "first",
+            "next": "$(self)[8d1cc47b7ba54500b3138c085184c374]"
+          },
+          "children": [
+            {
+              "id": "801ed272b6644414b56be2f5b5084664",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "16efcba2da884d0b83aa49eadf2538c6",
+                    "type": "table",
+                    "name": "Favorite",
+                    "target": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "c8e4a89d881448579ea9f9aa47188c5f",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[79db7750293443a490a285ea45b624f5].filter.[a6af485f7bc14296b70594fc7454c787]",
+                "type": "Field",
+                "value": "&(self)[d8ecbb2756094e919acabe8c03163bc5].[58e16e375e2e43e7a7e482d2afb4fd31]"
+              }
+            }
+          ]
+        },
+        {
+          "id": "8d1cc47b7ba54500b3138c085184c374",
+          "widget": "variable",
+          "props": {
+            "x": 165,
+            "y": 362.2,
+            "name": "变量定义",
+            "next": "$(self)[1d97c66055a541e18f401c979db96f3e]"
+          },
+          "children": [
+            {
+              "id": "8e7010b2362e4c4fbb21455b8f56793f",
+              "widget": "variable_field",
+              "props": {
+                "name": "res",
+                "dataType": "String",
+                "type": "Value",
+                "value": "No"
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "1d97c66055a541e18f401c979db96f3e",
+          "widget": "if",
+          "props": {
+            "x": 165,
+            "y": 475.8,
+            "name": "条件分支",
+            "next": "$(self)[3cad7e0635b34b60bddb84f2b84062f5]"
+          },
+          "children": [
+            {
+              "id": "b1f8e79208964f6d83222e397add9473",
+              "widget": "if_conditions",
+              "props": {},
+              "children": [
+                {
+                  "id": "e85d52cd2c4a43cfacbffac7e6fd887b",
+                  "widget": "if_condition",
+                  "props": {
+                    "expression": "$(exp)IsNotNull(&(self)[79db7750293443a490a285ea45b624f5].result.[00946b3d44784fe1983ee817b0a358e7])",
+                    "type": "Expression",
+                    "operator": "EQ",
+                    "rightSelectorType": "Field"
+                  }
+                }
+              ]
+            },
+            {
+              "id": "455077cdf6194c60a5e3057c34abd26c",
+              "widget": "if_branch",
+              "props": {
+                "name": "True",
+                "next": "$(self)[7d4fa3d72b404c60a75ff115adbd96b8]",
+                "type": true
+              },
+              "children": [
+                {
+                  "id": "7d4fa3d72b404c60a75ff115adbd96b8",
+                  "widget": "adapter",
+                  "props": {
+                    "x": -39,
+                    "y": 695.4,
+                    "name": "数据适配",
+                    "next": "$(self)[d110e9666f7d4162b811790a79d5ae13]"
+                  },
+                  "children": [
+                    {
+                      "id": "5904721a85934189afeb9899e87ac140",
+                      "widget": "assign_field",
+                      "props": {
+                        "type": "Value",
+                        "field": "&(self)[8d1cc47b7ba54500b3138c085184c374].[8e7010b2362e4c4fbb21455b8f56793f]",
+                        "value": "Yes"
+                      }
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "3fd4d65809f947ceb419a00fb35451f2",
+              "widget": "if_branch",
+              "props": {
+                "name": "False",
+                "next": "$(self)[d110e9666f7d4162b811790a79d5ae13]",
+                "type": false
+              }
+            },
+            {
+              "id": "d110e9666f7d4162b811790a79d5ae13",
+              "widget": "back",
+              "props": {
+                "x": 243.6,
+                "y": 827
+              }
+            }
+          ]
+        },
+        {
+          "id": "3cad7e0635b34b60bddb84f2b84062f5",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 931,
+            "name": "结束",
+            "type": "Field",
+            "result": "&(self)[8d1cc47b7ba54500b3138c085184c374].[8e7010b2362e4c4fbb21455b8f56793f]",
+            "isCollection": false
+          }
+        }
+      ]
+    }
+  ],
+  "references": {
+    "032fbeca80b34acba889bc82af4deba6": "$(global)PageParameter.json",
+    "856bbd6b855b4b9abb8d36fbd447da52": "$(global)PageResult.json",
+    "da45aabb8241482080f88e8e9db05a9e": "..\\Database.sde",
+    "676d36bf782d442cbf3731225811380a": "..\\Properties\\DataStructures\\FavoriteAdd.json"
+  }
+}

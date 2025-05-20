@@ -1,0 +1,58 @@
+{
+  "id": "619599554668293",
+  "widget": "model",
+  "props": {
+    "name": "WeatherStatisticInfo",
+    "displayName": "WeatherStatisticInfo"
+  },
+  "children": [
+    {
+      "id": "mtCity_585349365390612",
+      "widget": "field",
+      "props": {
+        "name": "City",
+        "dataType": "String"
+      }
+    },
+    {
+      "id": "mtSunCount_698422081754954",
+      "widget": "field",
+      "props": {
+        "name": "SunCount",
+        "dataType": "Int32"
+      }
+    },
+    {
+      "id": "mtCloudCount_421931845024603",
+      "widget": "field",
+      "props": {
+        "name": "CloudCount",
+        "dataType": "Int32"
+      }
+    },
+    {
+      "id": "mtRainCount_476693918960466",
+      "widget": "field",
+      "props": {
+        "name": "RainCount",
+        "dataType": "Int32"
+      }
+    },
+    {
+      "id": "mtSnowCount_627292365031006",
+      "widget": "field",
+      "props": {
+        "name": "SnowCount",
+        "dataType": "Int32"
+      }
+    },
+    {
+      "id": "mtWindCount_861521667579210",
+      "widget": "field",
+      "props": {
+        "name": "WindCount",
+        "dataType": "Int32"
+      }
+    }
+  ]
+}

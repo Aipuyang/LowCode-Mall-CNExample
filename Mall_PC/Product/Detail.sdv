@@ -1,0 +1,679 @@
+﻿{
+  "id": "page_e8ba42a3c441449b9f43586b996044a6",
+  "widget": "page",
+  "version": "1.0.0",
+  "props": {
+    "ref": "page_e8ba42a3c441449b9f43586b996044a6",
+    "name": "Detail",
+    "title": "Detail",
+    "params": [
+      {
+        "id": "eb21de0596614dbf8b917f2fefe58284",
+        "widget": "parameter",
+        "props": {
+          "name": "id",
+          "dataType": "Number",
+          "isCollection": false,
+          "isNullable": false
+        }
+      }
+    ]
+  },
+  "children": [
+    {
+      "id": "descriptions_04c24721ad3f45b5b4897f63d78635e6",
+      "widget": "descriptions",
+      "props": {
+        "ref": "descriptions_04c24721ad3f45b5b4897f63d78635e6",
+        "dataSource": {
+          "id": "function_db8785cd51e6436893a800c9b08faf63",
+          "widget": "function",
+          "children": [
+            {
+              "id": "action_950f318291664cd4b5e3e836039132b9",
+              "widget": "action_api",
+              "props": {
+                "target": "&(ref)8894167f519e471cb1c6b54318bb461b.[ab6188e7b3e34049a94a661d3ace829b_get_func]",
+                "params": [
+                  {
+                    "id": "assign_param_ccd551aa6ebd86b",
+                    "widget": "assign_param",
+                    "props": {
+                      "name": {
+                        "kind": "Parameter",
+                        "value": "&(self)[descriptions_04c24721ad3f45b5b4897f63d78635e6].dataSource.[action_950f318291664cd4b5e3e836039132b9].target.params.[ab6188e7b3e34049a94a661d3ace829b_get_params_1]"
+                      },
+                      "value": {
+                        "kind": "Props",
+                        "value": "$(self)[page_e8ba42a3c441449b9f43586b996044a6].params.[eb21de0596614dbf8b917f2fefe58284]"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "actionAdapter_061dd1673cd94662b6a321b4333abf53",
+              "widget": "action_adapter",
+              "children": [
+                {
+                  "id": "assign_param_31466119424c9d7",
+                  "widget": "assign_param",
+                  "props": {
+                    "name": {
+                      "kind": "Members",
+                      "value": "&(self)[descriptions_04c24721ad3f45b5b4897f63d78635e6].data"
+                    },
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[descriptions_04c24721ad3f45b5b4897f63d78635e6].dataSource.[action_950f318291664cd4b5e3e836039132b9].target.result"
+                    }
+                  }
+                }
+              ],
+              "props": {}
+            }
+          ],
+          "props": {}
+        },
+        "model": {
+          "data": "&(ref)26cf3ce487ea4eb98f237bd5810a0e91.[ab6188e7b3e34049a94a661d3ace829b]"
+        },
+        "title": [
+          {
+            "id": "space_0eee034be313451e8672d31c5aa682ce",
+            "widget": "space",
+            "props": {
+              "style": {
+                "height": "40px"
+              },
+              "ref": "space_0eee034be313451e8672d31c5aa682ce",
+              "align": "end",
+              "direction": "horizontal",
+              "size": 8
+            },
+            "children": [
+              {
+                "id": "title_b7fc754611ef4d2cb7f3051249c44aa5",
+                "widget": "title",
+                "props": {
+                  "ref": "title_b7fc754611ef4d2cb7f3051249c44aa5",
+                  "value": "商品",
+                  "level": 4,
+                  "style": {
+                    "display": "inline"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "bordered": true,
+        "column": 3,
+        "layout": "vertical",
+        "descriptionsItems": [
+          {
+            "id": "descriptionsItem_9010a6ff68584c4f9208b2515fa87b38",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_9010a6ff68584c4f9208b2515fa87b38",
+              "label": "Id",
+              "span": 1,
+              "hide": true
+            },
+            "children": [
+              {
+                "id": "text_7a4753fb2fa44ecbbec54e2c734ee277",
+                "widget": "text",
+                "props": {
+                  "ref": "text_7a4753fb2fa44ecbbec54e2c734ee277",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_04c24721ad3f45b5b4897f63d78635e6].dataSource.[actionAdapter_061dd1673cd94662b6a321b4333abf53].[assign_param_31466119424c9d7].[55cc5d9c658f45b2936be4bb180e2b0c]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_570cf1a6b7ba46dca0da5d23c84c3976",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_570cf1a6b7ba46dca0da5d23c84c3976",
+              "label": "名称",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_5ab42917097146eab6af3500d44b0872",
+                "widget": "text",
+                "props": {
+                  "ref": "text_5ab42917097146eab6af3500d44b0872",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_04c24721ad3f45b5b4897f63d78635e6].dataSource.[actionAdapter_061dd1673cd94662b6a321b4333abf53].[assign_param_31466119424c9d7].[d1703919d6904a9f97d48ebf07b98156]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_850d322a932743f4977d29051ee4c8c0",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_850d322a932743f4977d29051ee4c8c0",
+              "label": "品牌",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_17e8565e0c35423885e77a80c94e64c6",
+                "widget": "text",
+                "props": {
+                  "ref": "text_17e8565e0c35423885e77a80c94e64c6",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_04c24721ad3f45b5b4897f63d78635e6].dataSource.[actionAdapter_061dd1673cd94662b6a321b4333abf53].[assign_param_31466119424c9d7].[df55ce90b2794cc2ab08f7bbb3af84a4]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_9f0c4c763c2440e28a627460c87a9c54",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_9f0c4c763c2440e28a627460c87a9c54",
+              "label": "描述",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_d6b9d45b791e4f4cba3be3283d5bba16",
+                "widget": "text",
+                "props": {
+                  "ref": "text_d6b9d45b791e4f4cba3be3283d5bba16",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_04c24721ad3f45b5b4897f63d78635e6].dataSource.[actionAdapter_061dd1673cd94662b6a321b4333abf53].[assign_param_31466119424c9d7].[82ceb48d6a96434e8c6be27b373ed624]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_f613dff2fad642bf805e57200b767ca8",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_f613dff2fad642bf805e57200b767ca8",
+              "label": "图片",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "image_5bb754f4cbdb610",
+                "widget": "image",
+                "props": {
+                  "ref": "image_a83f70741d28e28",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_04c24721ad3f45b5b4897f63d78635e6].dataSource.[actionAdapter_061dd1673cd94662b6a321b4333abf53].[assign_param_31466119424c9d7].[a9def5044e604127ad7d394b720723b1]"
+                  },
+                  "width": 60,
+                  "height": 60
+                },
+                "children": []
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_d0906c954dbb4fc38f56d017ce6c65bf",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_d0906c954dbb4fc38f56d017ce6c65bf",
+              "label": "价格",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_9874acf3234e41d394a25f98e7c41e88",
+                "widget": "text",
+                "props": {
+                  "ref": "text_9874acf3234e41d394a25f98e7c41e88",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_04c24721ad3f45b5b4897f63d78635e6].dataSource.[actionAdapter_061dd1673cd94662b6a321b4333abf53].[assign_param_31466119424c9d7].[8fc7dd76f7ab41dabec9104cd4a0d2c6]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_2fbc8f079b804e3ba6088b27f0ed4178",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_2fbc8f079b804e3ba6088b27f0ed4178",
+              "label": "折扣价格",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_0357e9e4878a4c419a643c86ac3f3d39",
+                "widget": "text",
+                "props": {
+                  "ref": "text_0357e9e4878a4c419a643c86ac3f3d39",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_04c24721ad3f45b5b4897f63d78635e6].dataSource.[actionAdapter_061dd1673cd94662b6a321b4333abf53].[assign_param_31466119424c9d7].[9d35d32850664bbaacdaac6c5662e9c2]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_b8b35b573ddf4f19b9879a3b3af21c48",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_b8b35b573ddf4f19b9879a3b3af21c48",
+              "label": "类别",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_d458bb9af9f341d6bdad20b1a553c178",
+                "widget": "text",
+                "props": {
+                  "ref": "text_d458bb9af9f341d6bdad20b1a553c178",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_04c24721ad3f45b5b4897f63d78635e6].dataSource.[actionAdapter_061dd1673cd94662b6a321b4333abf53].[assign_param_31466119424c9d7].[ca9725f642ef425fa462e09c6201ceff_64c1684c3eeb480592ebee056f74f761_principal].[db9ed88be9d044179dd3c88cf5a59218]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_dababd90029a46b88813d204b9983572",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_dababd90029a46b88813d204b9983572",
+              "label": "上架",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "tag_ca5950dd0dce40b283a1d1692eb64754",
+                "widget": "tag",
+                "props": {
+                  "ref": "tag_ca5950dd0dce40b283a1d1692eb64754",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_04c24721ad3f45b5b4897f63d78635e6].dataSource.[actionAdapter_061dd1673cd94662b6a321b4333abf53].[assign_param_31466119424c9d7].[1282a68d174f4f8e8912700b040955c1]"
+                  },
+                  "color": "#FFD700FF"
+                }
+              }
+            ]
+          }
+        ],
+        "hideActions": true
+      },
+      "children": []
+    },
+    {
+      "id": "descriptions_69348926715b53e",
+      "widget": "descriptions",
+      "props": {
+        "ref": "descriptions_103cf0ae5d31c2a",
+        "model": {
+          "data": "&(ref)26cf3ce487ea4eb98f237bd5810a0e91.[126710830d5440388911fa674e407a63]"
+        },
+        "dataSource": {
+          "id": "function_03015f7fcef4e6f",
+          "widget": "function",
+          "children": [
+            {
+              "id": "action_f66852650534da0",
+              "widget": "action_api",
+              "props": {
+                "target": "&(ref)492275aff53a4e5a8a700d6166df615c.[126710830d5440388911fa674e407a63_get_func]",
+                "params": [
+                  {
+                    "id": "assign_param_02d73001e66ae75",
+                    "widget": "assign_param",
+                    "props": {
+                      "name": {
+                        "kind": "Parameter",
+                        "value": "&(self)[descriptions_69348926715b53e].dataSource.[action_f66852650534da0].target.params.[126710830d5440388911fa674e407a63_get_params_1]"
+                      },
+                      "value": {
+                        "kind": "Props",
+                        "value": "$(self)[page_e8ba42a3c441449b9f43586b996044a6].params.[eb21de0596614dbf8b917f2fefe58284]"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "action_cd9acdaa0063faa",
+              "widget": "action_adapter",
+              "children": [
+                {
+                  "id": "assign_param_e710d5721b53083",
+                  "widget": "assign_param",
+                  "props": {
+                    "name": {
+                      "kind": "Members",
+                      "value": "&(self)[descriptions_69348926715b53e].data"
+                    },
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[descriptions_69348926715b53e].dataSource.[action_f66852650534da0].target.result"
+                    }
+                  }
+                }
+              ],
+              "props": {}
+            }
+          ],
+          "props": {}
+        },
+        "descriptionsItems": [
+          {
+            "id": "descriptionsItem_7178fe0445c344ddaddf4c399f5e4a01",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_7178fe0445c344ddaddf4c399f5e4a01",
+              "label": "Id",
+              "span": 1,
+              "hide": true
+            },
+            "children": [
+              {
+                "id": "text_158aa86657e3461d8de2f80804df7818",
+                "widget": "text",
+                "props": {
+                  "ref": "text_158aa86657e3461d8de2f80804df7818",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_69348926715b53e].dataSource.[action_cd9acdaa0063faa].[assign_param_e710d5721b53083].[74f410b360b345238c01e9287954d45f]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_3da479833da346fbbe3d3788d3048617",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_3da479833da346fbbe3d3788d3048617",
+              "label": "",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "image_2faae206d8374e10b22fd8cd843eb2bf",
+                "widget": "image",
+                "props": {
+                  "ref": "image_2faae206d8374e10b22fd8cd843eb2bf",
+                  "width": 150,
+                  "height": 150,
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_69348926715b53e].dataSource.[action_cd9acdaa0063faa].[assign_param_e710d5721b53083].[99d24d39c73142f8904f6216a396058a]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_1b0af03244474391ac1e0165c51ced13",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_1b0af03244474391ac1e0165c51ced13",
+              "label": "",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "image_a11d04caee4945caa19164f8c70f7fc2",
+                "widget": "image",
+                "props": {
+                  "ref": "image_a11d04caee4945caa19164f8c70f7fc2",
+                  "width": 150,
+                  "height": 150,
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_69348926715b53e].dataSource.[action_cd9acdaa0063faa].[assign_param_e710d5721b53083].[af88b944d2cb4c2f885e9d4db96522a4]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_8aa0d1e98d1d4935af689a3f452d779d",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_8aa0d1e98d1d4935af689a3f452d779d",
+              "label": "",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "image_bc95fb5dd9fc4442a4ac6bd88e4baba3",
+                "widget": "image",
+                "props": {
+                  "ref": "image_bc95fb5dd9fc4442a4ac6bd88e4baba3",
+                  "width": 150,
+                  "height": 150,
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_69348926715b53e].dataSource.[action_cd9acdaa0063faa].[assign_param_e710d5721b53083].[14ae36c6e070459e90eb388ff4771fed]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_69e059bc92334925a4501994d83bee5d",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_69e059bc92334925a4501994d83bee5d",
+              "label": "",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "image_c4b64a3f3eb2441bac61beadcefda76d",
+                "widget": "image",
+                "props": {
+                  "ref": "image_c4b64a3f3eb2441bac61beadcefda76d",
+                  "width": 150,
+                  "height": 150,
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_69348926715b53e].dataSource.[action_cd9acdaa0063faa].[assign_param_e710d5721b53083].[73c604598a5344669b87639b4adfc67f]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_5715b05c14884b85ae5629d89e8fce4c",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_5715b05c14884b85ae5629d89e8fce4c",
+              "label": "",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "image_cd58c5d1ad804ed882b5c8ef84d7b341",
+                "widget": "image",
+                "props": {
+                  "ref": "image_cd58c5d1ad804ed882b5c8ef84d7b341",
+                  "width": 150,
+                  "height": 150,
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_69348926715b53e].dataSource.[action_cd9acdaa0063faa].[assign_param_e710d5721b53083].[14b73c967f734003a2f4b92409db3e38]"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "title": "详情图片",
+        "size": "middle",
+        "colon": false
+      },
+      "children": [
+        {
+          "id": "button_615aea8375e5b36",
+          "widget": "button",
+          "props": {
+            "ref": "button_dd8426d87655cf5",
+            "label": "编辑详情图片",
+            "icon": "antdv://EditFilled",
+            "events": {
+              "onClick": {
+                "id": "event_454de92c8dd6e62",
+                "widget": "event",
+                "children": [
+                  {
+                    "widget": "action_component",
+                    "id": "action_daa6df9489f2ee2",
+                    "props": {
+                      "target": "&(self)[modal_d4a6d9b8eba1de7].onOpen"
+                    }
+                  }
+                ],
+                "props": {}
+              }
+            }
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "modal_d4a6d9b8eba1de7",
+      "widget": "modal",
+      "props": {
+        "ref": "modal_688f7cd7a0eb280",
+        "destroyOnClose": true,
+        "footer": [
+          {
+            "id": "button_8ba5d50ee20f6c7",
+            "widget": "button",
+            "props": {
+              "ref": "button_39710e3fe3beb69",
+              "label": "确认",
+              "type": "primary",
+              "events": {
+                "onClick": {
+                  "id": "event_6ef41c0bf47a682",
+                  "widget": "event",
+                  "children": [
+                    {
+                      "widget": "action_component",
+                      "id": "action_87fc9cbbe929b43",
+                      "props": {
+                        "target": "&(self)[include_a237cfcdd41ce3c].page.link.exposes.[dbdf27079f304ed3ae3ed92c06e3454a]"
+                      }
+                    },
+                    {
+                      "widget": "action_component",
+                      "id": "action_c70e201def8377c",
+                      "props": {
+                        "target": "&(self)[modal_d4a6d9b8eba1de7].onClose"
+                      }
+                    },
+                    {
+                      "widget": "action_component",
+                      "id": "action_7e8cf42cf855d5e",
+                      "props": {
+                        "target": "&(self)[descriptions_69348926715b53e].loadData"
+                      }
+                    }
+                  ],
+                  "props": {}
+                }
+              }
+            },
+            "children": []
+          },
+          {
+            "id": "button_4d608ab817136ed",
+            "widget": "button",
+            "props": {
+              "ref": "button_ec1de2b55730e07",
+              "label": "取消",
+              "events": {
+                "onClick": {
+                  "id": "event_afeba0fc9d2a17e",
+                  "widget": "event",
+                  "children": [
+                    {
+                      "id": "action_component_d2e67855ae0f866",
+                      "widget": "action_component",
+                      "props": {
+                        "target": "&(self)[modal_d4a6d9b8eba1de7].onClose"
+                      }
+                    }
+                  ],
+                  "props": {}
+                }
+              }
+            },
+            "children": []
+          }
+        ],
+        "title": "编辑详情图片"
+      },
+      "children": [
+        {
+          "id": "include_a237cfcdd41ce3c",
+          "widget": "include",
+          "props": {
+            "ref": "include_51687ee524ddbac",
+            "page": {
+              "id": "action_99a09cabee87b69",
+              "widget": "action_frame",
+              "props": {
+                "link": {
+                  "kind": "Document",
+                  "value": "$(ref)b347fc3a658b411f87813c0daad4430d"
+                },
+                "params": [
+                  {
+                    "id": "assign_param_fd0439a02fdd9c1",
+                    "widget": "assign_param",
+                    "props": {
+                      "name": {
+                        "kind": "VParameter",
+                        "value": "&(ref)b347fc3a658b411f87813c0daad4430d.[page_8c9836be97ef44b08a7e659fb5faa1d1].params.[b59dabab1f384595a40559aa37079751]"
+                      },
+                      "value": {
+                        "kind": "Members",
+                        "value": "&(self)[descriptions_69348926715b53e].data.[74f410b360b345238c01e9287954d45f]"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "references": {
+    "26cf3ce487ea4eb98f237bd5810a0e91": "..\\..\\Mall_Services\\Database.sde",
+    "8894167f519e471cb1c6b54318bb461b": "$(project)Mall_Services/Services\\Product.sdlg",
+    "492275aff53a4e5a8a700d6166df615c": "$(project)Mall_Services/Services\\ProductImg.sdlg",
+    "b347fc3a658b411f87813c0daad4430d": "ProductImgEdit.sdv"
+  }
+}

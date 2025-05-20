@@ -1,0 +1,30 @@
+{
+  "id": "475827760918377",
+  "widget": "model",
+  "props": {
+    "name": "CityModel",
+    "displayName": "CityModel"
+  },
+  "children": [
+    {
+      "id": "mtName_227860470037956",
+      "widget": "field",
+      "props": {
+        "name": "CityName",
+        "dataType": "String",
+        "nullable": false,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "mtValue_983460054664230",
+      "widget": "field",
+      "props": {
+        "name": "Count",
+        "dataType": "String",
+        "nullable": false,
+        "defaultValueType": "Value"
+      }
+    }
+  ]
+}

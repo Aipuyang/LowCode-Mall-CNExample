@@ -1,0 +1,183 @@
+﻿{
+  "id": "page_8dd7849463e283d",
+  "widget": "page",
+  "version": "1.0.0",
+  "props": {
+    "ref": "page_8dd7849463e283d",
+    "name": "Chart",
+    "title": "数值报表",
+    "subTitle": "2025-04-10（星期四）"
+  },
+  "rules": [],
+  "children": [
+    {
+      "id": "row_38dd380d679e690",
+      "widget": "row",
+      "props": {
+        "ref": "row_53b090296685fbc",
+        "gutter": {
+          "enabled": false
+        }
+      },
+      "children": [
+        {
+          "id": "col_5a512d64c610440",
+          "widget": "col",
+          "props": {
+            "ref": "col_5d03032ae76e6be",
+            "width": {
+              "kind": "span",
+              "value": 16
+            }
+          },
+          "children": [
+            {
+              "id": "row_89f3ac82e1c4392",
+              "widget": "row",
+              "props": {
+                "ref": "row_b9f42ee110a61c4",
+                "gutter": {
+                  "enabled": false
+                }
+              },
+              "children": [
+                {
+                  "id": "col_2da5ca2df71f3fb",
+                  "widget": "col",
+                  "props": {
+                    "ref": "col_99babde40b680e7",
+                    "width": {
+                      "kind": "flex",
+                      "value": 1
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "statistic_a32f881081bbf5b",
+                      "widget": "statistic",
+                      "props": {
+                        "ref": "statistic_549d7eebc5286bd",
+                        "title": "今日销售额",
+                        "style": {
+                          "backgroundColor": "#DCF5FFFF"
+                        },
+                        "tipText": ""
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "col_929e41ebb456538",
+                  "widget": "col",
+                  "props": {
+                    "ref": "col_4473cbfc2cf5027",
+                    "width": {
+                      "kind": "flex",
+                      "value": 1
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "statistic_8d6716ad485ca7a",
+                      "widget": "statistic",
+                      "props": {
+                        "ref": "statistic_cc2c03e980f1d5d",
+                        "title": "今日订单数",
+                        "style": {
+                          "backgroundColor": "#FFD700FF"
+                        }
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "col_0de3e855ce3a7bd",
+                  "widget": "col",
+                  "props": {
+                    "ref": "col_949badea76d45d5",
+                    "width": {
+                      "kind": "flex",
+                      "value": 1
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "statistic_6af56afae7c45be",
+                      "widget": "statistic",
+                      "props": {
+                        "ref": "statistic_590371793d8bbd4",
+                        "title": "今日已完成订单"
+                      },
+                      "children": []
+                    }
+                  ]
+                },
+                {
+                  "id": "col_7594a79e836e537",
+                  "widget": "col",
+                  "props": {
+                    "ref": "col_5fb6551068a4ca7",
+                    "width": {
+                      "kind": "flex",
+                      "value": 1
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "statistic_c7699cfc95b5f7a",
+                      "widget": "statistic",
+                      "props": {
+                        "ref": "statistic_7d67e0529fc482a",
+                        "title": "今日访客数"
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            },
+            {
+              "id": "row_f646306394da046",
+              "widget": "row",
+              "props": {
+                "ref": "row_e48e9d09c978eb7",
+                "gutter": {
+                  "enabled": false
+                }
+              },
+              "children": [
+                {
+                  "id": "col_94fa5cd826f3eab",
+                  "widget": "col",
+                  "props": {
+                    "ref": "col_de444e82c16b8ce",
+                    "width": {
+                      "kind": "flex",
+                      "value": 1
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "id": "col_3d93959276011fa",
+          "widget": "col",
+          "props": {
+            "ref": "col_0bfdea32e8271d5",
+            "width": {
+              "kind": "flex",
+              "value": 1
+            }
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "references": {}
+}

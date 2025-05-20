@@ -1,0 +1,54 @@
+﻿{
+  "id": "5364f2dd19a6442d87b018c519b2897a",
+  "widget": "model",
+  "props": {
+    "name": "OrderStatistics",
+    "displayName": "订单商品数量和总金额统计"
+  },
+  "children": [
+    {
+      "id": "03da3c96e36a4c35820e7d9d36cc4cbd",
+      "widget": "field",
+      "props": {
+        "displayName": "TotalQuantity",
+        "name": "TotalQuantity",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "53149b9462b14f4fa376149ed54ccbdf",
+      "widget": "field",
+      "props": {
+        "displayName": "TotalAmount",
+        "name": "TotalAmount",
+        "dataType": "Double",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "3b890ef6df0148988cf29d2a94eaa381",
+      "widget": "field",
+      "props": {
+        "displayName": "TotalDiscount",
+        "name": "TotalDiscount",
+        "dataType": "Double",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "6d077f96fa13466c82ce3a54ebce3f67",
+      "widget": "field",
+      "props": {
+        "displayName": "Payable",
+        "name": "Payable",
+        "dataType": "Double",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ]
+}

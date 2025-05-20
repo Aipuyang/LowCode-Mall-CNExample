@@ -1,0 +1,577 @@
+﻿{
+  "id": "page_8dd55b8a6b2e722",
+  "widget": "page",
+  "props": {
+    "ref": "page_8dd55b8a6b2e722",
+    "name": "My",
+    "title": "我的"
+  },
+  "rules": [],
+  "children": [
+    {
+      "id": "flex_a6e83ba59bfc1de",
+      "widget": "flex",
+      "props": {
+        "style": {
+          "backgroundColor": "#F7F8FAFF",
+          "height": "90px",
+          "paddingLeft": "18px"
+        },
+        "ref": "flex_cf4c742ba08af11",
+        "gap": {
+          "custom": true,
+          "number": 10
+        },
+        "align": "center"
+      },
+      "children": [
+        {
+          "id": "image_36815f2aa939df4",
+          "widget": "image",
+          "props": {
+            "style": {
+              "borderRadius": "25px 25px 25px 25px"
+            },
+            "ref": "image_5456b0925197dfa",
+            "value": "/static/images/vicogao.jpg",
+            "width": 50,
+            "height": 50
+          },
+          "children": []
+        },
+        {
+          "id": "flex_8fa88f6a3422fbb",
+          "widget": "flex",
+          "props": {
+            "style": {},
+            "ref": "flex_1a33154c7c1cc23",
+            "gap": {
+              "custom": true,
+              "number": 10
+            },
+            "vertical": true,
+            "align": "flex-start",
+            "justify": "center"
+          },
+          "children": [
+            {
+              "id": "text_0335907aa563147",
+              "widget": "text",
+              "props": {
+                "style": {},
+                "ref": "text_2666495f1826225",
+                "textType": {
+                  "custom": false,
+                  "type": "default"
+                },
+                "value": "Appeon",
+                "strong": true,
+                "fontSize": 16
+              },
+              "children": []
+            },
+            {
+              "id": "text_e044b80cc1af382",
+              "widget": "text",
+              "props": {
+                "style": {},
+                "ref": "text_47a855827d3f910",
+                "textType": {
+                  "custom": false,
+                  "type": "default"
+                },
+                "value": "181****0087"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "flex_19661735b7d5861",
+      "widget": "flex",
+      "props": {
+        "ref": "flex_0eefda091eeca86",
+        "gap": {
+          "number": 0,
+          "custom": true
+        },
+        "vertical": true,
+        "style": {
+          "paddingLeft": "8px",
+          "marginTop": "8px",
+          "marginBottom": "8px",
+          "borderRadius": "10px",
+          "paddingRight": "8px"
+        }
+      },
+      "children": [
+        {
+          "id": "cell_e56afd9d180f444",
+          "widget": "cell",
+          "props": {
+            "style": {
+              "borderRadius": "10px 10px 0px 0px",
+              "height": "60px"
+            },
+            "ref": "cell_7e8883973cf13f6",
+            "title": [
+              {
+                "id": "flex_0cb2a75a1962df7",
+                "widget": "flex",
+                "props": {
+                  "style": {},
+                  "ref": "flex_d69019991df1282",
+                  "gap": {
+                    "custom": true,
+                    "number": 5
+                  },
+                  "align": "center",
+                  "justify": "flex-start"
+                },
+                "children": [
+                  {
+                    "id": "icon_4fe22abbb296c7d",
+                    "widget": "icon",
+                    "props": {
+                      "style": {},
+                      "ref": "icon_bb93518179ad0e1",
+                      "icon": "vant://star-o",
+                      "color": "#FF8C00FF",
+                      "size": 20
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "text_13f3c9277e0e448",
+                    "widget": "text",
+                    "props": {
+                      "style": {},
+                      "ref": "text_f626cf47682e20b",
+                      "textType": {
+                        "custom": false,
+                        "type": "default"
+                      },
+                      "value": "我的收藏",
+                      "fontSize": 13
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ],
+            "value": "",
+            "label": "",
+            "icon": "",
+            "center": true,
+            "isLink": true,
+            "size": "large",
+            "events": {
+              "onClick": {
+                "id": "event_e51643273e0c68c",
+                "widget": "event",
+                "children": [
+                  {
+                    "widget": "action_frame",
+                    "id": "action_23afd9832319728",
+                    "props": {
+                      "target": "navigator.open",
+                      "params": [],
+                      "link": {
+                        "kind": "Document",
+                        "value": "$(ref)40115a8193254fdf801acdc998cc6e52"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "children": []
+        },
+        {
+          "id": "cell_e5c8c73b12a38dd",
+          "widget": "cell",
+          "props": {
+            "style": {
+              "borderRadius": "0px 0px 0px 0px",
+              "height": "60px"
+            },
+            "ref": "cell_43d96da4de38155",
+            "title": [
+              {
+                "id": "flex_51c4f3e3f25b4ae",
+                "widget": "flex",
+                "props": {
+                  "style": {},
+                  "ref": "flex_89cf89332cc79ff",
+                  "gap": {
+                    "custom": true,
+                    "number": 5
+                  },
+                  "align": "center",
+                  "justify": "flex-start"
+                },
+                "children": [
+                  {
+                    "id": "icon_b5dfd26599ef724",
+                    "widget": "icon",
+                    "props": {
+                      "style": {},
+                      "ref": "icon_eeb47050baf6f30",
+                      "icon": "vant://todo-list-o",
+                      "color": "#FF8C00FF",
+                      "size": 20
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "text_4e03b33e57286da",
+                    "widget": "text",
+                    "props": {
+                      "style": {},
+                      "ref": "text_05d9025e861873a",
+                      "textType": {
+                        "custom": false,
+                        "type": "default"
+                      },
+                      "value": "我的订单",
+                      "fontSize": 13
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ],
+            "value": "",
+            "label": "",
+            "icon": "",
+            "center": true,
+            "isLink": true,
+            "size": "large",
+            "events": {
+              "onClick": {
+                "id": "event_1a72a84515b27b1",
+                "widget": "event",
+                "children": [
+                  {
+                    "widget": "action_frame",
+                    "id": "action_7ec2eb9302ce2fc",
+                    "props": {
+                      "target": "navigator.open",
+                      "params": [],
+                      "link": {
+                        "kind": "Document",
+                        "value": "$(ref)50c721b140af42648ea103eb51874dc7"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "children": []
+        },
+        {
+          "id": "cell_9c89816d096afb3",
+          "widget": "cell",
+          "props": {
+            "style": {
+              "borderRadius": "0px 0px 10px 10px",
+              "height": "60px"
+            },
+            "ref": "cell_6f532f502065b78",
+            "title": [
+              {
+                "id": "flex_07927b1098b3fa3",
+                "widget": "flex",
+                "props": {
+                  "style": {},
+                  "ref": "flex_0f62d734240efaa",
+                  "gap": {
+                    "custom": true,
+                    "number": 5
+                  },
+                  "align": "center",
+                  "justify": "flex-start"
+                },
+                "children": [
+                  {
+                    "id": "icon_97a222ea8424c0d",
+                    "widget": "icon",
+                    "props": {
+                      "style": {},
+                      "ref": "icon_8f4a3df61c3bed5",
+                      "icon": "vant://after-sale",
+                      "color": "#FF8C00FF",
+                      "size": 20
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "text_3fb6104b5dfa569",
+                    "widget": "text",
+                    "props": {
+                      "style": {},
+                      "ref": "text_480a4d27f9eb971",
+                      "textType": {
+                        "custom": false,
+                        "type": "default"
+                      },
+                      "value": "退款/售后",
+                      "fontSize": 13
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ],
+            "value": "",
+            "label": "",
+            "icon": "",
+            "center": true,
+            "isLink": true,
+            "size": "large",
+            "events": {
+              "onClick": {
+                "id": "event_31af90b4f477880",
+                "widget": "event",
+                "children": [
+                  {
+                    "widget": "action_frame",
+                    "id": "action_129a24c34c5e699",
+                    "props": {
+                      "target": "navigator.open",
+                      "params": [],
+                      "link": {
+                        "kind": "Document",
+                        "value": "$(ref)eac5b42755a44462a4baa89beda62ca5"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "flex_7b9adb44cfc4962",
+      "widget": "flex",
+      "props": {
+        "ref": "flex_1a8dea441b64583",
+        "gap": {
+          "custom": true,
+          "number": 0
+        },
+        "style": {
+          "marginBottom": "8px",
+          "borderRadius": "10px",
+          "width": "%",
+          "paddingLeft": "8px",
+          "paddingRight": "8px"
+        },
+        "vertical": true
+      },
+      "children": [
+        {
+          "id": "cell_f4cead17a1525e0",
+          "widget": "cell",
+          "props": {
+            "style": {
+              "borderRadius": "10px",
+              "width": "%",
+              "height": "60px"
+            },
+            "ref": "cell_35069600df9fe62",
+            "title": [
+              {
+                "id": "flex_0c2e4a094002cc7",
+                "widget": "flex",
+                "props": {
+                  "style": {},
+                  "ref": "flex_9aacacb37094318",
+                  "gap": {
+                    "custom": true,
+                    "number": 5
+                  },
+                  "align": "center",
+                  "justify": "flex-start"
+                },
+                "children": [
+                  {
+                    "id": "icon_96a4c99814be9a3",
+                    "widget": "icon",
+                    "props": {
+                      "style": {},
+                      "ref": "icon_4ae02d3ca2baa3c",
+                      "icon": "vant://location-o",
+                      "color": "#FF8C00FF",
+                      "size": 20
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "text_f1a756919f95797",
+                    "widget": "text",
+                    "props": {
+                      "style": {},
+                      "ref": "text_1072751e5ea06bb",
+                      "textType": {
+                        "custom": false,
+                        "type": "default"
+                      },
+                      "value": "收货地址",
+                      "fontSize": 13
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ],
+            "value": "",
+            "label": "",
+            "icon": "",
+            "center": true,
+            "isLink": true,
+            "size": "large",
+            "events": {
+              "onClick": {
+                "id": "event_93618c9f25b8027",
+                "widget": "event",
+                "children": [
+                  {
+                    "widget": "action_frame",
+                    "id": "action_aee8ace8612053c",
+                    "props": {
+                      "target": "navigator.open",
+                      "params": [],
+                      "link": {
+                        "kind": "Document",
+                        "value": "$(ref)86eb97db8785460e9bcdd085d55f23a7"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "flex_4d3510dc0290f49",
+      "widget": "flex",
+      "props": {
+        "ref": "flex_0ea4d5086b3f38a",
+        "gap": {
+          "custom": true,
+          "number": 0
+        },
+        "style": {
+          "paddingLeft": "8px",
+          "borderRadius": "10px",
+          "width": "%",
+          "paddingRight": "8px"
+        },
+        "vertical": true
+      },
+      "children": [
+        {
+          "id": "cell_b3206b5c4d67078",
+          "widget": "cell",
+          "props": {
+            "style": {
+              "borderRadius": "10px",
+              "height": "60px"
+            },
+            "ref": "cell_fc1bc39c5ad25a1",
+            "title": [
+              {
+                "id": "flex_aaa3978567d55eb",
+                "widget": "flex",
+                "props": {
+                  "style": {},
+                  "ref": "flex_897fbedd3fb6f5f",
+                  "gap": {
+                    "custom": true,
+                    "number": 5
+                  },
+                  "align": "center",
+                  "justify": "flex-start"
+                },
+                "children": [
+                  {
+                    "id": "icon_09b9e1f95af793c",
+                    "widget": "icon",
+                    "props": {
+                      "style": {},
+                      "ref": "icon_c816667787394b9",
+                      "icon": "vant://warning-o",
+                      "color": "#FF8C00FF",
+                      "size": 20
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "text_8736cacc3628775",
+                    "widget": "text",
+                    "props": {
+                      "style": {},
+                      "ref": "text_0924960e37601aa",
+                      "textType": {
+                        "custom": false,
+                        "type": "default"
+                      },
+                      "value": "关于我们",
+                      "fontSize": 13
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ],
+            "value": "",
+            "label": "",
+            "icon": "",
+            "center": true,
+            "isLink": true,
+            "size": "large",
+            "events": {
+              "onClick": {
+                "id": "event_4247d349f1f0ad4",
+                "widget": "event",
+                "children": [
+                  {
+                    "widget": "action_frame",
+                    "id": "action_8e641c4ad19e366",
+                    "props": {
+                      "target": "navigator.open",
+                      "params": [],
+                      "link": {
+                        "kind": "Document",
+                        "value": "$(ref)5fc171b6155d434393a45fa92afbf95e"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "references": {
+    "50c721b140af42648ea103eb51874dc7": "..\\MinePage\\MyOrders.sdv",
+    "eac5b42755a44462a4baa89beda62ca5": "..\\MinePage\\AfterSales.sdv",
+    "86eb97db8785460e9bcdd085d55f23a7": "..\\MinePage\\Address.sdv",
+    "40115a8193254fdf801acdc998cc6e52": "..\\MinePage\\MyFavorites.sdv",
+    "5fc171b6155d434393a45fa92afbf95e": "..\\MinePage\\About.sdv"
+  }
+}

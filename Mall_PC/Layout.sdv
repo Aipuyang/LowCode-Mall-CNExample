@@ -1,0 +1,189 @@
+﻿{
+  "id": "pageLayout_400665135487067",
+  "widget": "page_layout",
+  "version": "1.0.0",
+  "props": {
+    "ref": "pageLayout_400665135487067",
+    "title": "商城管理后台",
+    "name": "Layout",
+    "footer": [
+      {
+        "id": "row_752168764386905",
+        "widget": "row",
+        "props": {
+          "ref": "row_752168764386905"
+        },
+        "children": [
+          {
+            "id": "col_164916231578310",
+            "widget": "col",
+            "props": {
+              "ref": "col_164916231578310",
+              "width": {
+                "kind": "flex",
+                "value": 1
+              }
+            },
+            "children": [
+              {
+                "id": "text_708539514386394",
+                "widget": "text",
+                "props": {
+                  "ref": "text_708539514386394",
+                  "value": "版权所有 © 2025 年至今，贵公司"
+                }
+              }
+            ]
+          }
+        ]
+      }
+    ],
+    "menu": {
+      "type": "group",
+      "items": [
+        {
+          "id": "layout_menuItem_3209808cbb2650a",
+          "widget": "layout_menuItem",
+          "props": {
+            "ref": "layout_menuItem_2a896b3a0c0525f",
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)ea1d103ed8c34ddcbde5c8ff64d7641b"
+            },
+            "icon": "antdv://SignalFilled",
+            "label": "数据报表"
+          }
+        },
+        {
+          "id": "layout_menuItem_9c9befcec0781bc",
+          "widget": "layout_menuItem",
+          "props": {
+            "ref": "layout_menuItem_d2d14735c25a52e",
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)1f20d0a2ef1f4d44bead9e74cb8efffb"
+            },
+            "icon": "antdv://AppstoreFilled",
+            "label": "商品管理"
+          }
+        },
+        {
+          "id": "layout_menuItem_d738ef99730a685",
+          "widget": "layout_menuItem",
+          "props": {
+            "ref": "layout_menuItem_fdb8ccd6c65035c",
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)37ad4252d14a45ffb05d725a23ca295c"
+            },
+            "icon": "antdv://TagsFilled",
+            "label": "类别管理"
+          }
+        },
+        {
+          "id": "layout_menuItem_bf9ccb507e9c5a4",
+          "widget": "layout_menuItem",
+          "props": {
+            "ref": "layout_menuItem_21e240ffd737be2",
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)9faed9340f384645868f48ffad688657"
+            },
+            "icon": "antdv://PictureFilled",
+            "label": "首页管理"
+          }
+        },
+        {
+          "id": "layout_menuItem_2f06fa54bc12ecb",
+          "widget": "layout_menuItem",
+          "props": {
+            "ref": "layout_menuItem_1c18af670196f6b",
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)29ede4dbfbe84730a1d1d52b2c50f034"
+            },
+            "icon": "antdv://ProfileFilled",
+            "label": "订单管理"
+          }
+        },
+        {
+          "id": "layout_menuItem_835be8550bac44d",
+          "widget": "layout_menuItem",
+          "props": {
+            "ref": "layout_menuItem_846b6e87ff26596",
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)55a12dfabc064a2d9f923dc3dcf93a30"
+            },
+            "icon": "antdv://AppstoreFilled",
+            "label": "评论管理"
+          }
+        },
+        {
+          "id": "layout_menuItem_6baf2217e124a48",
+          "widget": "layout_menuItem",
+          "props": {
+            "ref": "layout_menuItem_b876a6890812a5a",
+            "page": {
+              "kind": "Document",
+              "value": "$(ref)50e30b978ebc4f8a82d8de32a57975ca"
+            },
+            "icon": "antdv://AppstoreFilled",
+            "label": "用户"
+          }
+        }
+      ]
+    },
+    "logo": "/static/images/logo.svg",
+    "profile": [
+      {
+        "id": "button_967003739490751",
+        "widget": "button",
+        "props": {
+          "ref": "button_569410853535165",
+          "label": "登出",
+          "icon": "antdv://LogoutOutlined",
+          "type": "text",
+          "events": {
+            "onClick": {
+              "id": "event_243802716514131",
+              "widget": "event",
+              "children": [
+                {
+                  "widget": "action_api",
+                  "id": "action_api_598925889137134",
+                  "props": {
+                    "params": []
+                  }
+                },
+                {
+                  "widget": "action_frame",
+                  "id": "action_frame_598837059353483",
+                  "props": {
+                    "target": "navigator.go",
+                    "params": [],
+                    "link": {
+                      "kind": "Document",
+                      "value": ""
+                    }
+                  }
+                }
+              ],
+              "props": {}
+            }
+          }
+        },
+        "children": []
+      }
+    ]
+  },
+  "references": {
+    "1f20d0a2ef1f4d44bead9e74cb8efffb": "Product\\List.sdv",
+    "37ad4252d14a45ffb05d725a23ca295c": "ProductType\\List.sdv",
+    "9faed9340f384645868f48ffad688657": "FrontPage\\List.sdv",
+    "29ede4dbfbe84730a1d1d52b2c50f034": "Order\\List.sdv",
+    "ea1d103ed8c34ddcbde5c8ff64d7641b": "Home.sdv",
+    "55a12dfabc064a2d9f923dc3dcf93a30": "Comment\\List.sdv",
+    "50e30b978ebc4f8a82d8de32a57975ca": "User\\List.sdv"
+  }
+}

@@ -1,0 +1,29 @@
+﻿{
+  "id": "961424417769678",
+  "widget": "model",
+  "props": {
+    "name": "CityStatisticInfo",
+    "displayName": "CityStatisticInfo"
+  },
+  "children": [
+    {
+      "id": "mtWeather_799894543533880",
+      "widget": "field",
+      "props": {
+        "name": "Weather",
+        "dataType": "$(ref)254185140112631"
+      }
+    },
+    {
+      "id": "mtCount_580119729081356",
+      "widget": "field",
+      "props": {
+        "name": "Count",
+        "dataType": "Int32"
+      }
+    }
+  ],
+  "references": {
+    "254185140112631": "WeatherState.json"
+  }
+}

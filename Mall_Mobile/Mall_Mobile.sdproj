@@ -1,0 +1,6 @@
+<Project>
+  <Type>Mobile</Type>
+  <ItemGroup>
+    <ProjectReference Include="..\Mall_Services\Mall_Services.sdproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,151 @@
+﻿{
+  "id": "0744d4dbcb1b4b3591fe31ff36c7fe52",
+  "widget": "page",
+  "version": "1.0.0",
+  "props": {
+    "ref": "page_7dh7daf66d47c53",
+    "name": "Completed",
+    "title": "申请成功"
+  },
+  "rules": [],
+  "children": [
+    {
+      "id": "25a174a8faf34716b232397dd987d8fe",
+      "widget": "flex",
+      "props": {
+        "ref": "flex_6cd980cbeb6ebcc",
+        "gap": {
+          "custom": true,
+          "number": 0
+        },
+        "style": {
+          "marginTop": "20px"
+        },
+        "justify": "center",
+        "vertical": false
+      },
+      "children": [
+        {
+          "id": "4948d5b6a60243c092cb2ad23f0f7cda",
+          "widget": "icon",
+          "props": {
+            "ref": "icon_fe337f731aa7866",
+            "icon": "vant://success",
+            "size": 30,
+            "color": "#22FF00FF"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "7a2d082ef03b4c36a63c38234af70dbd",
+      "widget": "flex",
+      "props": {
+        "ref": "flex_8209114db636f75",
+        "gap": {
+          "custom": true,
+          "number": 0
+        },
+        "style": {
+          "marginTop": "20px"
+        },
+        "justify": "center",
+        "vertical": false
+      },
+      "children": [
+        {
+          "id": "907c9c67a4d4432cba4b4c8e10fcb131",
+          "widget": "button",
+          "props": {
+            "ref": "button_2294179fe000ec3",
+            "shape": "round",
+            "size": "small",
+            "style": {
+              "width": "200px"
+            },
+            "label": "继续逛逛",
+            "events": {
+              "onClick": {
+                "id": "1415acc2d21a4131a3394fff6daed8ec",
+                "widget": "event",
+                "children": [
+                  {
+                    "widget": "action_frame",
+                    "id": "74fd2612d61e447dbb5d9168e0ce0f02",
+                    "props": {
+                      "target": "navigator.open",
+                      "params": [],
+                      "link": {
+                        "kind": "Document",
+                        "value": "$(ref)10014aadaef046f092638e77bb2fe6a9"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "flex_733b4cfd8e8eaff",
+      "widget": "flex",
+      "props": {
+        "ref": "flex_f391a4b3136cb20",
+        "gap": {
+          "custom": true,
+          "number": 0
+        },
+        "style": {
+          "marginTop": "10px"
+        },
+        "justify": "center",
+        "vertical": false
+      },
+      "children": [
+        {
+          "id": "button_122b133d818b524",
+          "widget": "button",
+          "props": {
+            "ref": "button_84d2e42a63173d6",
+            "shape": "round",
+            "size": "small",
+            "style": {
+              "width": "200px"
+            },
+            "label": "查看进度",
+            "events": {
+              "onClick": {
+                "id": "event_874c6cb244d81f4",
+                "widget": "event",
+                "children": [
+                  {
+                    "widget": "action_frame",
+                    "id": "action_frame_5c464aa4fddf09a",
+                    "props": {
+                      "target": "navigator.open",
+                      "params": [],
+                      "link": {
+                        "kind": "Document",
+                        "value": "$(ref)73c7865e8c2543dcbb572399de497e90"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "type": "warning"
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "references": {
+    "10014aadaef046f092638e77bb2fe6a9": "..\\Views\\TopPage.sdv",
+    "73c7865e8c2543dcbb572399de497e90": "..\\MinePage\\AfterSales.sdv"
+  }
+}

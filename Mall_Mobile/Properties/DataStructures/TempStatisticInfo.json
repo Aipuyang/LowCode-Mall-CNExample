@@ -1,0 +1,26 @@
+{
+  "id": "910077154421645",
+  "widget": "model",
+  "props": {
+    "name": "TempStatisticInfo",
+    "displayName": "TempStatisticInfo"
+  },
+  "children": [
+    {
+      "id": "mtAvgTemp_883007068602417",
+      "widget": "field",
+      "props": {
+        "name": "AvgTemperature",
+        "dataType": "Double"
+      }
+    },
+    {
+      "id": "mtDate_780186438507358",
+      "widget": "field",
+      "props": {
+        "name": "Date",
+        "dataType": "DateOnly"
+      }
+    }
+  ]
+}

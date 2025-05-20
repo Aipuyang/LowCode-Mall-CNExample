@@ -1,0 +1,283 @@
+﻿{
+  "id": "page_1980a1e9a38b4f8a8a79a05239fb2c16",
+  "widget": "page",
+  "version": "1.0.0",
+  "props": {
+    "ref": "page_1980a1e9a38b4f8a8a79a05239fb2c16",
+    "name": "Detail",
+    "title": "",
+    "params": [
+      {
+        "id": "3759db5d6dae4452bd6c2d98a21ce18b",
+        "widget": "parameter",
+        "props": {
+          "name": "id",
+          "dataType": "Number",
+          "isCollection": false,
+          "isNullable": false
+        }
+      }
+    ]
+  },
+  "children": [
+    {
+      "id": "descriptions_5c69f168e1054262a30b3bc05a6d29de",
+      "widget": "descriptions",
+      "props": {
+        "ref": "descriptions_5c69f168e1054262a30b3bc05a6d29de",
+        "dataSource": {
+          "id": "function_924130c785584a3097d16106e8fead78",
+          "widget": "function",
+          "children": [
+            {
+              "id": "action_58c01e222c9c49308df7e6b82ef42d70",
+              "widget": "action_api",
+              "props": {
+                "target": "&(ref)23e999ded77646868046f08ffbcdf3af.[ea4d79670fa64e67b53a6864b9702f4f_get_func]",
+                "params": [
+                  {
+                    "id": "assign_param45244a6067ba435aaa0371a21b4d521f",
+                    "widget": "assign_param",
+                    "props": {
+                      "name": {
+                        "kind": "Parameter",
+                        "value": "&(self)[descriptions_5c69f168e1054262a30b3bc05a6d29de].dataSource.[action_58c01e222c9c49308df7e6b82ef42d70].target.params.[ea4d79670fa64e67b53a6864b9702f4f_get_params_1]"
+                      },
+                      "value": {
+                        "kind": "Props",
+                        "value": "$(self)[page_1980a1e9a38b4f8a8a79a05239fb2c16].params.[3759db5d6dae4452bd6c2d98a21ce18b]"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            {
+              "id": "actionAdapter_d691bc0db84342e098f9e0016298ad1a",
+              "widget": "action_adapter",
+              "children": [
+                {
+                  "id": "adapterParam_14df59caceeb460381da87a68c0839da",
+                  "widget": "assign_param",
+                  "props": {
+                    "name": {
+                      "kind": "Members",
+                      "value": "&(self)[descriptions_5c69f168e1054262a30b3bc05a6d29de].data"
+                    },
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[descriptions_5c69f168e1054262a30b3bc05a6d29de].dataSource.[action_58c01e222c9c49308df7e6b82ef42d70].target.result"
+                    }
+                  }
+                }
+              ],
+              "props": {}
+            }
+          ],
+          "props": {}
+        },
+        "model": {
+          "data": "$(ref)69f83f3338e040d2951122662a3b403c.[ea4d79670fa64e67b53a6864b9702f4f]"
+        },
+        "title": [
+          {
+            "id": "space_46ca8d3747a04aadaf5ff8a56f74c91e",
+            "widget": "space",
+            "props": {
+              "style": {
+                "height": "40px"
+              },
+              "ref": "space_46ca8d3747a04aadaf5ff8a56f74c91e",
+              "align": "end",
+              "direction": "horizontal",
+              "size": 8
+            },
+            "children": [
+              {
+                "id": "title_e98e6b081939447888060b63676484e3",
+                "widget": "title",
+                "props": {
+                  "ref": "title_e98e6b081939447888060b63676484e3",
+                  "value": "订单详情",
+                  "level": 4,
+                  "style": {
+                    "display": "inline"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "bordered": true,
+        "column": 3,
+        "layout": "horizontal",
+        "descriptionsItems": [
+          {
+            "id": "descriptionsItem_518385b069cc42828f63043c9f84650d",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_518385b069cc42828f63043c9f84650d",
+              "label": "Id",
+              "span": 1,
+              "hide": true
+            },
+            "children": [
+              {
+                "id": "text_e204f7ea94704374a06f3f3dcb2eb780",
+                "widget": "text",
+                "props": {
+                  "ref": "text_e204f7ea94704374a06f3f3dcb2eb780",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_5c69f168e1054262a30b3bc05a6d29de].dataSource.[actionAdapter_d691bc0db84342e098f9e0016298ad1a].[adapterParam_14df59caceeb460381da87a68c0839da].[3ef52b0bc2d443008a0f3b710ab6f32d]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_0b7b40f02f78415384881d79607fdd94",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_0b7b40f02f78415384881d79607fdd94",
+              "label": "订单号",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_a4e6a6ee64e740eab5dbc6ea3eeeeed7",
+                "widget": "text",
+                "props": {
+                  "ref": "text_a4e6a6ee64e740eab5dbc6ea3eeeeed7",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_5c69f168e1054262a30b3bc05a6d29de].dataSource.[actionAdapter_d691bc0db84342e098f9e0016298ad1a].[adapterParam_14df59caceeb460381da87a68c0839da].[c3048f61db27464dadd9c163236498d3]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_f3014ddebc0b4b6893427f545478f948",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_f3014ddebc0b4b6893427f545478f948",
+              "label": "收货地址",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_32e4589fa62c4791b1825d8912c47985",
+                "widget": "text",
+                "props": {
+                  "ref": "text_32e4589fa62c4791b1825d8912c47985",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_5c69f168e1054262a30b3bc05a6d29de].dataSource.[actionAdapter_d691bc0db84342e098f9e0016298ad1a].[adapterParam_14df59caceeb460381da87a68c0839da].[f5df5f889fc94e7f8d4254dbcb83bf25]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_848558e653fa4a54bf580e3825e05220",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_848558e653fa4a54bf580e3825e05220",
+              "label": "所属用户",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_e1d74d4d679e4db6a55f80e3a552fc44",
+                "widget": "text",
+                "props": {
+                  "ref": "text_e1d74d4d679e4db6a55f80e3a552fc44",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_5c69f168e1054262a30b3bc05a6d29de].dataSource.[actionAdapter_d691bc0db84342e098f9e0016298ad1a].[adapterParam_14df59caceeb460381da87a68c0839da].[44798101455f4ef5947cb4fbe6edad56]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_f6e86b4e999d4435950502830a5094d8",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_f6e86b4e999d4435950502830a5094d8",
+              "label": "商品",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_8cca4c18c1f341b8bc644f185c0add8d",
+                "widget": "text",
+                "props": {
+                  "ref": "text_8cca4c18c1f341b8bc644f185c0add8d",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_5c69f168e1054262a30b3bc05a6d29de].dataSource.[actionAdapter_d691bc0db84342e098f9e0016298ad1a].[adapterParam_14df59caceeb460381da87a68c0839da].[6c29dc76d9284a659059e1e07f415882]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_26d5627d455d4d249322d4f2148851c5",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_26d5627d455d4d249322d4f2148851c5",
+              "label": "数量",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "text_b3e878f232bb43068d2e282eee061a3b",
+                "widget": "text",
+                "props": {
+                  "ref": "text_b3e878f232bb43068d2e282eee061a3b",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_5c69f168e1054262a30b3bc05a6d29de].dataSource.[actionAdapter_d691bc0db84342e098f9e0016298ad1a].[adapterParam_14df59caceeb460381da87a68c0839da].[27dc2e38cf1d4a499f2b492b41abe944]"
+                  }
+                }
+              }
+            ]
+          },
+          {
+            "id": "descriptionsItem_3199ef3f651943899451457ba9fe3218",
+            "widget": "descriptionsItem",
+            "props": {
+              "ref": "descriptionsItem_3199ef3f651943899451457ba9fe3218",
+              "label": "订单状态",
+              "span": 1
+            },
+            "children": [
+              {
+                "id": "tag_595826e8c58541e0abb71b22fd371e98",
+                "widget": "tag",
+                "props": {
+                  "ref": "tag_595826e8c58541e0abb71b22fd371e98",
+                  "value": {
+                    "kind": "Field",
+                    "value": "&(self)[descriptions_5c69f168e1054262a30b3bc05a6d29de].dataSource.[actionAdapter_d691bc0db84342e098f9e0016298ad1a].[adapterParam_14df59caceeb460381da87a68c0839da].[d2e12d6ae6c149dcb4526be501715cea]",
+                    "converter": "&(ref)b4a3abbf50b541dfa46f6c521eb41f01.[4c1b9372c57548588f57c81765730682].converters.[b48005580912ec7]"
+                  }
+                }
+              }
+            ]
+          }
+        ],
+        "hideActions": true,
+        "size": "middle"
+      },
+      "children": []
+    }
+  ],
+  "references": {
+    "23e999ded77646868046f08ffbcdf3af": "..\\..\\Mall_Services\\Services\\Order.sdlg",
+    "69f83f3338e040d2951122662a3b403c": "..\\..\\Mall_Services\\Database.sde",
+    "b4a3abbf50b541dfa46f6c521eb41f01": "$(project)Mall_Services/Properties\\DataStructures\\OrderType.json"
+  }
+}

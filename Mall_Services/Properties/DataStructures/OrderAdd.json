@@ -1,0 +1,101 @@
+﻿{
+  "id": "4d14ca67c9d74959a5e42a154a3e600f",
+  "widget": "model",
+  "props": {
+    "name": "OrderAdd",
+    "displayName": "OrderAdd"
+  },
+  "children": [
+    {
+      "id": "3039ac5ea0d34a65ab24ff4d669891a3",
+      "widget": "field",
+      "props": {
+        "displayName": "Id",
+        "name": "Id",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "e93be9dfc53d4eac8c72b8a3ba9e186a",
+      "widget": "field",
+      "props": {
+        "displayName": "OrderNumber",
+        "name": "OrderNumber",
+        "dataType": "Guid",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "e5d5dd82b7674dd7b2ffa888879e069e",
+      "widget": "field",
+      "props": {
+        "displayName": "DeliveryAddress",
+        "name": "DeliveryAddress",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "be93a6ca39f94e14a29d9c7c5993848c",
+      "widget": "field",
+      "props": {
+        "displayName": "Userid",
+        "name": "Userid",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "a8208643dee84d89b8a9625da128c11f",
+      "widget": "field",
+      "props": {
+        "displayName": "Type",
+        "name": "Type",
+        "dataType": "$(ref)0885b137dcaf4f7d8113ac64987cabc9",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "1d90fe38959a4327bbe8cf35b0de81e4",
+      "widget": "field",
+      "props": {
+        "displayName": "Remark",
+        "name": "Remark",
+        "dataType": "String",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "a11d30d900744fe2ac67292c278b9c5c",
+      "widget": "field",
+      "props": {
+        "displayName": "CreatTime",
+        "name": "CreatTime",
+        "dataType": "DateTime",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "49d48aacb32748db8e15b3bca634a536",
+      "widget": "field",
+      "props": {
+        "displayName": "TotalAmount",
+        "name": "TotalAmount",
+        "dataType": "Double",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ],
+  "references": {
+    "0885b137dcaf4f7d8113ac64987cabc9": "OrderType.json"
+  }
+}

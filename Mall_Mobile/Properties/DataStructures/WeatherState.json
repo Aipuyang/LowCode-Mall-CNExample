@@ -1,0 +1,121 @@
+{
+  "id": "mweather_120868999277773",
+  "widget": "enum",
+  "props": {
+    "name": "WeatherState",
+    "displayName": "天气状况",
+    "description": "WeatherState",
+    "converters": [
+      {
+        "id": "mweatherLabelConverter_641383383641750",
+        "widget": "converter",
+        "props": {
+            "name": "天气对应展示图标",
+            "ref": "WeatherIcon_Display",
+            "input": "enum",
+            "output": "Text",
+            "items": [
+                {
+                    "source": "&(self)[mweather_120868999277773].[mSunny_528398561317402]",
+                    "target": "/static/images/sunny.png"
+                },
+                {
+                    "source": "&(self)[mweather_120868999277773].[mCloud_612344244179607]",
+                    "target": "/static/images/cloudy.png"
+                },
+                {
+                    "source": "&(self)[mweather_120868999277773].[mRain_815771751021673]",
+                    "target": "/static/images/rainy.png"
+                },
+                {
+                    "source": "&(self)[mweather_120868999277773].[mSnow_571787593895604]",
+                    "target":  "/static/images/snow.png"
+                },
+                {
+                    "source": "&(self)[mweather_120868999277773].[mWind_412768253792700]",
+                    "target":  "/static/images/windy.png"
+                }
+            ]
+          }
+        },
+        {
+          "id": "mweatherLabelConverter2_723450558109856",
+          "widget": "converter",
+          "props": {
+            "name": "天气展示信息",
+            "ref": "WeatherState_Display2",
+            "input": "enum",
+            "output": "Text",
+            "items": [
+                {
+                    "source": "&(self)[mweather_120868999277773].[mSunny_528398561317402]",
+                    "target": "晴天"
+                },
+                {
+                    "source": "&(self)[mweather_120868999277773].[mCloud_612344244179607]",
+                    "target": "多云"
+                },
+                {
+                    "source": "&(self)[mweather_120868999277773].[mRain_815771751021673]",
+                    "target": "雨天"
+                },
+                {
+                    "source": "&(self)[mweather_120868999277773].[mSnow_571787593895604]",
+                    "target":  "雪天"
+                },
+                {
+                    "source": "&(self)[mweather_120868999277773].[mWind_412768253792700]",
+                    "target":  "大风"
+                }
+            ]
+         }
+       }
+    ]
+  },
+  "children": [
+    {
+      "id": "mSunny_528398561317402",
+      "widget": "enum_field",
+      "props": {
+        "name": "Sunny",
+        "displayName": "晴天"
+      }
+    },
+    {
+      "id": "mCloud_612344244179607",
+      "widget": "enum_field",
+      "props": {
+        "name": "Cloudy",
+        "displayName": "多云",
+        "value": 1
+      }
+    },
+    {
+      "id": "mRain_815771751021673",
+      "widget": "enum_field",
+      "props": {
+        "name": "Rainy",
+        "displayName": "雨天",
+        "value": 2
+      }
+    },
+    {
+      "id": "mSnow_571787593895604",
+      "widget": "enum_field",
+      "props": {
+        "name": "Snow",
+        "displayName": "雪天",
+        "value": 3
+      }
+    },
+    {
+      "id": "mWind_412768253792700",
+      "widget": "enum_field",
+      "props": {
+        "name": "Windy",
+        "displayName": "大风",
+        "value": 4
+      }
+    }
+  ]
+}

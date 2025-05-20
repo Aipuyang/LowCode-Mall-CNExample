@@ -1,0 +1,76 @@
+﻿{
+  "id": "70fd379f064f47e3afee0e6837aaffde",
+  "widget": "model",
+  "props": {
+    "name": "ShoppingCartUpdate",
+    "displayName": "ShoppingCartUpdate"
+  },
+  "children": [
+    {
+      "id": "0d2a58b6227d48cf8587a8eccec7ac42",
+      "widget": "field",
+      "props": {
+        "displayName": "Id",
+        "name": "Id",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "1f890a60a053475eb0d099ea1ac77958",
+      "widget": "field",
+      "props": {
+        "displayName": "ProductId",
+        "name": "ProductId",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "30564824e321476c98b7540119006f29",
+      "widget": "field",
+      "props": {
+        "displayName": "UserId",
+        "name": "UserId",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "921e7829cbc4486e8561fd18d0b5dfc8",
+      "widget": "field",
+      "props": {
+        "displayName": "Selected",
+        "name": "Selected",
+        "dataType": "Boolean",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "14c117b3c77d4892bac30fed41393de2",
+      "widget": "field",
+      "props": {
+        "displayName": "Num",
+        "name": "Num",
+        "dataType": "Int16",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "84d21e36f46d4232a521f5df88bd64a3",
+      "widget": "field",
+      "props": {
+        "displayName": "AddTime",
+        "name": "AddTime",
+        "dataType": "DateTime",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ]
+}

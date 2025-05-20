@@ -1,0 +1,508 @@
+﻿{
+  "id": "page_a619e1aed91d415b961297b6c564c4a6",
+  "widget": "page",
+  "version": "1.0.0",
+  "props": {
+    "ref": "page_a619e1aed91d415b961297b6c564c4a6",
+    "name": "AddComment",
+    "isSetupScript": true,
+    "title": "商品评价",
+    "params": [
+      {
+        "id": "e6984a1713517e6",
+        "widget": "parameter",
+        "props": {
+          "name": "productid",
+          "dataType": "Number",
+          "isCollection": false,
+          "isNullable": false
+        }
+      }
+    ],
+    "rules": [],
+    "dataSource": {
+      "id": "function_47560d9e8f38693",
+      "widget": "function",
+      "children": [
+        {
+          "id": "action_ebf37db2f8b4b4e",
+          "widget": "action_api",
+          "props": {
+            "target": "&(ref)808c245b73344027900c3c76567e9d61.[ab6188e7b3e34049a94a661d3ace829b_get_func]",
+            "params": [
+              {
+                "id": "assign_param_08ad8e29ceb3b53",
+                "widget": "assign_param",
+                "props": {
+                  "name": {
+                    "kind": "Parameter",
+                    "value": "&(self)[page_a619e1aed91d415b961297b6c564c4a6].dataSource.[action_ebf37db2f8b4b4e].target.params.[ab6188e7b3e34049a94a661d3ace829b_get_params_1]"
+                  },
+                  "value": {
+                    "kind": "Props",
+                    "value": "$(self)[page_a619e1aed91d415b961297b6c564c4a6].params.[e6984a1713517e6]"
+                  }
+                }
+              }
+            ]
+          }
+        },
+        {
+          "id": "action_602746e22e90983",
+          "widget": "action_adapter",
+          "children": [
+            {
+              "id": "assign_param_0fd86dcd0ba39b6",
+              "widget": "assign_param",
+              "props": {
+                "name": "GetAdapter",
+                "value": {
+                  "kind": "Field",
+                  "value": "&(self)[page_a619e1aed91d415b961297b6c564c4a6].dataSource.[action_ebf37db2f8b4b4e].target.result"
+                }
+              }
+            }
+          ],
+          "props": {}
+        }
+      ],
+      "props": {}
+    }
+  },
+  "children": [
+    {
+      "id": "flex_23c024dc232cbcc",
+      "widget": "flex",
+      "props": {
+        "ref": "flex_0f4bf00b8e57e3b",
+        "gap": {
+          "custom": true,
+          "number": 0
+        },
+        "justify": "center"
+      },
+      "children": [
+        {
+          "id": "image_12647ee2decd7fa",
+          "widget": "image",
+          "props": {
+            "ref": "image_6d39e31938a223b",
+            "width": 80,
+            "height": 80,
+            "value": {
+              "kind": "Field",
+              "value": "&(self)[page_a619e1aed91d415b961297b6c564c4a6].dataSource.[action_602746e22e90983].[assign_param_0fd86dcd0ba39b6].[a9def5044e604127ad7d394b720723b1]"
+            },
+            "radius": 5
+          },
+          "children": []
+        },
+        {
+          "id": "flex_00c28bfa87b574f",
+          "widget": "flex",
+          "props": {
+            "ref": "flex_82e855f8efaf033",
+            "gap": {
+              "custom": true,
+              "number": 0
+            },
+            "vertical": true,
+            "align": "center",
+            "justify": "center",
+            "style": {
+              "marginLeft": "5px"
+            }
+          },
+          "children": [
+            {
+              "id": "text_4f667cfc36709ac",
+              "widget": "text",
+              "props": {
+                "ref": "text_d5547fe6264d067",
+                "textType": {
+                  "custom": false,
+                  "type": "default"
+                },
+                "value": {
+                  "kind": "Field",
+                  "value": "&(self)[page_a619e1aed91d415b961297b6c564c4a6].dataSource.[action_602746e22e90983].[assign_param_0fd86dcd0ba39b6].[d1703919d6904a9f97d48ebf07b98156]"
+                }
+              },
+              "children": []
+            },
+            {
+              "id": "text_e3c8f19434713fb",
+              "widget": "text",
+              "props": {
+                "ref": "text_8acf9b1c709ff1c",
+                "textType": {
+                  "custom": false,
+                  "type": "secondary"
+                },
+                "value": {
+                  "kind": "Field",
+                  "value": "&(self)[page_a619e1aed91d415b961297b6c564c4a6].dataSource.[action_602746e22e90983].[assign_param_0fd86dcd0ba39b6].[82ceb48d6a96434e8c6be27b373ed624]"
+                },
+                "fontSize": 13
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "formContainer_a4f8d512baa74096894a186b6865754e",
+      "widget": "formContainer",
+      "props": {
+        "ref": "formContainer_a4f8d512baa74096894a186b6865754e",
+        "labelAlign": "left",
+        "labelWidth": "90px",
+        "layout": "horizontal",
+        "set": {
+          "id": "function_383d40534c224b2eaecd1d8a5e4be052",
+          "widget": "function",
+          "children": [
+            {
+              "id": "actionApi_dfc8cbdc7c5d4e7a8e0dd0583eab4c86",
+              "widget": "action_api",
+              "props": {
+                "target": "&(ref)02065642a75e4a47a75280477f2fed87.[df0e38af017149eebb9831ecb02fa520_add_func]"
+              }
+            }
+          ],
+          "props": {}
+        },
+        "model": {
+          "formModel": "$(ref)02065642a75e4a47a75280477f2fed87.[df0e38af017149eebb9831ecb02fa520_add_func].params"
+        },
+        "events": {
+          "finish": {
+            "id": "event_502483c7360fc58",
+            "widget": "event",
+            "children": [
+              {
+                "widget": "action_frame",
+                "id": "action_d48f15bdfe23c44",
+                "props": {
+                  "target": "navigator.open",
+                  "params": [],
+                  "link": {
+                    "kind": "Document",
+                    "value": "$(ref)1ed7079c80df455eb1ce538a0e578b45"
+                  }
+                }
+              }
+            ]
+          }
+        }
+      },
+      "children": [
+        {
+          "id": "formItem_1c916fc3873142fe9a264687eed67fe5",
+          "widget": "formItem",
+          "props": {
+            "ref": "formItem_1c916fc3873142fe9a264687eed67fe5",
+            "label": "Id",
+            "labelAlign": "",
+            "name": {
+              "kind": "Field",
+              "value": "&(self)[formContainer_a4f8d512baa74096894a186b6865754e].set.[actionApi_dfc8cbdc7c5d4e7a8e0dd0583eab4c86].target.params.[df0e38af017149eebb9831ecb02fa520_add_params].[b5d352135aed46c29aaa2685950fc08d]"
+            },
+            "hide": true
+          },
+          "children": [
+            {
+              "id": "numberInput_dff21e9dbb7249aea7aef3b107b14c94",
+              "widget": "numberInput",
+              "props": {
+                "ref": "numberInput_dff21e9dbb7249aea7aef3b107b14c94",
+                "value": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_a4f8d512baa74096894a186b6865754e].set.[actionApi_dfc8cbdc7c5d4e7a8e0dd0583eab4c86].target.params.[df0e38af017149eebb9831ecb02fa520_add_params].[b5d352135aed46c29aaa2685950fc08d]"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "formItem_8dfb308cbf464893a8c85d68b6260f93",
+          "widget": "formItem",
+          "props": {
+            "ref": "formItem_8dfb308cbf464893a8c85d68b6260f93",
+            "label": "用户",
+            "labelAlign": "",
+            "name": {
+              "kind": "Field",
+              "value": "&(self)[formContainer_a4f8d512baa74096894a186b6865754e].set.[actionApi_dfc8cbdc7c5d4e7a8e0dd0583eab4c86].target.params.[df0e38af017149eebb9831ecb02fa520_add_params].[81302bf96efc41f5905b0cbbbb50ed41]"
+            },
+            "hide": false
+          },
+          "children": [
+            {
+              "id": "select_9ab378b4ca7d940",
+              "widget": "select",
+              "props": {
+                "ref": "select_21e4a0438ed50b5",
+                "defaultItemLabel": "全部",
+                "model": {
+                  "data": "&(ref)738837970974525.[9089eee3fc344ce5a63b215f50198498]"
+                },
+                "dataSource": {
+                  "id": "function_ae4e4ec0136a3d1",
+                  "widget": "function",
+                  "children": [
+                    {
+                      "id": "action_4f0bf92a98eb7a7",
+                      "widget": "action_api",
+                      "props": {
+                        "target": "&(ref)0002e4081f1d4c10921ccd5542e1c4f4.[9089eee3fc344ce5a63b215f50198498_list_func]",
+                        "params": []
+                      }
+                    },
+                    {
+                      "id": "action_61bf8d03e9c78ad",
+                      "widget": "action_adapter",
+                      "children": [
+                        {
+                          "id": "assign_param_6ff6be61572b599",
+                          "widget": "assign_param",
+                          "props": {
+                            "name": {
+                              "kind": "Members",
+                              "value": "&(self)[select_9ab378b4ca7d940].data"
+                            },
+                            "value": {
+                              "kind": "Field",
+                              "value": "&(self)[select_9ab378b4ca7d940].dataSource.[action_4f0bf92a98eb7a7].target.result"
+                            }
+                          }
+                        }
+                      ],
+                      "props": {}
+                    }
+                  ],
+                  "props": {}
+                },
+                "fieldName": {
+                  "kind": "Field",
+                  "value": "&(self)[select_9ab378b4ca7d940].dataSource.[action_61bf8d03e9c78ad].[assign_param_6ff6be61572b599].[e2a025d8f2994f9f8c1925bf166a244a]"
+                },
+                "fieldValue": {
+                  "kind": "Field",
+                  "value": "&(self)[select_9ab378b4ca7d940].dataSource.[action_61bf8d03e9c78ad].[assign_param_6ff6be61572b599].[390004c4866e40a1ba387d139f30185b]"
+                },
+                "default": "",
+                "value": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_a4f8d512baa74096894a186b6865754e].set.[actionApi_dfc8cbdc7c5d4e7a8e0dd0583eab4c86].target.params.[df0e38af017149eebb9831ecb02fa520_add_params].[81302bf96efc41f5905b0cbbbb50ed41]"
+                }
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "formItem_eabc2d8ac80d46439c4e74c7275676e5",
+          "widget": "formItem",
+          "props": {
+            "ref": "formItem_eabc2d8ac80d46439c4e74c7275676e5",
+            "label": "对应商品",
+            "labelAlign": "",
+            "name": {
+              "kind": "Field",
+              "value": "&(self)[formContainer_a4f8d512baa74096894a186b6865754e].set.[actionApi_dfc8cbdc7c5d4e7a8e0dd0583eab4c86].target.params.[df0e38af017149eebb9831ecb02fa520_add_params].[b04d6d33069c4a42a0c0b642120940ba]"
+            },
+            "hide": true
+          },
+          "children": [
+            {
+              "id": "numberInput_3ff9ff1291514994a1691f475a7aa97e",
+              "widget": "numberInput",
+              "props": {
+                "ref": "numberInput_3ff9ff1291514994a1691f475a7aa97e",
+                "value": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_a4f8d512baa74096894a186b6865754e].set.[actionApi_dfc8cbdc7c5d4e7a8e0dd0583eab4c86].target.params.[df0e38af017149eebb9831ecb02fa520_add_params].[b04d6d33069c4a42a0c0b642120940ba]"
+                },
+                "default": {
+                  "kind": "Props",
+                  "value": "$(self)[page_a619e1aed91d415b961297b6c564c4a6].params.[e6984a1713517e6]"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "formItem_139ae5b3df35486a96f49375832d8f8b",
+          "widget": "formItem",
+          "props": {
+            "ref": "formItem_139ae5b3df35486a96f49375832d8f8b",
+            "label": "评论时间",
+            "labelAlign": "",
+            "name": {
+              "kind": "Field",
+              "value": "&(self)[formContainer_a4f8d512baa74096894a186b6865754e].set.[actionApi_dfc8cbdc7c5d4e7a8e0dd0583eab4c86].target.params.[df0e38af017149eebb9831ecb02fa520_add_params].[469fd6fe40bf440c8680155d5a9dca4b]"
+            },
+            "hide": true
+          },
+          "children": [
+            {
+              "id": "datePicker_fe2a2c74474d4166879728e4a0c5965d",
+              "widget": "datePicker",
+              "props": {
+                "ref": "datePicker_fe2a2c74474d4166879728e4a0c5965d",
+                "value": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_a4f8d512baa74096894a186b6865754e].set.[actionApi_dfc8cbdc7c5d4e7a8e0dd0583eab4c86].target.params.[df0e38af017149eebb9831ecb02fa520_add_params].[469fd6fe40bf440c8680155d5a9dca4b]"
+                }
+              }
+            }
+          ]
+        },
+        {
+          "id": "formItem_3ab3f90269dc466bad67120a166960f3",
+          "widget": "formItem",
+          "props": {
+            "ref": "formItem_3ab3f90269dc466bad67120a166960f3",
+            "label": "评论内容",
+            "labelAlign": "",
+            "name": {
+              "kind": "Field",
+              "value": "&(self)[formContainer_a4f8d512baa74096894a186b6865754e].set.[actionApi_dfc8cbdc7c5d4e7a8e0dd0583eab4c86].target.params.[df0e38af017149eebb9831ecb02fa520_add_params].[dd2a17a309de48cd8557a21346f0b969]"
+            }
+          },
+          "children": [
+            {
+              "id": "textArea_b9a1e357404454c",
+              "widget": "textArea",
+              "props": {
+                "ref": "textArea_6224270eb1d265f",
+                "placeholder": "请输入",
+                "style": {
+                  "width": "100%"
+                },
+                "value": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_a4f8d512baa74096894a186b6865754e].set.[actionApi_dfc8cbdc7c5d4e7a8e0dd0583eab4c86].target.params.[df0e38af017149eebb9831ecb02fa520_add_params].[dd2a17a309de48cd8557a21346f0b969]"
+                }
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "formItem_333768c9b0f342499d23096e4fd76716",
+          "widget": "formItem",
+          "props": {
+            "ref": "formItem_333768c9b0f342499d23096e4fd76716",
+            "label": "上传图片",
+            "labelAlign": "",
+            "name": {
+              "kind": "Field",
+              "value": "&(self)[formContainer_a4f8d512baa74096894a186b6865754e].set.[actionApi_dfc8cbdc7c5d4e7a8e0dd0583eab4c86].target.params.[df0e38af017149eebb9831ecb02fa520_add_params].[ff4c0e4cba40437abd2164bc44b566a0]"
+            }
+          },
+          "children": [
+            {
+              "id": "upload_6ccd572f5b6842d5a5d7fa077214a1e2",
+              "widget": "upload",
+              "props": {
+                "ref": "upload_6ccd572f5b6842d5a5d7fa077214a1e2",
+                "value": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_a4f8d512baa74096894a186b6865754e].set.[actionApi_dfc8cbdc7c5d4e7a8e0dd0583eab4c86].target.params.[df0e38af017149eebb9831ecb02fa520_add_params].[ff4c0e4cba40437abd2164bc44b566a0]"
+                },
+                "uploadType": "base64",
+                "maxCount": 1,
+                "capture": ""
+              }
+            }
+          ]
+        },
+        {
+          "id": "flex_c3277ed4cf3c4dc098e29bff84036b02",
+          "widget": "flex",
+          "props": {
+            "ref": "flex_c3277ed4cf3c4dc098e29bff84036b02",
+            "justify": "space-between",
+            "style": {
+              "marginTop": "24px",
+              "marginRight": "16px",
+              "marginLeft": "16px",
+              "marginBottom": "16px",
+              "display": "flex"
+            },
+            "gap": {
+              "custom": true,
+              "number": 15
+            },
+            "vertical": true
+          },
+          "children": [
+            {
+              "id": "button_14148af50b164b80aff67896bc342726",
+              "widget": "button",
+              "props": {
+                "style": {
+                  "flexGrow": 1,
+                  "backgroundColor": "#FF6321FF",
+                  "borderStyle": "none"
+                },
+                "block": true,
+                "size": "normal",
+                "ref": "button_14148af50b164b80aff67896bc342726",
+                "htmlType": "submit",
+                "label": "保存",
+                "type": "primary",
+                "nativeType": "submit",
+                "shape": "round"
+              },
+              "children": []
+            },
+            {
+              "id": "button_b64a1a613c574304b299ecffe0e7d22b",
+              "widget": "button",
+              "props": {
+                "style": {
+                  "width": "%",
+                  "marginRight": "20px",
+                  "flexGrow": 1
+                },
+                "ref": "button_b64a1a613c574304b299ecffe0e7d22b",
+                "htmlType": "button",
+                "label": "取消",
+                "block": true,
+                "size": "normal",
+                "events": {
+                  "onClick": {
+                    "id": "event_b819906ed611435ead862277d4bd09f1",
+                    "type": "event",
+                    "children": [
+                      {
+                        "id": "actionFrame_11b825f5917e4dcd887c44cfe49ff897",
+                        "widget": "action_frame",
+                        "props": {
+                          "target": "navigator.back"
+                        }
+                      }
+                    ]
+                  }
+                },
+                "shape": "round"
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": {
+    "02065642a75e4a47a75280477f2fed87": "..\\..\\Mall_Services\\Services\\Comment.sdlg",
+    "808c245b73344027900c3c76567e9d61": "$(project)Mall_Services/Services\\Product.sdlg",
+    "1ed7079c80df455eb1ce538a0e578b45": "CommentCompleted.sdv",
+    "0002e4081f1d4c10921ccd5542e1c4f4": "$(project)Mall_Services/Services\\User.sdlg",
+    "738837970974525": "$(project)Mall_Services/Database.sde"
+  }
+}

@@ -1,0 +1,128 @@
+﻿{
+  "id": "4c1b9372c57548588f57c81765730682",
+  "widget": "enum",
+  "props": {
+    "name": "OrderType",
+    "displayName": "订单状态",
+    "converters": [
+      {
+        "id": "b48005580912ec7",
+        "widget": "converter",
+        "props": {
+          "name": "订单状态输出值",
+          "ref": "ordertype_enum_value",
+          "input": "enum",
+          "output": "Text",
+          "items": [
+            {
+              "source": "&(self)[4c1b9372c57548588f57c81765730682].[a7a4fcbde82b42db8aaa9f2838c19660]",
+              "target": "待支付"
+            },
+            {
+              "source": "&(self)[4c1b9372c57548588f57c81765730682].[0474c2963b7a493f8ae1a3359ea500ff]",
+              "target": "待发货"
+            },
+            {
+              "source": "&(self)[4c1b9372c57548588f57c81765730682].[415736cde20b42cc9acad863735b3cbc]",
+              "target": "已发货"
+            },
+            {
+              "source": "&(self)[4c1b9372c57548588f57c81765730682].[71141c45661e419aac86eaeaeecf9556]",
+              "target": "已完成"
+            },
+            {
+              "source": "&(self)[4c1b9372c57548588f57c81765730682].[1a3b6be8c1554508ab63625b61df074f]",
+              "target": "售后中"
+            },
+            {
+              "source": "&(self)[4c1b9372c57548588f57c81765730682].[4837c3b340b64ee29e19424a58e905ac]",
+              "target": "售后完成"
+            },
+            {
+              "source": "&(self)[4c1b9372c57548588f57c81765730682].[0cec1dfabec846ddad1acf8912a9ab50]",
+              "target": "待评价"
+            },
+            {
+              "source": "&(self)[4c1b9372c57548588f57c81765730682].[4c2c57689b984cd58f97423e61a2002d]",
+              "target": "已取消"
+            }
+          ]
+        }
+      }
+    ]
+  },
+  "children": [
+    {
+      "id": "a7a4fcbde82b42db8aaa9f2838c19660",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "待支付",
+        "name": "TobePayed",
+        "value": 0
+      }
+    },
+    {
+      "id": "0474c2963b7a493f8ae1a3359ea500ff",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "待发货",
+        "name": "TobeShipped",
+        "value": 1
+      }
+    },
+    {
+      "id": "415736cde20b42cc9acad863735b3cbc",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "已发货",
+        "name": "TobeReceived",
+        "value": 2
+      }
+    },
+    {
+      "id": "71141c45661e419aac86eaeaeecf9556",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "已完成",
+        "name": "Completed",
+        "value": 3
+      }
+    },
+    {
+      "id": "1a3b6be8c1554508ab63625b61df074f",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "售后中",
+        "name": "AfterSalesProgress",
+        "value": 4
+      }
+    },
+    {
+      "id": "4837c3b340b64ee29e19424a58e905ac",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "售后完成",
+        "name": "AfterSalesComplete",
+        "value": 5
+      }
+    },
+    {
+      "id": "0cec1dfabec846ddad1acf8912a9ab50",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "待评价",
+        "name": "Evaluated",
+        "value": 6
+      }
+    },
+    {
+      "id": "4c2c57689b984cd58f97423e61a2002d",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "已取消",
+        "name": "Cancelled",
+        "value": 7
+      }
+    }
+  ]
+}

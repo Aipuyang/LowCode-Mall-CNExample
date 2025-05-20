@@ -1,0 +1,75 @@
+{
+  "id": "mwindDirection_176806808611767",
+  "widget": "enum",
+  "props": {
+    "name": "WindDirection",
+    "displayName": "风向",
+    "converters": [
+        {
+          "id": "mwindDirectionLabelConverter_889764788589329",
+          "widget": "converter",
+          "props": {
+            "name": "风向显示信息",
+            "ref": "windDirection_Display",
+            "input": "enum",
+            "output": "Text",
+            "items": [
+            {
+                "source": "&(self)[mwindDirection_176806808611767].[mEast_852152599522143]",
+                "target": "东风"
+            },
+            {
+                "source": "&(self)[mwindDirection_176806808611767].[970986563952010]",
+                "target": "南风"
+            },
+            {
+                "source": "&(self)[mwindDirection_176806808611767].[788109925663826]",
+                "target": "西风"
+            },
+            {
+                "source": "&(self)[mwindDirection_176806808611767].[409113109724921]",
+                "target": "北风"
+            }
+          ]
+        }
+      }
+      ]
+  },
+  "children": [
+    {
+      "id": "mEast_852152599522143",
+      "widget": "enum_field",
+      "props": {
+        "name": "East",
+        "displayName": "东风"
+      }
+    },
+    {
+      "id": "970986563952010",
+      "widget": "enum_field",
+      "props": {
+        "name": "South",
+        "displayName": "南风",
+        "value": 1
+      }
+    },
+    {
+      "id": "788109925663826",
+      "widget": "enum_field",
+      "props": {
+        "name": "West",
+        "displayName": "西风",
+        "value": 2
+      }
+    },
+    {
+      "id": "409113109724921",
+      "widget": "enum_field",
+      "props": {
+        "name": "North",
+        "displayName": "北风",
+        "value": 3
+      }
+    }
+  ]
+}

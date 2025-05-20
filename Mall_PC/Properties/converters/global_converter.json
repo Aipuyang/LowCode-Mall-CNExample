@@ -1,0 +1,49 @@
+﻿{
+  "id": "f48cf00f863d463b9bd94485c77a1a90",
+  "widget": "global_Converter",
+  "props": {
+    "name": "GlobalConverter"
+  },
+  "children": [
+    {
+      "id": "031336624e3bea6",
+      "widget": "converter",
+      "props": {
+        "name": "是否上架的显示",
+        "ref": "isOnself",
+        "input": "boolean",
+        "output": "Text",
+        "items": [
+          {
+            "source": "true",
+            "target": "已上架"
+          },
+          {
+            "source": "false",
+            "target": "未上架"
+          }
+        ]
+      }
+    },
+    {
+      "id": "5087626e69d400c",
+      "widget": "converter",
+      "props": {
+        "name": "是否上架的颜色显示",
+        "ref": "OnselfColor",
+        "input": "boolean",
+        "output": "Color",
+        "items": [
+          {
+            "source": "true",
+            "target": "#A7EBA0FF"
+          },
+          {
+            "source": "false",
+            "target": "#A2B8B8FF"
+          }
+        ]
+      }
+    }
+  ]
+}

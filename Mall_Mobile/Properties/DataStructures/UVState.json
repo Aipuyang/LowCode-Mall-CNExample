@@ -1,0 +1,62 @@
+{
+    "id": "mUVState_763412706974544",
+    "widget": "enum",
+    "props": {
+        "name": "UVState",
+        "displayName": "紫外线",
+        "converters": [
+        {
+          "id": "mUVLabelConverter_790946395414404",
+          "widget": "converter",
+          "props": {
+            "name": "紫外线显示信息",
+            "ref": "UVState_Display",
+            "input": "enum",
+            "output": "Text",
+            "items": [
+            {
+                "source": "&(self)[mUVState_763412706974544].[mPower_328227900799550]",
+                "target": "强"
+            },
+            {
+                "source": "&(self)[mUVState_763412706974544].[659274249406867]",
+                "target": "中"
+            },
+            {
+                "source": "&(self)[mUVState_763412706974544].[377052867548960]",
+                "target": "弱"
+            }
+          ]
+        }
+      }
+      ]
+    },
+    "children": [
+        {
+            "id": "mPower_328227900799550",
+            "widget": "enum_field",
+            "props": {
+                "name": "Power",
+                "displayName": "强"
+            }
+        },
+        {
+            "id": "659274249406867",
+            "widget": "enum_field",
+            "props": {
+                "name": "Middle",
+                "displayName": "中",
+                "value": 1
+            }
+        },
+        {
+            "id": "377052867548960",
+            "widget": "enum_field",
+            "props": {
+                "name": "Weak",
+                "displayName": "弱",
+                "value": 2
+            }
+        }
+    ]
+}

@@ -1,0 +1,43 @@
+﻿{
+  "id": "e9a94311eb2149a6b0367590b4b27771",
+  "widget": "model",
+  "props": {
+    "name": "FavoriteAdd",
+    "displayName": "FavoriteAdd"
+  },
+  "children": [
+    {
+      "id": "6c4bfb8832904e1e87811da16501ce38",
+      "widget": "field",
+      "props": {
+        "displayName": "Id",
+        "name": "Id",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "33a2ef8198e84999870cac49699ec720",
+      "widget": "field",
+      "props": {
+        "displayName": "ProductId",
+        "name": "ProductId",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    },
+    {
+      "id": "77ce2fc21f9c49daaa2fd34f68c69675",
+      "widget": "field",
+      "props": {
+        "displayName": "UserId",
+        "name": "UserId",
+        "dataType": "Int32",
+        "nullable": true,
+        "defaultValueType": "Value"
+      }
+    }
+  ]
+}

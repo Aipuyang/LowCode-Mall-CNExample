@@ -1,0 +1,11 @@
+﻿{
+  "id": "3ab905b53c734bab908a877a1089bb6c",
+  "widget": "sequence",
+  "props": {
+    "name": "Sequence1",
+    "dataType": "String",
+    "startingValue": 1,
+    "increment": 1,
+    "format": "B{Now:yyyyMMdd}{Value:D6}"
+  }
+}

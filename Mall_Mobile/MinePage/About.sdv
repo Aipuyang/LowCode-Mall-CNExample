@@ -1,0 +1,13 @@
+﻿{
+  "id": "page_8dd791749393b92",
+  "widget": "page",
+  "version": "1.0.0",
+  "props": {
+    "ref": "page_8dd791749393b92",
+    "name": "About",
+    "title": "关于SnapDevelop"
+  },
+  "rules": [],
+  "children": [],
+  "references": {}
+}

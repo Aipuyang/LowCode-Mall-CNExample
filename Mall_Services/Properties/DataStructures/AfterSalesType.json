@@ -1,0 +1,37 @@
+﻿{
+  "id": "203131977b7049ddbacd3092ca833d00",
+  "widget": "enum",
+  "props": {
+    "name": "AfterSalesType",
+    "displayName": "售后类型"
+  },
+  "children": [
+    {
+      "id": "5236ff81744a47d6b6b39cc5873d39e8",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "退货退款",
+        "name": "SalesReturn",
+        "value": 0
+      }
+    },
+    {
+      "id": "3147e2f0de764c52bd1691259a9b6799",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "换货",
+        "name": "Exchange",
+        "value": 1
+      }
+    },
+    {
+      "id": "62c6f92780d04351bdec2d3e5860b0da",
+      "widget": "enum_field",
+      "props": {
+        "displayName": "退款(不退货)",
+        "name": "RefundNoReturn",
+        "value": 2
+      }
+    }
+  ]
+}
