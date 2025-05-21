@@ -47,6 +47,6 @@
 # 更多信息
 关于本商城示例应用中包含的功能以及功能的详细设计过程，请参见[项目设计文档](/项目设计文档.md)。
 
-如需下载最新版本的 SnapDevelop，欢迎访问：https://www.aipuyang.com。
+如需下载最新版本的 SnapDevelop，欢迎访问：[https://www.aipuyang.com](https://www.aipuyang.com)。
 
-如需了解更多关于 SnapDevelop 的使用信息，欢迎访问：https://docs.aipuyang.com.
+如需了解更多关于 SnapDevelop 的使用信息，欢迎访问：[https://docs.aipuyang.com](https://docs.aipuyang.com)。
