@@ -135,7 +135,17 @@
             "source": "$(ref)1fb4cdfaba8a41eeaafed8248b0d3bfa.[ab6188e7b3e34049a94a661d3ace829b]",
             "sourceValue": "$(self)[6d2eabc8290241ffbeeb3fa704d0ef91].[ab6188e7b3e34049a94a661d3ace829b_add_params]"
           },
-          "children": []
+          "children": [
+            {
+              "id": "a5cab308dc724090924e8a6262d06beb",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[ab8e3c5491fc47bbab0d0622bb14705e].source.[4d98ecc48d6f48dcaeed2cd090f95389]",
+                "type": "Expression",
+                "value": "$(exp)Now()"
+              }
+            }
+          ]
         },
         {
           "id": "ab6188e7b3e34049a94a661d3ace829b_add_end",

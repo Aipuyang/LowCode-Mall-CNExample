@@ -14,7 +14,7 @@
           "id": "action_9677860754ebb17",
           "widget": "action_api",
           "props": {
-            "target": "&(ref)abd542739f924e76b59184ef738fe3b3.[08999ccc5c75427f8d5721d641448b5e]",
+            "target": "&(ref)abd542739f924e76b59184ef738fe3b3.[2adf12105f084c96a53a98adc401bcd5]",
             "params": []
           }
         },
@@ -23,10 +23,10 @@
           "widget": "action_adapter",
           "children": [
             {
-              "id": "assign_param_0d9eba8da88e6a9",
+              "id": "assign_param_94141eca4e653ab",
               "widget": "assign_param",
               "props": {
-                "name": "CountOrderNumAmountAdapter",
+                "name": "CountOrderNumAmount1Adapter",
                 "value": {
                   "kind": "Field",
                   "value": "&(self)[page_8dd784d90937885].dataSource.[action_9677860754ebb17].target.result"
@@ -608,7 +608,7 @@
               "id": "action_cfd8d37dd782eab",
               "widget": "action_api",
               "props": {
-                "target": "&(ref)abd542739f924e76b59184ef738fe3b3.[08999ccc5c75427f8d5721d641448b5e]",
+                "target": "&(ref)abd542739f924e76b59184ef738fe3b3.[2adf12105f084c96a53a98adc401bcd5]",
                 "params": []
               }
             },
@@ -617,7 +617,7 @@
               "widget": "action_adapter",
               "children": [
                 {
-                  "id": "assign_param_0e6f10d6710407f",
+                  "id": "assign_param_d5b969d484835d6",
                   "widget": "assign_param",
                   "props": {
                     "name": {
@@ -697,7 +697,7 @@
                     "strong": false,
                     "value": {
                       "kind": "Field",
-                      "value": "&(self)[card_1ff62181f6d4dba].dataSource.[action_7e17230902a48c4].[assign_param_0e6f10d6710407f].[03da3c96e36a4c35820e7d9d36cc4cbd]"
+                      "value": "&(self)[card_1ff62181f6d4dba].dataSource.[action_7e17230902a48c4].[assign_param_d5b969d484835d6].[03da3c96e36a4c35820e7d9d36cc4cbd]"
                     }
                   },
                   "children": []
@@ -780,7 +780,7 @@
                     "strong": true,
                     "value": {
                       "kind": "Field",
-                      "value": "&(self)[card_1ff62181f6d4dba].dataSource.[action_7e17230902a48c4].[assign_param_0e6f10d6710407f].[53149b9462b14f4fa376149ed54ccbdf]"
+                      "value": "&(self)[card_1ff62181f6d4dba].dataSource.[action_7e17230902a48c4].[assign_param_d5b969d484835d6].[53149b9462b14f4fa376149ed54ccbdf]"
                     }
                   },
                   "children": []
@@ -943,7 +943,7 @@
                     "strong": true,
                     "value": {
                       "kind": "Field",
-                      "value": "&(self)[card_1ff62181f6d4dba].dataSource.[action_7e17230902a48c4].[assign_param_0e6f10d6710407f].[3b890ef6df0148988cf29d2a94eaa381]"
+                      "value": "&(self)[card_1ff62181f6d4dba].dataSource.[action_7e17230902a48c4].[assign_param_d5b969d484835d6].[3b890ef6df0148988cf29d2a94eaa381]"
                     }
                   },
                   "children": []
@@ -1027,7 +1027,7 @@
                     "strong": true,
                     "value": {
                       "kind": "Field",
-                      "value": "&(self)[card_1ff62181f6d4dba].dataSource.[action_7e17230902a48c4].[assign_param_0e6f10d6710407f].[6d077f96fa13466c82ce3a54ebce3f67]"
+                      "value": "&(self)[card_1ff62181f6d4dba].dataSource.[action_7e17230902a48c4].[assign_param_d5b969d484835d6].[6d077f96fa13466c82ce3a54ebce3f67]"
                     }
                   },
                   "children": []
@@ -1190,7 +1190,7 @@
                 "strong": true,
                 "value": {
                   "kind": "Field",
-                  "value": "&(self)[page_8dd784d90937885].dataSource.[action_57c96d9379fd5e8].[assign_param_0d9eba8da88e6a9].[6d077f96fa13466c82ce3a54ebce3f67]"
+                  "value": "&(self)[page_8dd784d90937885].dataSource.[action_57c96d9379fd5e8].[assign_param_94141eca4e653ab].[6d077f96fa13466c82ce3a54ebce3f67]"
                 }
               },
               "children": []
@@ -1234,25 +1234,25 @@
                         "widget": "action_api",
                         "id": "action_api_d069fb4d154da1f",
                         "props": {
-                          "target": "&(ref)dd18b75a586e4778a7ac6bc426370472.[60b6596af9424df3946586e7f6c14c49]",
+                          "target": "&(ref)dd18b75a586e4778a7ac6bc426370472.[9363fba33f1c45bab5464dfc6b7e3af1]",
                           "params": [
                             {
-                              "id": "assign_param_2a90937ee6d03d6",
+                              "id": "assign_param_257298b286ac90c",
                               "widget": "assign_param",
                               "props": {
                                 "name": {
                                   "kind": "Parameter",
-                                  "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[048a6b1912d44a80bf1cf56ed6c901a0]"
+                                  "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[6ca9251409534141b80c7c5fb087efdb]"
                                 }
                               },
                               "children": [
                                 {
-                                  "id": "assign_param_1de37ebf62a6995",
+                                  "id": "assign_param_de397a1d9aa4b01",
                                   "widget": "assign_param",
                                   "props": {
                                     "name": {
                                       "kind": "Parameter",
-                                      "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[048a6b1912d44a80bf1cf56ed6c901a0].[3039ac5ea0d34a65ab24ff4d669891a3]"
+                                      "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[6ca9251409534141b80c7c5fb087efdb].[3039ac5ea0d34a65ab24ff4d669891a3]"
                                     },
                                     "value": {
                                       "kind": "Members"
@@ -1260,12 +1260,12 @@
                                   }
                                 },
                                 {
-                                  "id": "assign_param_73f058bc1190538",
+                                  "id": "assign_param_29c4b6e09b61dcf",
                                   "widget": "assign_param",
                                   "props": {
                                     "name": {
                                       "kind": "Parameter",
-                                      "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[048a6b1912d44a80bf1cf56ed6c901a0].[e93be9dfc53d4eac8c72b8a3ba9e186a]"
+                                      "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[6ca9251409534141b80c7c5fb087efdb].[e93be9dfc53d4eac8c72b8a3ba9e186a]"
                                     },
                                     "value": {
                                       "kind": "Members"
@@ -1273,12 +1273,12 @@
                                   }
                                 },
                                 {
-                                  "id": "assign_param_dbc4da01b05878b",
+                                  "id": "assign_param_337b406aa4ae29d",
                                   "widget": "assign_param",
                                   "props": {
                                     "name": {
                                       "kind": "Parameter",
-                                      "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[048a6b1912d44a80bf1cf56ed6c901a0].[e5d5dd82b7674dd7b2ffa888879e069e]"
+                                      "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[6ca9251409534141b80c7c5fb087efdb].[e5d5dd82b7674dd7b2ffa888879e069e]"
                                     },
                                     "value": {
                                       "kind": "Members",
@@ -1287,12 +1287,12 @@
                                   }
                                 },
                                 {
-                                  "id": "assign_param_9d5383f2b346220",
+                                  "id": "assign_param_5da49d997af4172",
                                   "widget": "assign_param",
                                   "props": {
                                     "name": {
                                       "kind": "Parameter",
-                                      "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[048a6b1912d44a80bf1cf56ed6c901a0].[be93a6ca39f94e14a29d9c7c5993848c]"
+                                      "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[6ca9251409534141b80c7c5fb087efdb].[be93a6ca39f94e14a29d9c7c5993848c]"
                                     },
                                     "value": {
                                       "kind": "Members"
@@ -1300,26 +1300,26 @@
                                   }
                                 },
                                 {
-                                  "id": "assign_param_4c15672d130038b",
+                                  "id": "assign_param_4498d485b4b319f",
                                   "widget": "assign_param",
                                   "props": {
                                     "name": {
                                       "kind": "Parameter",
-                                      "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[048a6b1912d44a80bf1cf56ed6c901a0].[a8208643dee84d89b8a9625da128c11f]"
+                                      "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[6ca9251409534141b80c7c5fb087efdb].[a8208643dee84d89b8a9625da128c11f]"
                                     },
                                     "value": {
-                                      "kind": "Field",
-                                      "value": "&(ref)168ed9ccd27249bebcf6f3ee129f6a30.[a7a4fcbde82b42db8aaa9f2838c19660]"
+                                      "kind": "EnumField",
+                                      "value": "&(ref)5513e7063b0b467b8bdb3a4411e3d84c.[a7a4fcbde82b42db8aaa9f2838c19660]"
                                     }
                                   }
                                 },
                                 {
-                                  "id": "assign_param_e7d20aea9a4db27",
+                                  "id": "assign_param_86eeb6561a9db25",
                                   "widget": "assign_param",
                                   "props": {
                                     "name": {
                                       "kind": "Parameter",
-                                      "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[048a6b1912d44a80bf1cf56ed6c901a0].[1d90fe38959a4327bbe8cf35b0de81e4]"
+                                      "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[6ca9251409534141b80c7c5fb087efdb].[1d90fe38959a4327bbe8cf35b0de81e4]"
                                     },
                                     "value": {
                                       "kind": "Members",
@@ -1328,26 +1328,25 @@
                                   }
                                 },
                                 {
-                                  "id": "assign_param_266330023ef57b8",
+                                  "id": "assign_param_5f33f90f72a4a59",
                                   "widget": "assign_param",
                                   "props": {
                                     "name": {
                                       "kind": "Parameter",
-                                      "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[048a6b1912d44a80bf1cf56ed6c901a0].[a11d30d900744fe2ac67292c278b9c5c]"
+                                      "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[6ca9251409534141b80c7c5fb087efdb].[a11d30d900744fe2ac67292c278b9c5c]"
                                     },
                                     "value": {
-                                      "kind": "Members",
-                                      "value": ""
+                                      "kind": "Members"
                                     }
                                   }
                                 },
                                 {
-                                  "id": "assign_param_84d5d3ccdacfec9",
+                                  "id": "assign_param_7c8407fd6f77937",
                                   "widget": "assign_param",
                                   "props": {
                                     "name": {
                                       "kind": "Parameter",
-                                      "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[048a6b1912d44a80bf1cf56ed6c901a0].[49d48aacb32748db8e15b3bca634a536]"
+                                      "value": "&(self)[button_9cd8a1630f0fa2f].events.onClick.[action_api_d069fb4d154da1f].target.params.[6ca9251409534141b80c7c5fb087efdb].[49d48aacb32748db8e15b3bca634a536]"
                                     },
                                     "value": {
                                       "kind": "Members",
@@ -1910,7 +1909,7 @@
     "5364f2dd19a6442d87b018c519b2897a": "$(project)Mall_Services/Properties\\DataStructures\\OrderStatistics.json",
     "f176b6ac07584b8986132b8ff246589d": "$(project)Mall_Services/Services\\DeliveryAddress.sdlg",
     "738837970974525": "$(project)Mall_Services/Database.sde",
-    "168ed9ccd27249bebcf6f3ee129f6a30": "$(project)Mall_Services/Properties\\DataStructures\\OrderType.json",
+    "5513e7063b0b467b8bdb3a4411e3d84c": "$(project)Mall_Services/Properties\\DataStructures\\OrderType.json",
     "abd542739f924e76b59184ef738fe3b3": "$(project)Mall_Services/Services\\ShoppingCart.sdlg",
     "5ae9a0967a2745a1a935bd24ea1325db": "..\\MinePage\\Address.sdv",
     "dd18b75a586e4778a7ac6bc426370472": "$(project)Mall_Services/Services\\Order.sdlg",

@@ -1,0 +1,97 @@
+﻿{
+  "id": "page_8dd7daf66d48c89",
+  "widget": "page",
+  "version": "1.0.0",
+  "props": {
+    "ref": "page_8dd7daf66d48c89",
+    "name": "CommentCompleted",
+    "title": "评论成功"
+  },
+  "rules": [],
+  "children": [
+    {
+      "id": "flex_95dfdbac1328374",
+      "widget": "flex",
+      "props": {
+        "ref": "flex_6cd980cbeb6ebcc",
+        "gap": {
+          "custom": true,
+          "number": 0
+        },
+        "style": {
+          "marginTop": "20px"
+        },
+        "justify": "center",
+        "vertical": false
+      },
+      "children": [
+        {
+          "id": "icon_360e41b31dfa87a",
+          "widget": "icon",
+          "props": {
+            "ref": "icon_fe337f731aa7866",
+            "icon": "vant://success",
+            "size": 30,
+            "color": "#22FF00FF"
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "flex_ff849db03b18707",
+      "widget": "flex",
+      "props": {
+        "ref": "flex_8209114db636f75",
+        "gap": {
+          "custom": true,
+          "number": 0
+        },
+        "style": {
+          "marginTop": "20px"
+        },
+        "justify": "center",
+        "vertical": false
+      },
+      "children": [
+        {
+          "id": "button_f2ea0424ab5d3f3",
+          "widget": "button",
+          "props": {
+            "ref": "button_2294179fe000ec3",
+            "shape": "round",
+            "size": "small",
+            "style": {
+              "width": "200px"
+            },
+            "label": "继续逛逛",
+            "events": {
+              "onClick": {
+                "id": "event_ae3282ce5ad36f6",
+                "widget": "event",
+                "children": [
+                  {
+                    "widget": "action_frame",
+                    "id": "action_43397c3623829a7",
+                    "props": {
+                      "target": "navigator.open",
+                      "params": [],
+                      "link": {
+                        "kind": "Document",
+                        "value": "$(ref)10014aadaef046f092638e77bb2fe6a9"
+                      }
+                    }
+                  }
+                ]
+              }
+            }
+          },
+          "children": []
+        }
+      ]
+    }
+  ],
+  "references": {
+    "10014aadaef046f092638e77bb2fe6a9": "..\\TopPage.sdv"
+  }
+}

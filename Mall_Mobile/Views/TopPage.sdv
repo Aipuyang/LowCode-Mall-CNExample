@@ -337,7 +337,8 @@
                     }
                   }
                 }
-              ]
+              ],
+              "props": {}
             }
           ],
           "props": {}
@@ -377,12 +378,12 @@
                       "target": "navigator.open",
                       "params": [
                         {
-                          "id": "assign_param_4d918ff38b91d57",
+                          "id": "assign_param_eb94cd4cd3a34fe",
                           "widget": "assign_param",
                           "props": {
                             "name": {
                               "kind": "VParameter",
-                              "value": "&(ref)b685bdfd057f457e8ab81ec056d41de1.[page_8dd78d687c6d712].params.[aba3854c3d97edd]"
+                              "value": "&(ref)2b95ac3ac1644ef09f12d355b4d87937.[page_8dd78d687c6d712].params.[aba3854c3d97edd]"
                             },
                             "value": {
                               "kind": "Members",
@@ -393,7 +394,7 @@
                       ],
                       "link": {
                         "kind": "Document",
-                        "value": "$(ref)b685bdfd057f457e8ab81ec056d41de1"
+                        "value": "$(ref)2b95ac3ac1644ef09f12d355b4d87937"
                       }
                     }
                   }
@@ -535,10 +536,10 @@
     }
   ],
   "references": {
-    "57e9d223f1e048ab9be93fa8a95a4c58": "$(project)Mall_Services/Services\\PageTop.sdlg",
-    "738837970974525": "$(project)Mall_Services/Database.sde",
-    "6afa53048cbb423ebf50c09e1e5b2645": "$(project)Mall_Services/Services\\Product.sdlg",
-    "a8a603360e504a40b0189a62b62466d0": "..\\Product\\SearchProduct.sdv",
-    "b685bdfd057f457e8ab81ec056d41de1": "..\\Product\\ProductDetail.sdv"
+    "57e9d223f1e048ab9be93fa8a95a4c58": "$(project)Mall_Services/Logics\\Services\\PageTop.sdlg",
+    "738837970974525": "$(project)Mall_Services/Entities\\Database.sde",
+    "6afa53048cbb423ebf50c09e1e5b2645": "$(project)Mall_Services/Logics\\Services\\Product.sdlg",
+    "a8a603360e504a40b0189a62b62466d0": "Product\\SearchProduct.sdv",
+    "2b95ac3ac1644ef09f12d355b4d87937": "Product\\ProductDetail.sdv"
   }
 }

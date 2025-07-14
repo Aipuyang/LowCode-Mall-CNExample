@@ -1,3 +1,4 @@
-﻿<Project>
-	<Type>Service</Type>
+<Project>
+  <Type>Service</Type>
+  <Version>1.0.0</Version>
 </Project>

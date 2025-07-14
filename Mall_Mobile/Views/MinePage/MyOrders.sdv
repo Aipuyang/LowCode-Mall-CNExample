@@ -1,0 +1,485 @@
+﻿{
+  "id": "page_8dd790cb56eeea8",
+  "widget": "page",
+  "version": "1.0.0",
+  "props": {
+    "ref": "page_8dd790cb56eeea8",
+    "name": "MyOrders",
+    "title": "我的订单",
+    "params": [],
+    "dataSource": {
+      "id": "function_5cb5af02f0bff22",
+      "widget": "function",
+      "children": [
+        {
+          "id": "action_4bfc2286da96db3",
+          "widget": "action_api",
+          "props": {
+            "target": "&(ref)ef81910888dd4af2a28c2696bd32fb2a.[3a654a3f5d464a65b7fc7c6d8766ea8d]",
+            "params": []
+          }
+        },
+        {
+          "id": "action_18a729758205ce0",
+          "widget": "action_adapter",
+          "children": [
+            {
+              "id": "assign_param_1d6b183acdd607e",
+              "widget": "assign_param",
+              "props": {
+                "name": "GetEachTypeNum1Adapter",
+                "value": {
+                  "kind": "Field",
+                  "value": "&(self)[page_8dd790cb56eeea8].dataSource.[action_4bfc2286da96db3].target.result"
+                }
+              }
+            }
+          ],
+          "props": {}
+        }
+      ],
+      "props": {}
+    }
+  },
+  "rules": [],
+  "children": [
+    {
+      "id": "tabs_188250b43df5142",
+      "widget": "tabs",
+      "props": {
+        "ref": "tabs_11410753fd669e3",
+        "custom": true
+      },
+      "children": [
+        {
+          "id": "tabPane_248ea33935c7ad9",
+          "widget": "tabPane",
+          "props": {
+            "ref": "tabPane_0ac0f43779946b9",
+            "name": "e515830f1611a93",
+            "title": [
+              {
+                "id": "flex_7bf018bc757fea7",
+                "widget": "flex",
+                "props": {
+                  "ref": "flex_85cec8b57b4d63a",
+                  "gap": {
+                    "custom": false,
+                    "type": "small"
+                  },
+                  "align": "flex-start",
+                  "justify": "flex-start",
+                  "vertical": false
+                },
+                "children": [
+                  {
+                    "id": "text_435e2e5b7e23acd",
+                    "widget": "text",
+                    "props": {
+                      "ref": "text_86e4b955fdd65bf",
+                      "textType": {
+                        "custom": false,
+                        "type": "default"
+                      },
+                      "fontSize": 14,
+                      "strong": false,
+                      "typography": "text",
+                      "value": "待付款"
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "text_da7b20419841f76",
+                    "widget": "text",
+                    "props": {
+                      "ref": "text_82e59bdc452150b",
+                      "textType": {
+                        "custom": false,
+                        "type": "default"
+                      },
+                      "fontSize": 14,
+                      "strong": false,
+                      "typography": "text",
+                      "value": {
+                        "kind": "Field",
+                        "value": "&(self)[page_8dd790cb56eeea8].dataSource.[action_18a729758205ce0].[assign_param_1d6b183acdd607e].[8a75bce246d94e079d593c3045c630a2]"
+                      },
+                      "prefix": "",
+                      "suffix": "",
+                      "hide": true
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          "children": [
+            {
+              "id": "include_9b2cb29a8a08558",
+              "widget": "include",
+              "props": {
+                "ref": "include_aed40b3f69b5a58",
+                "page": {
+                  "id": "action_c83aa03af18d18d",
+                  "widget": "action_frame",
+                  "props": {
+                    "link": {
+                      "kind": "Document",
+                      "value": "$(ref)fdac8063e5b14ecf950e8760e0b7c04a"
+                    },
+                    "params": []
+                  }
+                }
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "tabPane_3b991b3b7cb1260",
+          "widget": "tabPane",
+          "props": {
+            "ref": "tabPane_c15484cc77d3e80",
+            "title": [
+              {
+                "id": "flex_d0708b50c729ca2",
+                "widget": "flex",
+                "props": {
+                  "ref": "flex_8213c31d8b0a120",
+                  "gap": {
+                    "custom": false,
+                    "type": "small"
+                  },
+                  "vertical": false
+                },
+                "children": [
+                  {
+                    "id": "text_31376d0a119bed1",
+                    "widget": "text",
+                    "props": {
+                      "ref": "text_c2d9ee095285ef1",
+                      "textType": {
+                        "custom": false,
+                        "type": "default"
+                      },
+                      "fontSize": 14,
+                      "strong": false,
+                      "typography": "text",
+                      "value": "待收货"
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "text_c3547c725b89fc9",
+                    "widget": "text",
+                    "props": {
+                      "ref": "text_3584758a28cab55",
+                      "textType": {
+                        "custom": false,
+                        "type": "default"
+                      },
+                      "fontSize": 14,
+                      "strong": false,
+                      "typography": "text",
+                      "value": {
+                        "kind": "Field",
+                        "value": "&(self)[page_8dd790cb56eeea8].dataSource.[action_18a729758205ce0].[assign_param_1d6b183acdd607e].[fa15d9fd99a74439a758cbc76731be33]"
+                      },
+                      "prefix": "",
+                      "suffix": "",
+                      "hide": true
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ],
+            "name": "83df88f8496c356"
+          },
+          "children": [
+            {
+              "id": "include_48a8a0c37910e21",
+              "widget": "include",
+              "props": {
+                "ref": "include_757cdf37fb93576",
+                "page": {
+                  "id": "action_448a0d61045510e",
+                  "widget": "action_frame",
+                  "props": {
+                    "link": {
+                      "kind": "Document",
+                      "value": "$(ref)cb55b314f4b84711adaa50cf07075865"
+                    },
+                    "params": []
+                  }
+                }
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "tabPane_9b81fcd59da79cc",
+          "widget": "tabPane",
+          "props": {
+            "ref": "tabPane_404690502296e00",
+            "title": [
+              {
+                "id": "flex_f35624bf5f89305",
+                "widget": "flex",
+                "props": {
+                  "ref": "flex_06503d55a21c56d",
+                  "gap": {
+                    "custom": false,
+                    "type": "small"
+                  },
+                  "vertical": false
+                },
+                "children": [
+                  {
+                    "id": "text_2ed961515085de6",
+                    "widget": "text",
+                    "props": {
+                      "ref": "text_6c28688a09582c7",
+                      "textType": {
+                        "custom": false,
+                        "type": "default"
+                      },
+                      "fontSize": 14,
+                      "strong": false,
+                      "typography": "text",
+                      "value": "待评价"
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "text_0b40b7560d6deb2",
+                    "widget": "text",
+                    "props": {
+                      "ref": "text_d79a866f4901c24",
+                      "textType": {
+                        "custom": false,
+                        "type": "default"
+                      },
+                      "fontSize": 14,
+                      "strong": false,
+                      "typography": "text",
+                      "value": {
+                        "kind": "Field",
+                        "value": "&(self)[page_8dd790cb56eeea8].dataSource.[action_18a729758205ce0].[assign_param_1d6b183acdd607e].[b026afbea2ac4925a58b0aacfbdf5ae9]"
+                      },
+                      "prefix": "",
+                      "suffix": "",
+                      "hide": true
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ],
+            "name": "d7c7c6ef573b586"
+          },
+          "children": [
+            {
+              "id": "include_8a4362c631f553f",
+              "widget": "include",
+              "props": {
+                "ref": "include_fb9c0d56a60c819",
+                "page": {
+                  "id": "action_f7916b6de139289",
+                  "widget": "action_frame",
+                  "props": {
+                    "target": "navigator.go",
+                    "link": {
+                      "kind": "Document",
+                      "value": "$(ref)2e838f7b2a1e4e6d83a3880ff0d53390"
+                    },
+                    "params": []
+                  }
+                }
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "tabPane_c2dc9b31a9193a8",
+          "widget": "tabPane",
+          "props": {
+            "ref": "tabPane_e36bf6045901ca2",
+            "title": [
+              {
+                "id": "flex_a0becc2b1a38074",
+                "widget": "flex",
+                "props": {
+                  "ref": "flex_9a97c1b53d44c05",
+                  "gap": {
+                    "custom": false,
+                    "type": "small"
+                  },
+                  "vertical": false
+                },
+                "children": [
+                  {
+                    "id": "text_e5b4a830394d629",
+                    "widget": "text",
+                    "props": {
+                      "ref": "text_62d531120cd499c",
+                      "textType": {
+                        "custom": false,
+                        "type": "default"
+                      },
+                      "fontSize": 14,
+                      "strong": false,
+                      "typography": "text",
+                      "value": "已完成"
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "text_50f4434e63981fe",
+                    "widget": "text",
+                    "props": {
+                      "ref": "text_404abb0649338be",
+                      "textType": {
+                        "custom": false,
+                        "type": "default"
+                      },
+                      "fontSize": 14,
+                      "strong": false,
+                      "typography": "text",
+                      "value": {
+                        "kind": "Field",
+                        "value": "&(self)[page_8dd790cb56eeea8].dataSource.[action_18a729758205ce0].[assign_param_1d6b183acdd607e].[dbf7fec26a66491c80965ea7ed72c51d]"
+                      },
+                      "prefix": "",
+                      "suffix": "",
+                      "hide": true
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ],
+            "name": "faf6c42385c9a8f"
+          },
+          "children": [
+            {
+              "id": "include_e977b18ff7dde63",
+              "widget": "include",
+              "props": {
+                "ref": "include_3155a38e24b6a0b",
+                "page": {
+                  "id": "action_8fdd917f61e6f1f",
+                  "widget": "action_frame",
+                  "props": {
+                    "target": "navigator.go",
+                    "link": {
+                      "kind": "Document",
+                      "value": "$(ref)abf6aac9ef0b42f5b5ed24d475f3cb4c"
+                    },
+                    "params": []
+                  }
+                }
+              },
+              "children": []
+            }
+          ]
+        },
+        {
+          "id": "tabPane_82689330baf09e7",
+          "widget": "tabPane",
+          "props": {
+            "ref": "tabPane_c1a3e6b180f89b9",
+            "name": "a601d38c84e312f",
+            "title": [
+              {
+                "id": "flex_26fd62280ad6868",
+                "widget": "flex",
+                "props": {
+                  "ref": "flex_d05a4e7aec37bb2",
+                  "gap": {
+                    "custom": false,
+                    "type": "small"
+                  },
+                  "vertical": false
+                },
+                "children": [
+                  {
+                    "id": "text_0600b32b50d244d",
+                    "widget": "text",
+                    "props": {
+                      "ref": "text_3a094d1bbcfc544",
+                      "textType": {
+                        "custom": false,
+                        "type": "default"
+                      },
+                      "fontSize": 14,
+                      "strong": false,
+                      "typography": "text",
+                      "value": "已取消"
+                    },
+                    "children": []
+                  },
+                  {
+                    "id": "text_e07d6e9f03fad9c",
+                    "widget": "text",
+                    "props": {
+                      "ref": "text_c4c1b296143b4ef",
+                      "textType": {
+                        "custom": false,
+                        "type": "default"
+                      },
+                      "fontSize": 14,
+                      "strong": false,
+                      "typography": "text",
+                      "value": {
+                        "kind": "Field",
+                        "value": "&(self)[page_8dd790cb56eeea8].dataSource.[action_18a729758205ce0].[assign_param_1d6b183acdd607e].[38c5c3dc99ac4d7caf1ab3ec2864e690]"
+                      },
+                      "prefix": "",
+                      "suffix": "",
+                      "hide": true
+                    },
+                    "children": []
+                  }
+                ]
+              }
+            ]
+          },
+          "children": [
+            {
+              "id": "include_cd59fb0d9dbd64d",
+              "widget": "include",
+              "props": {
+                "ref": "include_bf703b04d00a987",
+                "page": {
+                  "id": "action_295b6aa6f91c8c4",
+                  "widget": "action_frame",
+                  "props": {
+                    "target": "navigator.go",
+                    "link": {
+                      "kind": "Document",
+                      "value": "$(ref)3e8ae97b34c94650b784f06074582593"
+                    },
+                    "params": []
+                  }
+                }
+              },
+              "children": []
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": {
+    "2e838f7b2a1e4e6d83a3880ff0d53390": "..\\Order\\OrderAwaitEvaluation.sdv",
+    "3e8ae97b34c94650b784f06074582593": "..\\Order\\OrderCancelled.sdv",
+    "abf6aac9ef0b42f5b5ed24d475f3cb4c": "..\\Order\\OrderCompleted.sdv",
+    "fdac8063e5b14ecf950e8760e0b7c04a": "..\\Order\\OrderTobePayed.sdv",
+    "cb55b314f4b84711adaa50cf07075865": "..\\Order\\OrderTobeReceived.sdv",
+    "ef81910888dd4af2a28c2696bd32fb2a": "$(project)Mall_Services/Logics\\Services\\Order.sdlg"
+  }
+}

@@ -49,7 +49,18 @@
             "next": "$(self)[c80e29c5d2d946e3ad0223a8d6fd59d9_add_end]",
             "source": "$(ref)647bd48d67dd4bc2abd164d69dae9adb.[c80e29c5d2d946e3ad0223a8d6fd59d9]",
             "sourceValue": "$(self)[9690505c51de470c8280c263ba66d3d7].[c80e29c5d2d946e3ad0223a8d6fd59d9_add_params]"
-          }
+          },
+          "children": [
+            {
+              "id": "5ad6c79f83e5450eb2ee56b7c96f1f7f",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[6b89b7df8d4e493199420fd702eb0a12].source.[dfdaddcbd9724dc4bec3895a324420e0]",
+                "type": "Expression",
+                "value": "$(exp)Now()"
+              }
+            }
+          ]
         },
         {
           "id": "c80e29c5d2d946e3ad0223a8d6fd59d9_add_end",

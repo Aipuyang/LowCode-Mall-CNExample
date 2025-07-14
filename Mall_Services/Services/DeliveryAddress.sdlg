@@ -88,7 +88,18 @@
             "next": "$(self)[d70306de7262417680756cbbdbab010f_add_end]",
             "source": "$(ref)6326d2a301954237bb2022a603354ae0.[d70306de7262417680756cbbdbab010f]",
             "sourceValue": "$(self)[2a428cd70eb14957ae275e304d252fd9].[d70306de7262417680756cbbdbab010f_add_params]"
-          }
+          },
+          "children": [
+            {
+              "id": "a9d41e04ab95411981aea382a97da78b",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[40e4381726b74251b1754030887ca9cd].source.[3576d3d9e0e0491eac188620eba56464]",
+                "type": "Expression",
+                "value": "$(exp)Now()"
+              }
+            }
+          ]
         },
         {
           "id": "d70306de7262417680756cbbdbab010f_add_end",

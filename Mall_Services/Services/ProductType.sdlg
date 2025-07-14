@@ -49,7 +49,18 @@
             "next": "$(self)[ca9725f642ef425fa462e09c6201ceff_add_end]",
             "source": "$(ref)4f3e22bb432c4bf3bba6468fdfaf9000.[ca9725f642ef425fa462e09c6201ceff]",
             "sourceValue": "$(self)[6dd0d578d8904f62b8651a926c5a415d].[ca9725f642ef425fa462e09c6201ceff_add_params]"
-          }
+          },
+          "children": [
+            {
+              "id": "a189f46d57f343f0ae6e1a80f8c5d4cb",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[18af6eac787640c4bc5bf6f64d586546].source.[a87e3ba06c6947f68f7bee9a43b316c4]",
+                "type": "Expression",
+                "value": "$(exp)Now()"
+              }
+            }
+          ]
         },
         {
           "id": "ca9725f642ef425fa462e09c6201ceff_add_end",
@@ -189,8 +200,8 @@
               "widget": "assign_field",
               "props": {
                 "field": "&(self)[10dd473e61cb46098e6a9b8d2ad9d37d].source.[a87e3ba06c6947f68f7bee9a43b316c4]",
-                "type": "Field",
-                "value": "&(self)[94c16427908b46558c64a401eb8b63fc].[ca9725f642ef425fa462e09c6201ceff_update_params].[a87e3ba06c6947f68f7bee9a43b316c4]"
+                "type": "Expression",
+                "value": "$(exp)Now()"
               }
             },
             {

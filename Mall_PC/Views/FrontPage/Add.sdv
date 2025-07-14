@@ -1,0 +1,205 @@
+﻿{
+  "id": "page_b80789b8d0d64df1be714ad6f8341fa6",
+  "widget": "page",
+  "version": "1.0.0",
+  "props": {
+    "ref": "page_b80789b8d0d64df1be714ad6f8341fa6",
+    "name": "Add",
+    "title": "首页置顶",
+    "params": [],
+    "rules": [],
+    "exposes": [
+      {
+        "id": "e649ea505d3a47dc998f0b2157b18a11",
+        "target": "&(self)[formContainer_c80fc0a3320e442e8a49a5eee370ef67].submit"
+      }
+    ]
+  },
+  "children": [
+    {
+      "id": "card_b0c4847393754431840bb84970137928",
+      "widget": "card",
+      "props": {
+        "ref": "card_b0c4847393754431840bb84970137928",
+        "title": "",
+        "extra": [],
+        "hideActions": true
+      },
+      "children": [
+        {
+          "id": "formContainer_c80fc0a3320e442e8a49a5eee370ef67",
+          "widget": "formContainer",
+          "props": {
+            "ref": "formContainer_c80fc0a3320e442e8a49a5eee370ef67",
+            "labelAlign": "left",
+            "layout": "horizontal",
+            "colon": false,
+            "labelCol": {
+              "width": {
+                "kind": "span",
+                "value": 4
+              }
+            },
+            "set": {
+              "id": "function_8c96a6d2d8044ac79144844032564319",
+              "widget": "function",
+              "children": [
+                {
+                  "id": "action_fbc95f9807594f51bd42fe1b42640379",
+                  "widget": "action_api",
+                  "props": {
+                    "target": "&(ref)eff9369871d642e9b921fc5aca95e336.[8c46a484d4f1424c801aabfa48143838_add_func]"
+                  }
+                }
+              ],
+              "props": {}
+            },
+            "model": {
+              "formModel": "$(ref)eff9369871d642e9b921fc5aca95e336.[8c46a484d4f1424c801aabfa48143838_add_func].params"
+            }
+          },
+          "children": [
+            {
+              "id": "formItem_968ef525eee347cc9fb7cf5caff0d4e8",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_968ef525eee347cc9fb7cf5caff0d4e8",
+                "label": "Id",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_c80fc0a3320e442e8a49a5eee370ef67].set.[action_fbc95f9807594f51bd42fe1b42640379].target.params.[8c46a484d4f1424c801aabfa48143838_add_params].[cf654aaf36f640838d3de6e2772eac1e]"
+                },
+                "hide": true
+              },
+              "children": [
+                {
+                  "id": "numberInput_ffebd553e13b44d38078aab6431646ec",
+                  "widget": "numberInput",
+                  "props": {
+                    "style": {
+                      "width": "100%"
+                    },
+                    "ref": "numberInput_ffebd553e13b44d38078aab6431646ec",
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_c80fc0a3320e442e8a49a5eee370ef67].set.[action_fbc95f9807594f51bd42fe1b42640379].target.params.[8c46a484d4f1424c801aabfa48143838_add_params].[cf654aaf36f640838d3de6e2772eac1e]"
+                    }
+                  }
+                }
+              ]
+            },
+            {
+              "id": "formItem_4e384b8230394f3d8418da228f7cf8b2",
+              "widget": "formItem",
+              "props": {
+                "ref": "formItem_4e384b8230394f3d8418da228f7cf8b2",
+                "label": "商品",
+                "labelAlign": "",
+                "name": {
+                  "kind": "Field",
+                  "value": "&(self)[formContainer_c80fc0a3320e442e8a49a5eee370ef67].set.[action_fbc95f9807594f51bd42fe1b42640379].target.params.[8c46a484d4f1424c801aabfa48143838_add_params].[bcb3307ba17c4e81bb727cc4b0bf352d]"
+                }
+              },
+              "children": [
+                {
+                  "id": "select_464d510b5b99891",
+                  "widget": "select",
+                  "props": {
+                    "style": {
+                      "width": "100%"
+                    },
+                    "ref": "select_c9aa6878e9f2655",
+                    "defaultItemLabel": "全部",
+                    "model": {
+                      "data": "&(ref)738837970974525.[ab6188e7b3e34049a94a661d3ace829b]"
+                    },
+                    "dataSource": {
+                      "id": "function_91b30300fbedfb3",
+                      "widget": "function",
+                      "children": [
+                        {
+                          "id": "action_8dec9ae1c58a757",
+                          "widget": "action_api",
+                          "props": {
+                            "target": "&(ref)5c28dd7ed0344f7c839acf03303a83ab.[ab6188e7b3e34049a94a661d3ace829b_list_func]",
+                            "params": []
+                          }
+                        },
+                        {
+                          "id": "action_52f4d8ffa0c30dd",
+                          "widget": "action_adapter",
+                          "children": [
+                            {
+                              "id": "assign_param_66f7f1d0f72a27b",
+                              "widget": "assign_param",
+                              "props": {
+                                "name": {
+                                  "kind": "Members",
+                                  "value": "&(self)[select_464d510b5b99891].data"
+                                },
+                                "value": {
+                                  "kind": "Field",
+                                  "value": "&(self)[select_464d510b5b99891].dataSource.[action_8dec9ae1c58a757].target.result"
+                                }
+                              }
+                            }
+                          ],
+                          "props": {}
+                        }
+                      ],
+                      "props": {}
+                    },
+                    "fieldName": {
+                      "kind": "Field",
+                      "value": "&(self)[select_464d510b5b99891].dataSource.[action_52f4d8ffa0c30dd].[assign_param_66f7f1d0f72a27b].[d1703919d6904a9f97d48ebf07b98156]"
+                    },
+                    "fieldValue": {
+                      "kind": "Field",
+                      "value": "&(self)[select_464d510b5b99891].dataSource.[action_52f4d8ffa0c30dd].[assign_param_66f7f1d0f72a27b].[55cc5d9c658f45b2936be4bb180e2b0c]"
+                    },
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[formContainer_c80fc0a3320e442e8a49a5eee370ef67].set.[action_fbc95f9807594f51bd42fe1b42640379].target.params.[8c46a484d4f1424c801aabfa48143838_add_params].[bcb3307ba17c4e81bb727cc4b0bf352d]"
+                    }
+                  },
+                  "children": []
+                }
+              ]
+            },
+            {
+              "id": "flex_c67bcd08fe8d4b56830a1dcff5fbbdfc",
+              "widget": "flex",
+              "props": {
+                "ref": "flex_c67bcd08fe8d4b56830a1dcff5fbbdfc",
+                "justify": "end"
+              },
+              "children": [
+                {
+                  "id": "button_af218b84f9be4159ac1260d19cbad33c",
+                  "widget": "button",
+                  "props": {
+                    "style": {
+                      "flexGrow": 0,
+                      "flexShrink": 0,
+                      "flexBasis": "auto"
+                    },
+                    "ref": "button_Submit",
+                    "htmlType": "submit",
+                    "label": "提交",
+                    "type": "primary"
+                  }
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": {
+    "eff9369871d642e9b921fc5aca95e336": "$(project)Mall_Services/Logics\\Services\\PageTop.sdlg",
+    "5c28dd7ed0344f7c839acf03303a83ab": "$(project)Mall_Services/Logics\\Services\\Product.sdlg",
+    "738837970974525": "$(project)Mall_Services/Entities\\Database.sde"
+  }
+}

@@ -15,7 +15,7 @@
           "id": "action_4bfc2286da96db3",
           "widget": "action_api",
           "props": {
-            "target": "&(ref)ef81910888dd4af2a28c2696bd32fb2a.[447832ef2856444ea6402f1740ce2f3f]",
+            "target": "&(ref)ef81910888dd4af2a28c2696bd32fb2a.[3a654a3f5d464a65b7fc7c6d8766ea8d]",
             "params": []
           }
         },
@@ -24,10 +24,10 @@
           "widget": "action_adapter",
           "children": [
             {
-              "id": "assign_param_8b88f5a31bac3e6",
+              "id": "assign_param_1d6b183acdd607e",
               "widget": "assign_param",
               "props": {
-                "name": "GetEachTypeNumAdapter",
+                "name": "GetEachTypeNum1Adapter",
                 "value": {
                   "kind": "Field",
                   "value": "&(self)[page_8dd790cb56eeea8].dataSource.[action_4bfc2286da96db3].target.result"
@@ -102,7 +102,7 @@
                       "typography": "text",
                       "value": {
                         "kind": "Field",
-                        "value": "&(self)[page_8dd790cb56eeea8].dataSource.[action_18a729758205ce0].[assign_param_8b88f5a31bac3e6].[8a75bce246d94e079d593c3045c630a2]"
+                        "value": "&(self)[page_8dd790cb56eeea8].dataSource.[action_18a729758205ce0].[assign_param_1d6b183acdd607e].[8a75bce246d94e079d593c3045c630a2]"
                       },
                       "prefix": "",
                       "suffix": "",
@@ -184,7 +184,7 @@
                       "typography": "text",
                       "value": {
                         "kind": "Field",
-                        "value": "&(self)[page_8dd790cb56eeea8].dataSource.[action_18a729758205ce0].[assign_param_8b88f5a31bac3e6].[fa15d9fd99a74439a758cbc76731be33]"
+                        "value": "&(self)[page_8dd790cb56eeea8].dataSource.[action_18a729758205ce0].[assign_param_1d6b183acdd607e].[fa15d9fd99a74439a758cbc76731be33]"
                       },
                       "prefix": "",
                       "suffix": "",
@@ -267,7 +267,7 @@
                       "typography": "text",
                       "value": {
                         "kind": "Field",
-                        "value": "&(self)[page_8dd790cb56eeea8].dataSource.[action_18a729758205ce0].[assign_param_8b88f5a31bac3e6].[b026afbea2ac4925a58b0aacfbdf5ae9]"
+                        "value": "&(self)[page_8dd790cb56eeea8].dataSource.[action_18a729758205ce0].[assign_param_1d6b183acdd607e].[b026afbea2ac4925a58b0aacfbdf5ae9]"
                       },
                       "prefix": "",
                       "suffix": "",
@@ -351,7 +351,7 @@
                       "typography": "text",
                       "value": {
                         "kind": "Field",
-                        "value": "&(self)[page_8dd790cb56eeea8].dataSource.[action_18a729758205ce0].[assign_param_8b88f5a31bac3e6].[dbf7fec26a66491c80965ea7ed72c51d]"
+                        "value": "&(self)[page_8dd790cb56eeea8].dataSource.[action_18a729758205ce0].[assign_param_1d6b183acdd607e].[dbf7fec26a66491c80965ea7ed72c51d]"
                       },
                       "prefix": "",
                       "suffix": "",
@@ -436,7 +436,7 @@
                       "typography": "text",
                       "value": {
                         "kind": "Field",
-                        "value": "&(self)[page_8dd790cb56eeea8].dataSource.[action_18a729758205ce0].[assign_param_8b88f5a31bac3e6].[38c5c3dc99ac4d7caf1ab3ec2864e690]"
+                        "value": "&(self)[page_8dd790cb56eeea8].dataSource.[action_18a729758205ce0].[assign_param_1d6b183acdd607e].[38c5c3dc99ac4d7caf1ab3ec2864e690]"
                       },
                       "prefix": "",
                       "suffix": "",

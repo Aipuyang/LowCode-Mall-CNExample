@@ -110,7 +110,18 @@
             "next": "$(self)[df0e38af017149eebb9831ecb02fa520_add_end]",
             "source": "$(ref)1733280d5c5342b191e22d06f3fc12c2.[df0e38af017149eebb9831ecb02fa520]",
             "sourceValue": "$(self)[fb4d1e5f4e9a4914827b060995abbdbe].[df0e38af017149eebb9831ecb02fa520_add_params]"
-          }
+          },
+          "children": [
+            {
+              "id": "9a997d25ab1d4756a154e8e3b6d13fcb",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[63e9538311d2429291955b54ba589321].source.[469fd6fe40bf440c8680155d5a9dca4b]",
+                "type": "Expression",
+                "value": "$(exp)Now()"
+              }
+            }
+          ]
         },
         {
           "id": "df0e38af017149eebb9831ecb02fa520_add_end",
@@ -259,8 +270,8 @@
               "widget": "assign_field",
               "props": {
                 "field": "&(self)[3a6b1b5912314f338f88ecd59974cee6].source.[469fd6fe40bf440c8680155d5a9dca4b]",
-                "type": "Field",
-                "value": "&(self)[3111b6cb69f8434e879f4cae31aea1b1].[df0e38af017149eebb9831ecb02fa520_update_params].[469fd6fe40bf440c8680155d5a9dca4b]"
+                "type": "Expression",
+                "value": "$(exp)Now()"
               }
             },
             {
@@ -699,8 +710,8 @@
         "requestMethod": "GET",
         "route": "GetNum",
         "authStrategy": "",
-        "x": 16,
-        "y": 171.2
+        "x": 25,
+        "y": 286.2
       },
       "children": [
         {
@@ -731,7 +742,7 @@
           "widget": "query",
           "props": {
             "x": 165,
-            "y": 248.6,
+            "y": 249,
             "name": "查询",
             "filter": "$(self)[627a79a6b8eb46309035859d6c24def6]",
             "strategy": "list",
@@ -776,9 +787,9 @@
           "widget": "variable",
           "props": {
             "x": 165,
-            "y": 362.2,
+            "y": 363,
             "name": "变量定义",
-            "next": "$(self)[a596fbd561d74a1cb775149c7c9c5c87]"
+            "next": "$(self)[c37a1d6af63b4296b42cbb780f6a505c]"
           },
           "children": [
             {
@@ -795,56 +806,23 @@
           ]
         },
         {
-          "id": "a596fbd561d74a1cb775149c7c9c5c87",
-          "widget": "loop",
+          "id": "c37a1d6af63b4296b42cbb780f6a505c",
+          "widget": "adapter",
           "props": {
             "x": 165,
-            "y": 475.8,
-            "name": "遍历",
-            "strategy": "Iterate",
-            "countType": "Ascending",
-            "sourceType": "Field",
-            "next": "$(self)[61f34a614fbe45c7a54cc0e9c56f464f]",
-            "source": "&(self)[0a4500ad6939474ba15950fd6a08cd54].result.[df0e38af017149eebb9831ecb02fa520]"
+            "y": 477,
+            "name": "数据适配",
+            "next": "$(self)[61f34a614fbe45c7a54cc0e9c56f464f]"
           },
           "children": [
             {
-              "id": "a5fdce3200624d87b581151311016d03",
-              "widget": "loop_var",
+              "id": "e8905df9473f402ea29385cf1446d36f",
+              "widget": "assign_field",
               "props": {
-                "name": "当前项",
-                "next": "$(self)[a1eff7694d644b238d807512e461874a]"
-              },
-              "children": [
-                {
-                  "id": "a1eff7694d644b238d807512e461874a",
-                  "widget": "adapter",
-                  "props": {
-                    "x": 471,
-                    "y": 558.2,
-                    "name": "数据适配",
-                    "next": "$(self)[f713f2e6c74147e1a501d63490812121]"
-                  },
-                  "children": [
-                    {
-                      "id": "4a0d435a17654dbf9b5ee02ac48cdbb7",
-                      "widget": "assign_field",
-                      "props": {
-                        "type": "Expression",
-                        "field": "&(self)[ff7c5b960b8c4f42bc9e5957f4b51399].[035da779a5bf40d3ae7b8e1659675474]",
-                        "value": "$(exp)&(self)[ff7c5b960b8c4f42bc9e5957f4b51399].[035da779a5bf40d3ae7b8e1659675474] + 1"
-                      }
-                    }
-                  ]
-                },
-                {
-                  "id": "f713f2e6c74147e1a501d63490812121",
-                  "widget": "back",
-                  "props": {
-                    "next": "$(self)[a596fbd561d74a1cb775149c7c9c5c87]"
-                  }
-                }
-              ]
+                "type": "Expression",
+                "field": "&(self)[ff7c5b960b8c4f42bc9e5957f4b51399].[035da779a5bf40d3ae7b8e1659675474]",
+                "value": "$(exp)Count(&(self)[0a4500ad6939474ba15950fd6a08cd54].result.[df0e38af017149eebb9831ecb02fa520].[b04d6d33069c4a42a0c0b642120940ba])"
+              }
             }
           ]
         },
@@ -853,7 +831,7 @@
           "widget": "variable",
           "props": {
             "x": 165,
-            "y": 805.4,
+            "y": 591,
             "name": "变量定义1",
             "next": "$(self)[ffdea47cdebc45b994b481f77065f424]"
           },
@@ -865,7 +843,7 @@
                 "name": "CommentNumStr",
                 "dataType": "String",
                 "type": "Expression",
-                "value": "$(exp)\"全部评论（\" + &(self)[ff7c5b960b8c4f42bc9e5957f4b51399].[035da779a5bf40d3ae7b8e1659675474] + '）'"
+                "value": "$(exp)\"全部评论（\" + &(self)[ff7c5b960b8c4f42bc9e5957f4b51399].[035da779a5bf40d3ae7b8e1659675474] + \"）\""
               },
               "children": []
             }
@@ -876,7 +854,7 @@
           "widget": "end",
           "props": {
             "x": 165,
-            "y": 919,
+            "y": 705,
             "name": "结束",
             "type": "Field",
             "result": "&(self)[61f34a614fbe45c7a54cc0e9c56f464f].[47f7d016a3c448708f7ccff574dbc775]",

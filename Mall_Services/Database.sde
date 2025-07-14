@@ -7,8 +7,8 @@
     "description": "Database",
     "dbType": "Sqlite",
     "connectionString": "Data Source=\"data.db\"",
-    "x": -230.39999999999998,
-    "y": -40.69999999999995
+    "x": -219.4,
+    "y": -113.7
   },
   "references": {
     "efd54dc59f5144a4b9f6bfe0aabc6cdc": "Properties\\DataStructures\\OrderType.json",
@@ -19,7 +19,7 @@
       "id": "ab6188e7b3e34049a94a661d3ace829b",
       "widget": "table",
       "props": {
-        "x": 100.80000000000001,
+        "x": 100.8,
         "y": 57.6,
         "displayName": "商品",
         "name": "Product",
@@ -574,7 +574,7 @@
       "id": "7498ec44f6e94d43b9a0031f21478826",
       "widget": "table",
       "props": {
-        "x": 100.80000000000001,
+        "x": 100.8,
         "y": 320.8,
         "displayName": "购物车",
         "name": "ShoppingCart",
@@ -1061,7 +1061,7 @@
       "id": "00946b3d44784fe1983ee817b0a358e7",
       "widget": "table",
       "props": {
-        "x": 100.80000000000001,
+        "x": 100.8,
         "y": 523.2,
         "displayName": "我的收藏",
         "name": "Favorite",
@@ -1293,6 +1293,18 @@
             "nullable": true,
             "defaultValueType": "Value",
             "isRelationship": true
+          }
+        },
+        {
+          "id": "57aebfab45164470945c27ffbe9cfde2",
+          "widget": "field",
+          "props": {
+            "displayName": "ProductIds",
+            "name": "ProductIds",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isCollection": true
           }
         }
       ]

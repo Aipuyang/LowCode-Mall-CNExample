@@ -3,7 +3,7 @@
   "widget": "model",
   "props": {
     "name": "OrderAdd",
-    "displayName": "OrderAdd"
+    "displayName": "OrderProductAdd"
   },
   "children": [
     {

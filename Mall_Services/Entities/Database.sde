@@ -1,0 +1,1721 @@
+﻿{
+  "id": "738837970974525",
+  "widget": "database",
+  "version": 0,
+  "props": {
+    "name": "Database",
+    "description": "Database",
+    "dbType": "Sqlite",
+    "connectionString": "Data Source=\"data.db\"",
+    "x": -219.4,
+    "y": -113.7
+  },
+  "references": {
+    "efd54dc59f5144a4b9f6bfe0aabc6cdc": "..\\Properties\\DataStructures\\OrderType.json",
+    "a1575b3d9fb14792a05b7fcd70419605": "..\\Properties\\DataStructures\\AfterSalesType.json"
+  },
+  "children": [
+    {
+      "id": "ab6188e7b3e34049a94a661d3ace829b",
+      "widget": "table",
+      "props": {
+        "x": 100.8,
+        "y": 57.6,
+        "displayName": "商品",
+        "name": "Product",
+        "indexes": [
+          {
+            "name": "PK_Product",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[55cc5d9c658f45b2936be4bb180e2b0c]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "foreignKeys": [
+          {
+            "id": "64c1684c3eeb480592ebee056f74f761",
+            "name": "FK_Product_ProductType",
+            "refTable": "$(self)[ca9725f642ef425fa462e09c6201ceff]",
+            "columns": [
+              "$(self)[ab6188e7b3e34049a94a661d3ace829b].[ae6c9a22aa39419bbe926ae0fefe3877]"
+            ],
+            "refColumns": [
+              "$(self)[ca9725f642ef425fa462e09c6201ceff].[675dc98e2d6746a193fa49407baacae5]"
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "55cc5d9c658f45b2936be4bb180e2b0c",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "d1703919d6904a9f97d48ebf07b98156",
+          "widget": "column",
+          "props": {
+            "displayName": "名称",
+            "name": "Name",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "validations": []
+          }
+        },
+        {
+          "id": "df55ce90b2794cc2ab08f7bbb3af84a4",
+          "widget": "column",
+          "props": {
+            "displayName": "品牌",
+            "name": "Brand",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "82ceb48d6a96434e8c6be27b373ed624",
+          "widget": "column",
+          "props": {
+            "displayName": "描述",
+            "name": "Description",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "a9def5044e604127ad7d394b720723b1",
+          "widget": "column",
+          "props": {
+            "displayName": "图片",
+            "name": "ImageUrl",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "8fc7dd76f7ab41dabec9104cd4a0d2c6",
+          "widget": "column",
+          "props": {
+            "displayName": "价格",
+            "name": "Price",
+            "dataType": "Double",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "9d35d32850664bbaacdaac6c5662e9c2",
+          "widget": "column",
+          "props": {
+            "displayName": "折扣价格",
+            "description": "折扣0.0-1.0，商品价格=原价*折扣",
+            "name": "DiscountPrice",
+            "dataType": "Double",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "ae6c9a22aa39419bbe926ae0fefe3877",
+          "widget": "column",
+          "props": {
+            "displayName": "类别",
+            "name": "Type",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "1282a68d174f4f8e8912700b040955c1",
+          "widget": "column",
+          "props": {
+            "displayName": "上架",
+            "name": "Onself",
+            "dataType": "Boolean",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "defaultValue": "false"
+          }
+        },
+        {
+          "id": "4d98ecc48d6f48dcaeed2cd090f95389",
+          "widget": "column",
+          "props": {
+            "displayName": "创建时间",
+            "name": "CreatTime",
+            "dataType": "DateTime",
+            "nullable": true,
+            "defaultValueType": "Expression",
+            "defaultValue": "$(exp)Now()"
+          }
+        },
+        {
+          "id": "8c46a484d4f1424c801aabfa48143838_72e455150ae24489bc3e49d288c9c12a_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "PageTops",
+            "name": "PageTops",
+            "dataType": "$(self)[8c46a484d4f1424c801aabfa48143838]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "7498ec44f6e94d43b9a0031f21478826_ca225706fc334b01a7d03609114f5c0f_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "ShoppingCarts",
+            "name": "ShoppingCarts",
+            "dataType": "$(self)[7498ec44f6e94d43b9a0031f21478826]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "00946b3d44784fe1983ee817b0a358e7_e0a5969355294f53afeee88f8f6ce5f6_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "Favorites",
+            "name": "Favorites",
+            "dataType": "$(self)[00946b3d44784fe1983ee817b0a358e7]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "9f56e81fa82d4812906a3479f737608d_bcd8e0a799c44b7db32f067a39fa4f50_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "OrderProducts",
+            "name": "OrderProducts",
+            "dataType": "$(self)[9f56e81fa82d4812906a3479f737608d]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "df0e38af017149eebb9831ecb02fa520_0052560a067d44f38f0e1ea1caec37c1_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "Comments",
+            "name": "Comments",
+            "dataType": "$(self)[df0e38af017149eebb9831ecb02fa520]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "c80e29c5d2d946e3ad0223a8d6fd59d9_e6521633e26544d8bb4b88ece234c749_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "AfterSales",
+            "name": "AfterSales",
+            "dataType": "$(self)[c80e29c5d2d946e3ad0223a8d6fd59d9]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "126710830d5440388911fa674e407a63_178681454bcd43e2b993fd2e85fa6863_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "ProductImgs",
+            "name": "ProductImgs",
+            "dataType": "$(self)[126710830d5440388911fa674e407a63]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "ca9725f642ef425fa462e09c6201ceff_64c1684c3eeb480592ebee056f74f761_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "ProductType",
+            "name": "ProductType",
+            "dataType": "$(self)[ca9725f642ef425fa462e09c6201ceff]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "d70306de7262417680756cbbdbab010f",
+      "widget": "table",
+      "props": {
+        "x": 609.6,
+        "y": 61.6,
+        "displayName": "收货地址",
+        "name": "DeliveryAddress",
+        "indexes": [
+          {
+            "name": "PK_DeliveryAddress",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[4b9ef8d9045a4da68ebe67bd91070f22]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "foreignKeys": [
+          {
+            "id": "b26d508c11794f1c98a957884de380e1",
+            "name": "FK_DeliveryAddress_User",
+            "refTable": "$(self)[9089eee3fc344ce5a63b215f50198498]",
+            "columns": [
+              "$(self)[d70306de7262417680756cbbdbab010f].[fe4ea1f019c043329ce0b2d394296186]"
+            ],
+            "refColumns": [
+              "$(self)[9089eee3fc344ce5a63b215f50198498].[390004c4866e40a1ba387d139f30185b]"
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "4b9ef8d9045a4da68ebe67bd91070f22",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "291786b025bf476bb79fb3607f1a0001",
+          "widget": "column",
+          "props": {
+            "displayName": "地区",
+            "name": "Area",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "cbf89d4dd92c4c7a84c7ffaf39df6752",
+          "widget": "column",
+          "props": {
+            "displayName": "详细地址",
+            "name": "DetailAdress",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "9c860fecbe604d0a93872fe24acc2f09",
+          "widget": "column",
+          "props": {
+            "displayName": "收件人",
+            "name": "Recipient",
+            "dataType": "String",
+            "nullable": true,
+            "length": 10,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "9a8d28250570497e8d9384fe778e97e6",
+          "widget": "column",
+          "props": {
+            "displayName": "电话号码",
+            "name": "PhoneNumber",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "fe4ea1f019c043329ce0b2d394296186",
+          "widget": "column",
+          "props": {
+            "displayName": "所属用户",
+            "name": "Userid",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "92764880708943cc9e73e1559fbc54fe",
+          "widget": "column",
+          "props": {
+            "displayName": "是否默认",
+            "name": "isDefault",
+            "dataType": "Boolean",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "defaultValue": "false"
+          }
+        },
+        {
+          "id": "3576d3d9e0e0491eac188620eba56464",
+          "widget": "column",
+          "props": {
+            "displayName": "更新时间",
+            "name": "CreatTime",
+            "dataType": "DateTime",
+            "nullable": true,
+            "defaultValueType": "Expression",
+            "defaultValue": "$(exp)Now()"
+          }
+        },
+        {
+          "id": "9089eee3fc344ce5a63b215f50198498_b26d508c11794f1c98a957884de380e1_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "User",
+            "name": "User",
+            "dataType": "$(self)[9089eee3fc344ce5a63b215f50198498]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "ea4d79670fa64e67b53a6864b9702f4f_144c91c699064467a556277c18236fb0_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "Orders",
+            "name": "Orders",
+            "dataType": "$(self)[ea4d79670fa64e67b53a6864b9702f4f]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "9089eee3fc344ce5a63b215f50198498",
+      "widget": "table",
+      "props": {
+        "x": 376,
+        "y": 54.4,
+        "displayName": "用户",
+        "name": "User",
+        "indexes": [
+          {
+            "name": "PK_User",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[390004c4866e40a1ba387d139f30185b]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "foreignKeys": []
+      },
+      "children": [
+        {
+          "id": "390004c4866e40a1ba387d139f30185b",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "e2a025d8f2994f9f8c1925bf166a244a",
+          "widget": "column",
+          "props": {
+            "displayName": "昵称",
+            "name": "Nickname",
+            "dataType": "String",
+            "nullable": true,
+            "length": 20,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "85470682d45a4e6c8d8fb7cafab88296",
+          "widget": "column",
+          "props": {
+            "displayName": "绑定号码",
+            "name": "PhoneNumber",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "8466e8bd69d844898dd32fa2757d9e75",
+          "widget": "column",
+          "props": {
+            "displayName": "头像",
+            "name": "Avatar",
+            "dataType": "String",
+            "nullable": true,
+            "isCollection": false,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "7498ec44f6e94d43b9a0031f21478826_2274ddd0202940d5a9f14556861e387b_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "ShoppingCarts",
+            "name": "ShoppingCarts",
+            "dataType": "$(self)[7498ec44f6e94d43b9a0031f21478826]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "00946b3d44784fe1983ee817b0a358e7_4a9b31e293b0409a98ff9912cf9bbe84_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "Favorites",
+            "name": "Favorites",
+            "dataType": "$(self)[00946b3d44784fe1983ee817b0a358e7]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "df0e38af017149eebb9831ecb02fa520_bf3c2a37876546beaa2fe3bad62a2b67_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "Comments",
+            "name": "Comments",
+            "dataType": "$(self)[df0e38af017149eebb9831ecb02fa520]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "d70306de7262417680756cbbdbab010f_b26d508c11794f1c98a957884de380e1_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "DeliveryAddresses",
+            "name": "DeliveryAddresses",
+            "dataType": "$(self)[d70306de7262417680756cbbdbab010f]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "ea4d79670fa64e67b53a6864b9702f4f_07c7c1be9dd048edb8444975df417776_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "Orders",
+            "name": "Orders",
+            "dataType": "$(self)[ea4d79670fa64e67b53a6864b9702f4f]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "7498ec44f6e94d43b9a0031f21478826",
+      "widget": "table",
+      "props": {
+        "x": 100.8,
+        "y": 320.8,
+        "displayName": "购物车",
+        "name": "ShoppingCart",
+        "indexes": [
+          {
+            "name": "PK_ShoppingCart",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[da7763d0c20b4584bd942f470d2111dc]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "foreignKeys": [
+          {
+            "id": "2274ddd0202940d5a9f14556861e387b",
+            "name": "FK_ShoppingCart_User",
+            "refTable": "$(self)[9089eee3fc344ce5a63b215f50198498]",
+            "columns": [
+              "$(self)[7498ec44f6e94d43b9a0031f21478826].[0b5bd7e69ad640e5840b0c265fa21d72]"
+            ],
+            "refColumns": [
+              "$(self)[9089eee3fc344ce5a63b215f50198498].[390004c4866e40a1ba387d139f30185b]"
+            ]
+          },
+          {
+            "id": "ca225706fc334b01a7d03609114f5c0f",
+            "name": "FK_ShoppingCart_Product",
+            "refTable": "$(self)[ab6188e7b3e34049a94a661d3ace829b]",
+            "columns": [
+              "$(self)[7498ec44f6e94d43b9a0031f21478826].[9f6c1c73d13b483b9dbcba00db948673]"
+            ],
+            "refColumns": [
+              "$(self)[ab6188e7b3e34049a94a661d3ace829b].[55cc5d9c658f45b2936be4bb180e2b0c]"
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "da7763d0c20b4584bd942f470d2111dc",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "9f6c1c73d13b483b9dbcba00db948673",
+          "widget": "column",
+          "props": {
+            "displayName": "商品",
+            "name": "ProductId",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isCollection": false
+          }
+        },
+        {
+          "id": "0b5bd7e69ad640e5840b0c265fa21d72",
+          "widget": "column",
+          "props": {
+            "displayName": "所属用户",
+            "name": "UserId",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "5e90226407114200971e75bcfe472731",
+          "widget": "column",
+          "props": {
+            "displayName": "已选",
+            "name": "Selected",
+            "dataType": "Boolean",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "defaultValue": "false"
+          }
+        },
+        {
+          "id": "ceb9eb782e74463498d3e5278d93aa1f",
+          "widget": "column",
+          "props": {
+            "displayName": "数量",
+            "name": "Num",
+            "dataType": "Int16",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "47c8743684e442f798be3893ef0be209",
+          "widget": "column",
+          "props": {
+            "displayName": "添加时间",
+            "name": "CreatTime",
+            "dataType": "DateTime",
+            "nullable": true,
+            "defaultValueType": "Expression",
+            "defaultValue": "$(exp)Now()"
+          }
+        },
+        {
+          "id": "ab6188e7b3e34049a94a661d3ace829b_ca225706fc334b01a7d03609114f5c0f_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Product",
+            "name": "Product",
+            "dataType": "$(self)[ab6188e7b3e34049a94a661d3ace829b]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "9089eee3fc344ce5a63b215f50198498_2274ddd0202940d5a9f14556861e387b_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "User",
+            "name": "User",
+            "dataType": "$(self)[9089eee3fc344ce5a63b215f50198498]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "ea4d79670fa64e67b53a6864b9702f4f",
+      "widget": "table",
+      "props": {
+        "x": 376,
+        "y": 208.8,
+        "displayName": "订单",
+        "name": "Order",
+        "indexes": [
+          {
+            "name": "PK_Order",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[3ef52b0bc2d443008a0f3b710ab6f32d]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "foreignKeys": [
+          {
+            "id": "07c7c1be9dd048edb8444975df417776",
+            "name": "FK_Order_User",
+            "refTable": "$(self)[9089eee3fc344ce5a63b215f50198498]",
+            "columns": [
+              "$(self)[ea4d79670fa64e67b53a6864b9702f4f].[44798101455f4ef5947cb4fbe6edad56]"
+            ],
+            "refColumns": [
+              "$(self)[9089eee3fc344ce5a63b215f50198498].[390004c4866e40a1ba387d139f30185b]"
+            ]
+          },
+          {
+            "id": "144c91c699064467a556277c18236fb0",
+            "name": "FK_Order_DeliveryAddress",
+            "refTable": "$(self)[d70306de7262417680756cbbdbab010f]",
+            "columns": [
+              "$(self)[ea4d79670fa64e67b53a6864b9702f4f].[f5df5f889fc94e7f8d4254dbcb83bf25]"
+            ],
+            "refColumns": [
+              "$(self)[d70306de7262417680756cbbdbab010f].[4b9ef8d9045a4da68ebe67bd91070f22]"
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "3ef52b0bc2d443008a0f3b710ab6f32d",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "c3048f61db27464dadd9c163236498d3",
+          "widget": "column",
+          "props": {
+            "displayName": "订单号",
+            "name": "OrderNumber",
+            "dataType": "Guid",
+            "nullable": false,
+            "defaultValueType": "Expression",
+            "defaultValue": "$(exp)NewGuid()"
+          }
+        },
+        {
+          "id": "f5df5f889fc94e7f8d4254dbcb83bf25",
+          "widget": "column",
+          "props": {
+            "displayName": "收货地址",
+            "name": "DeliveryAddress",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "e26566eb004a4e7da29c7cb095aec47f",
+          "widget": "column",
+          "props": {
+            "displayName": "总金额",
+            "name": "TotalAmount",
+            "dataType": "Double",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "44798101455f4ef5947cb4fbe6edad56",
+          "widget": "column",
+          "props": {
+            "displayName": "所属用户",
+            "name": "Userid",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "d2e12d6ae6c149dcb4526be501715cea",
+          "widget": "column",
+          "props": {
+            "displayName": "订单状态",
+            "name": "Type",
+            "dataType": "$(ref)efd54dc59f5144a4b9f6bfe0aabc6cdc",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "0b3e75c01fd043e394a7c394883ae909",
+          "widget": "column",
+          "props": {
+            "displayName": "备注",
+            "name": "Remark",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "13a505765f924bb49e51940fcbc3cd27",
+          "widget": "column",
+          "props": {
+            "displayName": "订单生成时间",
+            "name": "CreateTime",
+            "dataType": "DateTime",
+            "nullable": true,
+            "defaultValueType": "Expression",
+            "defaultValue": "$(exp)Now()"
+          }
+        },
+        {
+          "id": "9f56e81fa82d4812906a3479f737608d_3093965086594c78b15083cb756b8ad4_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "OrderProducts",
+            "name": "OrderProducts",
+            "dataType": "$(self)[9f56e81fa82d4812906a3479f737608d]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "9089eee3fc344ce5a63b215f50198498_07c7c1be9dd048edb8444975df417776_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "User",
+            "name": "User",
+            "dataType": "$(self)[9089eee3fc344ce5a63b215f50198498]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "d70306de7262417680756cbbdbab010f_144c91c699064467a556277c18236fb0_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "DeliveryAddress1",
+            "name": "DeliveryAddress1",
+            "dataType": "$(self)[d70306de7262417680756cbbdbab010f]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "c80e29c5d2d946e3ad0223a8d6fd59d9_f5cd9dcc22934e4c95dd896e5191bd2a_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "AfterSales",
+            "name": "AfterSales",
+            "dataType": "$(self)[c80e29c5d2d946e3ad0223a8d6fd59d9]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "ca9725f642ef425fa462e09c6201ceff",
+      "widget": "table",
+      "props": {
+        "x": -153.6,
+        "y": 57.6,
+        "displayName": "商品类别",
+        "name": "ProductType",
+        "indexes": [
+          {
+            "name": "PK_ProductType",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[675dc98e2d6746a193fa49407baacae5]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "675dc98e2d6746a193fa49407baacae5",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "db9ed88be9d044179dd3c88cf5a59218",
+          "widget": "column",
+          "props": {
+            "displayName": "类别名称",
+            "name": "TypeName",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "a87e3ba06c6947f68f7bee9a43b316c4",
+          "widget": "column",
+          "props": {
+            "displayName": "创建时间",
+            "name": "CreatTime",
+            "dataType": "DateTime",
+            "nullable": true,
+            "defaultValueType": "Expression",
+            "defaultValue": "$(exp)Now()"
+          }
+        },
+        {
+          "id": "ab6188e7b3e34049a94a661d3ace829b_64c1684c3eeb480592ebee056f74f761_dependency",
+          "widget": "field",
+          "props": {
+            "displayName": "Products",
+            "name": "Products",
+            "dataType": "$(self)[ab6188e7b3e34049a94a661d3ace829b]",
+            "nullable": true,
+            "isCollection": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "8c46a484d4f1424c801aabfa48143838",
+      "widget": "table",
+      "props": {
+        "x": -153.6,
+        "y": 192.8,
+        "displayName": "首页置顶",
+        "name": "PageTop",
+        "indexes": [
+          {
+            "name": "PK_PageTop",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[cf654aaf36f640838d3de6e2772eac1e]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "foreignKeys": [
+          {
+            "id": "72e455150ae24489bc3e49d288c9c12a",
+            "name": "FK_PageTop_Product",
+            "refTable": "$(self)[ab6188e7b3e34049a94a661d3ace829b]",
+            "columns": [
+              "$(self)[8c46a484d4f1424c801aabfa48143838].[bcb3307ba17c4e81bb727cc4b0bf352d]"
+            ],
+            "refColumns": [
+              "$(self)[ab6188e7b3e34049a94a661d3ace829b].[55cc5d9c658f45b2936be4bb180e2b0c]"
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "cf654aaf36f640838d3de6e2772eac1e",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "bcb3307ba17c4e81bb727cc4b0bf352d",
+          "widget": "column",
+          "props": {
+            "displayName": "商品",
+            "name": "ProductId",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "ab6188e7b3e34049a94a661d3ace829b_72e455150ae24489bc3e49d288c9c12a_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Product",
+            "name": "Product",
+            "dataType": "$(self)[ab6188e7b3e34049a94a661d3ace829b]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "00946b3d44784fe1983ee817b0a358e7",
+      "widget": "table",
+      "props": {
+        "x": 100.8,
+        "y": 523.2,
+        "displayName": "我的收藏",
+        "name": "Favorite",
+        "indexes": [
+          {
+            "name": "PK_Favorite",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[faff0a1a96284a87a09c80e53200ed35]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "foreignKeys": [
+          {
+            "id": "4a9b31e293b0409a98ff9912cf9bbe84",
+            "name": "FK_Favorite_User",
+            "refTable": "$(self)[9089eee3fc344ce5a63b215f50198498]",
+            "columns": [
+              "$(self)[00946b3d44784fe1983ee817b0a358e7].[9ac7f34f598b43a9a0f5038051832e41]"
+            ],
+            "refColumns": [
+              "$(self)[9089eee3fc344ce5a63b215f50198498].[390004c4866e40a1ba387d139f30185b]"
+            ]
+          },
+          {
+            "id": "e0a5969355294f53afeee88f8f6ce5f6",
+            "name": "FK_Favorite_Product",
+            "refTable": "$(self)[ab6188e7b3e34049a94a661d3ace829b]",
+            "columns": [
+              "$(self)[00946b3d44784fe1983ee817b0a358e7].[32a54e5742254a16ba0b6baacb90a422]"
+            ],
+            "refColumns": [
+              "$(self)[ab6188e7b3e34049a94a661d3ace829b].[55cc5d9c658f45b2936be4bb180e2b0c]"
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "faff0a1a96284a87a09c80e53200ed35",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "32a54e5742254a16ba0b6baacb90a422",
+          "widget": "column",
+          "props": {
+            "displayName": "商品",
+            "name": "ProductId",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "9ac7f34f598b43a9a0f5038051832e41",
+          "widget": "column",
+          "props": {
+            "displayName": "用户",
+            "name": "UserId",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "70d4ff1ace1f43b29ba83d495c946420",
+          "widget": "column",
+          "props": {
+            "displayName": "创建时间",
+            "name": "CreatTime",
+            "dataType": "DateTime",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "ab6188e7b3e34049a94a661d3ace829b_e0a5969355294f53afeee88f8f6ce5f6_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Product",
+            "name": "Product",
+            "dataType": "$(self)[ab6188e7b3e34049a94a661d3ace829b]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "9089eee3fc344ce5a63b215f50198498_4a9b31e293b0409a98ff9912cf9bbe84_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "User",
+            "name": "User",
+            "dataType": "$(self)[9089eee3fc344ce5a63b215f50198498]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "9f56e81fa82d4812906a3479f737608d",
+      "widget": "table",
+      "props": {
+        "x": 376,
+        "y": 473.6,
+        "displayName": "OrderProduct",
+        "name": "OrderProduct",
+        "indexes": [
+          {
+            "name": "PK_OrderProduct",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[31aed931b0ce4793a64ea44bbc05478c]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "foreignKeys": [
+          {
+            "id": "bcd8e0a799c44b7db32f067a39fa4f50",
+            "name": "FK_OrderProduct_Product",
+            "refTable": "$(self)[ab6188e7b3e34049a94a661d3ace829b]",
+            "columns": [
+              "$(self)[9f56e81fa82d4812906a3479f737608d].[0fe23e1b2095481787249bcc508d12dc]"
+            ],
+            "refColumns": [
+              "$(self)[ab6188e7b3e34049a94a661d3ace829b].[55cc5d9c658f45b2936be4bb180e2b0c]"
+            ]
+          },
+          {
+            "id": "3093965086594c78b15083cb756b8ad4",
+            "name": "FK_OrderProduct_Order",
+            "refTable": "$(self)[ea4d79670fa64e67b53a6864b9702f4f]",
+            "columns": [
+              "$(self)[9f56e81fa82d4812906a3479f737608d].[dd324a5974b74eafadfaf6d5859a2074]"
+            ],
+            "refColumns": [
+              "$(self)[ea4d79670fa64e67b53a6864b9702f4f].[3ef52b0bc2d443008a0f3b710ab6f32d]"
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "31aed931b0ce4793a64ea44bbc05478c",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "dd324a5974b74eafadfaf6d5859a2074",
+          "widget": "column",
+          "props": {
+            "displayName": "OrderId",
+            "name": "OrderId",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "0fe23e1b2095481787249bcc508d12dc",
+          "widget": "column",
+          "props": {
+            "displayName": "商品",
+            "name": "ProductId",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "2b3685d038db4d43b8795c06e1b88453",
+          "widget": "column",
+          "props": {
+            "displayName": "数量",
+            "name": "Num",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "ea4d79670fa64e67b53a6864b9702f4f_3093965086594c78b15083cb756b8ad4_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Order",
+            "name": "Order",
+            "dataType": "$(self)[ea4d79670fa64e67b53a6864b9702f4f]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "ab6188e7b3e34049a94a661d3ace829b_bcd8e0a799c44b7db32f067a39fa4f50_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Product",
+            "name": "Product",
+            "dataType": "$(self)[ab6188e7b3e34049a94a661d3ace829b]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "57aebfab45164470945c27ffbe9cfde2",
+          "widget": "field",
+          "props": {
+            "displayName": "ProductIds",
+            "name": "ProductIds",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isCollection": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "df0e38af017149eebb9831ecb02fa520",
+      "widget": "table",
+      "props": {
+        "x": -153.6,
+        "y": 295.2,
+        "displayName": "商品评价",
+        "name": "Comment",
+        "indexes": [
+          {
+            "name": "PK_Comment",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[b5d352135aed46c29aaa2685950fc08d]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "foreignKeys": [
+          {
+            "id": "0052560a067d44f38f0e1ea1caec37c1",
+            "name": "FK_Comment_Product",
+            "refTable": "$(self)[ab6188e7b3e34049a94a661d3ace829b]",
+            "columns": [
+              "$(self)[df0e38af017149eebb9831ecb02fa520].[b04d6d33069c4a42a0c0b642120940ba]"
+            ],
+            "refColumns": [
+              "$(self)[ab6188e7b3e34049a94a661d3ace829b].[55cc5d9c658f45b2936be4bb180e2b0c]"
+            ]
+          },
+          {
+            "id": "bf3c2a37876546beaa2fe3bad62a2b67",
+            "name": "FK_Comment_User",
+            "refTable": "$(self)[9089eee3fc344ce5a63b215f50198498]",
+            "columns": [
+              "$(self)[df0e38af017149eebb9831ecb02fa520].[81302bf96efc41f5905b0cbbbb50ed41]"
+            ],
+            "refColumns": [
+              "$(self)[9089eee3fc344ce5a63b215f50198498].[390004c4866e40a1ba387d139f30185b]"
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "b5d352135aed46c29aaa2685950fc08d",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "81302bf96efc41f5905b0cbbbb50ed41",
+          "widget": "column",
+          "props": {
+            "displayName": "用户",
+            "name": "UserId",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "b04d6d33069c4a42a0c0b642120940ba",
+          "widget": "column",
+          "props": {
+            "displayName": "对应商品",
+            "name": "ProductId",
+            "dataType": "Int32",
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "469fd6fe40bf440c8680155d5a9dca4b",
+          "widget": "column",
+          "props": {
+            "displayName": "评论时间",
+            "name": "CreatTime",
+            "dataType": "DateTime",
+            "defaultValueType": "Expression",
+            "defaultValue": "$(exp)Now()"
+          }
+        },
+        {
+          "id": "dd2a17a309de48cd8557a21346f0b969",
+          "widget": "column",
+          "props": {
+            "displayName": "评论内容",
+            "name": "Content",
+            "dataType": "String",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "ff4c0e4cba40437abd2164bc44b566a0",
+          "widget": "column",
+          "props": {
+            "displayName": "图片",
+            "name": "Image",
+            "dataType": "String",
+            "nullable": true,
+            "isCollection": false,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "9089eee3fc344ce5a63b215f50198498_bf3c2a37876546beaa2fe3bad62a2b67_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "User",
+            "name": "User",
+            "dataType": "$(self)[9089eee3fc344ce5a63b215f50198498]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "ab6188e7b3e34049a94a661d3ace829b_0052560a067d44f38f0e1ea1caec37c1_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Product",
+            "name": "Product",
+            "dataType": "$(self)[ab6188e7b3e34049a94a661d3ace829b]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "c80e29c5d2d946e3ad0223a8d6fd59d9",
+      "widget": "table",
+      "props": {
+        "x": 610,
+        "y": 310.4,
+        "displayName": "售后",
+        "name": "AfterSales",
+        "indexes": [
+          {
+            "name": "PK_AfterSales",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[0e1707972b1f447aa1e497c93df6e0c7]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "foreignKeys": [
+          {
+            "id": "f5cd9dcc22934e4c95dd896e5191bd2a",
+            "name": "FK_AfterSales_Order",
+            "refTable": "$(self)[ea4d79670fa64e67b53a6864b9702f4f]",
+            "columns": [
+              "$(self)[c80e29c5d2d946e3ad0223a8d6fd59d9].[e869e5122bc845fa91c4c9703b2932bc]"
+            ],
+            "refColumns": [
+              "$(self)[ea4d79670fa64e67b53a6864b9702f4f].[3ef52b0bc2d443008a0f3b710ab6f32d]"
+            ]
+          },
+          {
+            "id": "e6521633e26544d8bb4b88ece234c749",
+            "name": "FK_AfterSales_Product",
+            "refTable": "$(self)[ab6188e7b3e34049a94a661d3ace829b]",
+            "columns": [
+              "$(self)[c80e29c5d2d946e3ad0223a8d6fd59d9].[c2bf5238a8154592a7f9422c3f34498f]"
+            ],
+            "refColumns": [
+              "$(self)[ab6188e7b3e34049a94a661d3ace829b].[55cc5d9c658f45b2936be4bb180e2b0c]"
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "0e1707972b1f447aa1e497c93df6e0c7",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "e869e5122bc845fa91c4c9703b2932bc",
+          "widget": "column",
+          "props": {
+            "displayName": "订单",
+            "name": "OrderId",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "c2bf5238a8154592a7f9422c3f34498f",
+          "widget": "column",
+          "props": {
+            "displayName": "产品",
+            "name": "ProductId",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "eb29801d13c94822ae7403d4775d2cc4",
+          "widget": "column",
+          "props": {
+            "displayName": "售后状态",
+            "name": "Status",
+            "dataType": "$(ref)a1575b3d9fb14792a05b7fcd70419605",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "dfdaddcbd9724dc4bec3895a324420e0",
+          "widget": "column",
+          "props": {
+            "displayName": "创建时间",
+            "name": "CreatTime",
+            "dataType": "DateTime",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "ab6188e7b3e34049a94a661d3ace829b_e6521633e26544d8bb4b88ece234c749_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Product",
+            "name": "Product",
+            "dataType": "$(self)[ab6188e7b3e34049a94a661d3ace829b]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        },
+        {
+          "id": "ea4d79670fa64e67b53a6864b9702f4f_f5cd9dcc22934e4c95dd896e5191bd2a_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Order",
+            "name": "Order",
+            "dataType": "$(self)[ea4d79670fa64e67b53a6864b9702f4f]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        }
+      ]
+    },
+    {
+      "id": "126710830d5440388911fa674e407a63",
+      "widget": "table",
+      "props": {
+        "x": -152.8,
+        "y": 494.4,
+        "displayName": "产品详情图片",
+        "name": "ProductImg",
+        "indexes": [
+          {
+            "name": "PK_ProductImg",
+            "type": "Key",
+            "unique": true,
+            "columns": [
+              {
+                "column": "$(self)[74f410b360b345238c01e9287954d45f]",
+                "direction": "Asc"
+              }
+            ]
+          }
+        ],
+        "foreignKeys": [
+          {
+            "id": "178681454bcd43e2b993fd2e85fa6863",
+            "name": "FK_ProductImg_Product",
+            "refTable": "$(self)[ab6188e7b3e34049a94a661d3ace829b]",
+            "columns": [
+              "$(self)[126710830d5440388911fa674e407a63].[bc0aa4f60ef04f94b99c8fe41c3ecd15]"
+            ],
+            "refColumns": [
+              "$(self)[ab6188e7b3e34049a94a661d3ace829b].[55cc5d9c658f45b2936be4bb180e2b0c]"
+            ]
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "74f410b360b345238c01e9287954d45f",
+          "widget": "column",
+          "props": {
+            "displayName": "Id",
+            "name": "Id",
+            "primaryKey": true,
+            "dataType": "Int32",
+            "defaultValueType": "Value",
+            "identity": true,
+            "seed": 1,
+            "increment": 1
+          }
+        },
+        {
+          "id": "bc0aa4f60ef04f94b99c8fe41c3ecd15",
+          "widget": "column",
+          "props": {
+            "displayName": "ProductId",
+            "name": "ProductId",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "99d24d39c73142f8904f6216a396058a",
+          "widget": "column",
+          "props": {
+            "displayName": "Image1",
+            "name": "Image1",
+            "dataType": "String",
+            "nullable": true,
+            "isCollection": false,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "af88b944d2cb4c2f885e9d4db96522a4",
+          "widget": "column",
+          "props": {
+            "displayName": "Image2",
+            "name": "Image2",
+            "dataType": "String",
+            "nullable": true,
+            "isCollection": false,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "14ae36c6e070459e90eb388ff4771fed",
+          "widget": "column",
+          "props": {
+            "displayName": "Image3",
+            "name": "Image3",
+            "dataType": "String",
+            "nullable": true,
+            "isCollection": false,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "73c604598a5344669b87639b4adfc67f",
+          "widget": "column",
+          "props": {
+            "displayName": "Image4",
+            "name": "Image4",
+            "dataType": "String",
+            "nullable": true,
+            "isCollection": false,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "14b73c967f734003a2f4b92409db3e38",
+          "widget": "column",
+          "props": {
+            "displayName": "Image5",
+            "name": "Image5",
+            "dataType": "String",
+            "nullable": true,
+            "isCollection": false,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "ab6188e7b3e34049a94a661d3ace829b_178681454bcd43e2b993fd2e85fa6863_principal",
+          "widget": "field",
+          "props": {
+            "displayName": "Product",
+            "name": "Product",
+            "dataType": "$(self)[ab6188e7b3e34049a94a661d3ace829b]",
+            "nullable": true,
+            "defaultValueType": "Value",
+            "isRelationship": true
+          }
+        }
+      ]
+    }
+  ]
+}

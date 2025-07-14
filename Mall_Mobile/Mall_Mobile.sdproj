@@ -3,4 +3,5 @@
   <ItemGroup>
     <ProjectReference Include="..\Mall_Services\Mall_Services.sdproj" />
   </ItemGroup>
+  <Version>1.0.0</Version>
 </Project>

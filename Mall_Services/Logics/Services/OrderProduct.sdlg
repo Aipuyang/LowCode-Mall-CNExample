@@ -1,0 +1,175 @@
+﻿{
+  "id": "368ca6a963154b10aa24125146b8d8a6_api",
+  "widget": "api",
+  "version": "1.0.0",
+  "props": {
+    "name": "OrderProduct",
+    "description": "OrderProduct",
+    "route": "api/[controller]"
+  },
+  "children": [
+    {
+      "id": "8e0464eadc214dcdb95bfed9d4fd2ad2",
+      "widget": "filter",
+      "props": {
+        "displayName": "FilterByOrderid",
+        "name": "FilterByOrderid",
+        "sources": [
+          {
+            "id": "7465fc1e74364066af64e4a1b5998104",
+            "type": "table",
+            "name": "OrderProduct",
+            "target": "$(ref)4da067bf82634fa4a6e5808385059cae.[9f56e81fa82d4812906a3479f737608d]"
+          }
+        ]
+      },
+      "children": [
+        {
+          "id": "e15cc0646fa14575ac25b57f9ea491aa",
+          "widget": "field",
+          "props": {
+            "displayName": "orderid",
+            "name": "orderid",
+            "dataType": "Int32",
+            "nullable": true,
+            "defaultValueType": "Value"
+          }
+        },
+        {
+          "id": "377a9bfd10d74e02937d4b56470ff504",
+          "widget": "condition",
+          "props": {
+            "type": "Field",
+            "operator": "EQ",
+            "parameter": "&(self)[e15cc0646fa14575ac25b57f9ea491aa]",
+            "field": "&(self)[8e0464eadc214dcdb95bfed9d4fd2ad2].sources.[7465fc1e74364066af64e4a1b5998104].[dd324a5974b74eafadfaf6d5859a2074]"
+          }
+        }
+      ]
+    },
+    {
+      "id": "b76721f618124612a507381442abaeaa",
+      "widget": "function",
+      "props": {
+        "name": "GetPageByOrderId",
+        "openApi": true,
+        "requestMethod": "GET",
+        "route": "GetPageByOrderId",
+        "authStrategy": ""
+      },
+      "children": [
+        {
+          "id": "1149baf1249b499a9d27b95aee8d4692",
+          "widget": "start",
+          "props": {
+            "x": 165,
+            "y": 135,
+            "name": "开始",
+            "next": "$(self)[10443df5f17547d78c0a99be8f0a9cfa]"
+          },
+          "children": [
+            {
+              "id": "1f256fa989324e2e929b3c71645a787d",
+              "widget": "field",
+              "props": {
+                "displayName": "param",
+                "name": "param",
+                "dataType": "$(ref)9d0328fc225340bcb6515b5976897695",
+                "defaultValueType": "Value",
+                "parameterFrom": "Query",
+                "genericsConstraint": "$(self)[8e0464eadc214dcdb95bfed9d4fd2ad2]"
+              }
+            }
+          ]
+        },
+        {
+          "id": "10443df5f17547d78c0a99be8f0a9cfa",
+          "widget": "query",
+          "props": {
+            "x": 165,
+            "y": 248.6,
+            "name": "查询",
+            "filter": "$(self)[8e0464eadc214dcdb95bfed9d4fd2ad2]",
+            "strategy": "page",
+            "next": "$(self)[37fb4957a7c74a6da9eb59b5087686d9]",
+            "enableTotal": true,
+            "pageNum": "&(self)[1149baf1249b499a9d27b95aee8d4692].[1f256fa989324e2e929b3c71645a787d].[62475dd3f2df4135a8d31830e5aab9ed]",
+            "pageSize": "&(self)[1149baf1249b499a9d27b95aee8d4692].[1f256fa989324e2e929b3c71645a787d].[6162f2cbdcea40ee9f5845791dd9359c]"
+          },
+          "children": [
+            {
+              "id": "48d00310ef4f45eda400a3f565695646",
+              "widget": "join",
+              "props": {
+                "sources": [
+                  {
+                    "id": "18f99caf654a4d59a25417c525fa23d9",
+                    "type": "table",
+                    "name": "OrderProduct",
+                    "target": "$(ref)4da067bf82634fa4a6e5808385059cae.[9f56e81fa82d4812906a3479f737608d]"
+                  }
+                ]
+              }
+            },
+            {
+              "id": "832339aac5af4eb4a45abf3dcaaffca6",
+              "widget": "assign_cascade_field",
+              "props": {
+                "source": "&(self)[48d00310ef4f45eda400a3f565695646].sources.[18f99caf654a4d59a25417c525fa23d9].[ab6188e7b3e34049a94a661d3ace829b_bcd8e0a799c44b7db32f067a39fa4f50_principal]",
+                "sourceValue": "&(self)[48d00310ef4f45eda400a3f565695646].sources.[18f99caf654a4d59a25417c525fa23d9].[ab6188e7b3e34049a94a661d3ace829b_bcd8e0a799c44b7db32f067a39fa4f50_principal]"
+              }
+            },
+            {
+              "id": "73349b1b9b9744a9b6b4230520d16067",
+              "widget": "assign_filter",
+              "props": {
+                "field": "&(self)[10443df5f17547d78c0a99be8f0a9cfa].filter.[e15cc0646fa14575ac25b57f9ea491aa]",
+                "type": "Field",
+                "value": "&(self)[1149baf1249b499a9d27b95aee8d4692].[1f256fa989324e2e929b3c71645a787d].[2794f34490ac4aca97817a886c184ada].[e15cc0646fa14575ac25b57f9ea491aa]"
+              }
+            }
+          ]
+        },
+        {
+          "id": "37fb4957a7c74a6da9eb59b5087686d9",
+          "widget": "end",
+          "props": {
+            "x": 165,
+            "y": 362.2,
+            "name": "结束",
+            "type": "Field",
+            "result": "$(ref)11782c64f64a49e89fe1c9b7f96b1a7a",
+            "isCollection": false,
+            "isPageResult": true,
+            "genericsConstraint": "&(self)[10443df5f17547d78c0a99be8f0a9cfa].result.[9f56e81fa82d4812906a3479f737608d]"
+          },
+          "children": [
+            {
+              "id": "5c1f20d42ff9401c80a7af804a24ba24",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[37fb4957a7c74a6da9eb59b5087686d9].result.[4be4523a12d6413f8bacb065db44fb22]",
+                "type": "Field",
+                "value": "&(self)[10443df5f17547d78c0a99be8f0a9cfa].result.[9f56e81fa82d4812906a3479f737608d]"
+              }
+            },
+            {
+              "id": "eacc3bd2109b4e5e840d2573fdd0617b",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[37fb4957a7c74a6da9eb59b5087686d9].result.[b04e0619191b412baf363228d2347a6a]",
+                "type": "Field",
+                "value": "&(self)[10443df5f17547d78c0a99be8f0a9cfa].result.[10443df5f17547d78c0a99be8f0a9cfa_total]"
+              }
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": {
+    "9d0328fc225340bcb6515b5976897695": "$(global)PageParameter.json",
+    "11782c64f64a49e89fe1c9b7f96b1a7a": "$(global)PageResult.json",
+    "4da067bf82634fa4a6e5808385059cae": "..\\..\\Entities\\Database.sde"
+  }
+}

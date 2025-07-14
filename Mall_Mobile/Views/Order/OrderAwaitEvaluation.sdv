@@ -1,0 +1,901 @@
+﻿{
+  "id": "9878ede8b059457da1f6997e47dcd7e8",
+  "widget": "page",
+  "version": "1.0.0",
+  "props": {
+    "ref": "page_8dd210cb56eeea8",
+    "name": "OrderAwaitEvaluation",
+    "title": "待评价",
+    "params": []
+  },
+  "rules": [],
+  "children": [
+    {
+      "id": "modal_2b0d3a279dc0997",
+      "widget": "modal",
+      "props": {
+        "ref": "modal_f175c9b1d17cb05",
+        "title": "确认订单已完成？",
+        "destroyOnClose": true,
+        "footer": [
+          {
+            "id": "flex_14f1ed5670261ba",
+            "widget": "flex",
+            "props": {
+              "ref": "flex_9333fb565eb1134",
+              "gap": {
+                "custom": true,
+                "number": 0
+              },
+              "style": {
+                "width": "100%"
+              }
+            },
+            "children": [
+              {
+                "id": "button_1ad200e224a004e",
+                "widget": "button",
+                "props": {
+                  "ref": "button_e03328877d48f42",
+                  "style": {
+                    "borderRadius": "0",
+                    "borderRightStyle": "none",
+                    "borderColor": "#00000000"
+                  },
+                  "label": "取消",
+                  "block": true,
+                  "events": {
+                    "onClick": {
+                      "id": "event_5091f4c042f7a0b",
+                      "widget": "event",
+                      "children": [
+                        {
+                          "id": "action_component_f9e31887e0c8574",
+                          "widget": "action_component",
+                          "props": {
+                            "target": "&(self)[modal_2b0d3a279dc0997].onClose"
+                          }
+                        }
+                      ],
+                      "props": {}
+                    }
+                  }
+                },
+                "children": []
+              },
+              {
+                "id": "button_c85f66528a11b4e",
+                "widget": "button",
+                "props": {
+                  "ref": "button_27dee705f936245",
+                  "style": {
+                    "color": "#1677FFFF",
+                    "borderRadius": "0",
+                    "borderColor": "#00000000"
+                  },
+                  "label": "确认",
+                  "plain": true,
+                  "block": true,
+                  "events": {
+                    "onClick": {
+                      "id": "event_873d014b0099c61",
+                      "widget": "event",
+                      "children": [
+                        {
+                          "widget": "action_api",
+                          "id": "action_3426677216d3bda",
+                          "props": {
+                            "target": "&(ref)16e7815bf93a4f9ea8a8321c3065655c.[933e61bff5fe458dbc98d2344be460ef]",
+                            "params": [
+                              {
+                                "id": "assign_param_44c13e16719898a",
+                                "widget": "assign_param",
+                                "props": {
+                                  "name": {
+                                    "kind": "Parameter",
+                                    "value": "&(self)[modal_2b0d3a279dc0997].footer.[button_c85f66528a11b4e].events.onClick.[action_3426677216d3bda].target.params.[def9a9c430e349deacb28bb0a2edaa38]"
+                                  }
+                                },
+                                "children": [
+                                  {
+                                    "id": "assign_param_7871a6ddbccc1dd",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[modal_2b0d3a279dc0997].footer.[button_c85f66528a11b4e].events.onClick.[action_3426677216d3bda].target.params.[def9a9c430e349deacb28bb0a2edaa38].[3039ac5ea0d34a65ab24ff4d669891a3]"
+                                      },
+                                      "value": {
+                                        "kind": "Members",
+                                        "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].currentRow.[3ef52b0bc2d443008a0f3b710ab6f32d]"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "id": "assign_param_d7aa6d44c9fd0a5",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[modal_2b0d3a279dc0997].footer.[button_c85f66528a11b4e].events.onClick.[action_3426677216d3bda].target.params.[def9a9c430e349deacb28bb0a2edaa38].[e93be9dfc53d4eac8c72b8a3ba9e186a]"
+                                      },
+                                      "value": {
+                                        "kind": "Members"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "id": "assign_param_86bd639dd1f0d15",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[modal_2b0d3a279dc0997].footer.[button_c85f66528a11b4e].events.onClick.[action_3426677216d3bda].target.params.[def9a9c430e349deacb28bb0a2edaa38].[e5d5dd82b7674dd7b2ffa888879e069e]"
+                                      },
+                                      "value": {
+                                        "kind": "Members"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "id": "assign_param_475bbe450995b27",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[modal_2b0d3a279dc0997].footer.[button_c85f66528a11b4e].events.onClick.[action_3426677216d3bda].target.params.[def9a9c430e349deacb28bb0a2edaa38].[be93a6ca39f94e14a29d9c7c5993848c]"
+                                      },
+                                      "value": {
+                                        "kind": "Members"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "id": "assign_param_78d817ab3342592",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[modal_2b0d3a279dc0997].footer.[button_c85f66528a11b4e].events.onClick.[action_3426677216d3bda].target.params.[def9a9c430e349deacb28bb0a2edaa38].[a8208643dee84d89b8a9625da128c11f]"
+                                      },
+                                      "value": {
+                                        "kind": "EnumField",
+                                        "value": "&(ref)737ead45b2ac4daabd1171f2f3f4e600.[71141c45661e419aac86eaeaeecf9556]"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "id": "assign_param_d54d80b3cc5e7f9",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[modal_2b0d3a279dc0997].footer.[button_c85f66528a11b4e].events.onClick.[action_3426677216d3bda].target.params.[def9a9c430e349deacb28bb0a2edaa38].[1d90fe38959a4327bbe8cf35b0de81e4]"
+                                      },
+                                      "value": {
+                                        "kind": "Members"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "id": "assign_param_45a911f1ffb8e4a",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[modal_2b0d3a279dc0997].footer.[button_c85f66528a11b4e].events.onClick.[action_3426677216d3bda].target.params.[def9a9c430e349deacb28bb0a2edaa38].[a11d30d900744fe2ac67292c278b9c5c]"
+                                      },
+                                      "value": {
+                                        "kind": "Members"
+                                      }
+                                    }
+                                  },
+                                  {
+                                    "id": "assign_param_717d92dabaecb69",
+                                    "widget": "assign_param",
+                                    "props": {
+                                      "name": {
+                                        "kind": "Parameter",
+                                        "value": "&(self)[modal_2b0d3a279dc0997].footer.[button_c85f66528a11b4e].events.onClick.[action_3426677216d3bda].target.params.[def9a9c430e349deacb28bb0a2edaa38].[49d48aacb32748db8e15b3bca634a536]"
+                                      },
+                                      "value": {
+                                        "kind": "Members"
+                                      }
+                                    }
+                                  }
+                                ]
+                              }
+                            ]
+                          }
+                        },
+                        {
+                          "widget": "action_component",
+                          "id": "action_7d801368670310b",
+                          "props": {
+                            "target": "&(self)[modal_2b0d3a279dc0997].onClose"
+                          }
+                        },
+                        {
+                          "widget": "action_component",
+                          "id": "action_4091cac4196e5ec",
+                          "props": {
+                            "target": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].loadData"
+                          }
+                        }
+                      ],
+                      "props": {}
+                    }
+                  }
+                },
+                "children": []
+              }
+            ]
+          }
+        ]
+      },
+      "children": []
+    },
+    {
+      "id": "drawer_f2255fda7020745",
+      "widget": "drawer",
+      "props": {
+        "ref": "drawer_5aa4ebde1525e36",
+        "position": "bottom",
+        "height": 250,
+        "closeable": true,
+        "destroyOnClose": true
+      },
+      "children": [
+        {
+          "id": "include_5b14e6119202bef",
+          "widget": "include",
+          "props": {
+            "ref": "include_7692df2171a261c",
+            "page": {
+              "id": "action_0ff340c0117d3e0",
+              "widget": "action_frame",
+              "props": {
+                "target": "navigator.go",
+                "link": {
+                  "kind": "Document",
+                  "value": "$(ref)04bb6a5774c84967859ffe5deabe16d1"
+                },
+                "params": [
+                  {
+                    "id": "assign_param_9a2e57ff958fb08",
+                    "widget": "assign_param",
+                    "props": {
+                      "name": {
+                        "kind": "VParameter",
+                        "value": "&(ref)04bb6a5774c84967859ffe5deabe16d1.[page_8dd7e58fb0caeff].params.[a108e3dade32524]"
+                      },
+                      "value": {
+                        "kind": "Members",
+                        "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].currentRow.[3ef52b0bc2d443008a0f3b710ab6f32d]"
+                      }
+                    }
+                  }
+                ]
+              }
+            },
+            "style": {
+              "backgroundColor": "#FFFFFFFF"
+            }
+          },
+          "children": []
+        }
+      ]
+    },
+    {
+      "id": "numberInput_b8b3708026867a6",
+      "widget": "numberInput",
+      "props": {
+        "ref": "numberInput_8983cd641781a3c",
+        "placeholder": "请输入",
+        "hide": true
+      },
+      "children": []
+    },
+    {
+      "id": "2fbc7d25e5f24589a47fb8941345d20d",
+      "widget": "list",
+      "props": {
+        "ref": "list_8934f4e0100314b",
+        "paginationMode": "scroll",
+        "loadingText": "加载中...",
+        "finishedText": "无更多订单",
+        "errorText": "加载出错",
+        "style": {
+          "paddingLeft": "8px",
+          "paddingRight": "8px",
+          "paddingTop": "8px",
+          "paddingBottom": "8px"
+        },
+        "model": {
+          "data": "&(ref)738837970974525.[ea4d79670fa64e67b53a6864b9702f4f]"
+        },
+        "dataSource": {
+          "id": "3bfa1d1061284b3a8069fe2aafc66f8c",
+          "widget": "function",
+          "children": [
+            {
+              "id": "9a314220902b4ff8bdeae30b1e5ed44f",
+              "widget": "action_api",
+              "props": {
+                "target": "&(ref)16e7815bf93a4f9ea8a8321c3065655c.[e8649e7c7bd843b79f60d0a2f5bf78a4]",
+                "params": [
+                  {
+                    "id": "assign_param_99a98e4790cf746",
+                    "widget": "assign_param",
+                    "props": {
+                      "name": {
+                        "kind": "Parameter",
+                        "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].dataSource.[9a314220902b4ff8bdeae30b1e5ed44f].target.params.[1f105e40c763452da2a9d4de80f220eb]"
+                      }
+                    },
+                    "children": [
+                      {
+                        "id": "assign_param_074f16d9c0076b2",
+                        "widget": "assign_param",
+                        "props": {
+                          "name": {
+                            "kind": "Parameter",
+                            "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].dataSource.[9a314220902b4ff8bdeae30b1e5ed44f].target.params.[1f105e40c763452da2a9d4de80f220eb].[62475dd3f2df4135a8d31830e5aab9ed]"
+                          },
+                          "value": {
+                            "kind": "Members",
+                            "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].pageNum"
+                          }
+                        }
+                      },
+                      {
+                        "id": "assign_param_c0580df9567707e",
+                        "widget": "assign_param",
+                        "props": {
+                          "name": {
+                            "kind": "Parameter",
+                            "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].dataSource.[9a314220902b4ff8bdeae30b1e5ed44f].target.params.[1f105e40c763452da2a9d4de80f220eb].[6162f2cbdcea40ee9f5845791dd9359c]"
+                          },
+                          "value": {
+                            "kind": "Members",
+                            "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].pageSize"
+                          }
+                        }
+                      },
+                      {
+                        "id": "assign_param_7b4008d2c1adb60",
+                        "widget": "assign_param",
+                        "props": {
+                          "name": {
+                            "kind": "Parameter",
+                            "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].dataSource.[9a314220902b4ff8bdeae30b1e5ed44f].target.params.[1f105e40c763452da2a9d4de80f220eb].[2794f34490ac4aca97817a886c184ada]"
+                          }
+                        },
+                        "children": [
+                          {
+                            "id": "assign_param_090448569fcc97f",
+                            "widget": "assign_param",
+                            "props": {
+                              "name": {
+                                "kind": "Parameter",
+                                "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].dataSource.[9a314220902b4ff8bdeae30b1e5ed44f].target.params.[1f105e40c763452da2a9d4de80f220eb].[2794f34490ac4aca97817a886c184ada].[221191c6773a48f7a8f51529dc51dce1]"
+                              },
+                              "value": {
+                                "kind": "EnumField",
+                                "value": "&(ref)737ead45b2ac4daabd1171f2f3f4e600.[0cec1dfabec846ddad1acf8912a9ab50]"
+                              }
+                            }
+                          }
+                        ]
+                      }
+                    ]
+                  }
+                ]
+              }
+            },
+            {
+              "id": "5743382be64b46a48dae56a93ec335ec",
+              "widget": "action_adapter",
+              "children": [
+                {
+                  "id": "assign_param_2bfe62f6dc4260e",
+                  "widget": "assign_param",
+                  "props": {
+                    "name": {
+                      "kind": "Members",
+                      "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].data"
+                    },
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].dataSource.[9a314220902b4ff8bdeae30b1e5ed44f].target.result.[4be4523a12d6413f8bacb065db44fb22]"
+                    }
+                  }
+                },
+                {
+                  "id": "assign_param_a85b0282ae33a8c",
+                  "widget": "assign_param",
+                  "props": {
+                    "name": {
+                      "kind": "Members",
+                      "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].total"
+                    },
+                    "value": {
+                      "kind": "Field",
+                      "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].dataSource.[9a314220902b4ff8bdeae30b1e5ed44f].target.result.[b04e0619191b412baf363228d2347a6a]"
+                    }
+                  }
+                }
+              ],
+              "props": {}
+            }
+          ],
+          "props": {}
+        }
+      },
+      "children": [
+        {
+          "id": "1477a897ab814d7384c1d636a911c58c",
+          "widget": "card",
+          "props": {
+            "ref": "card_0fb4a798ce927f3",
+            "title": "",
+            "style": {
+              "marginBottom": "8px",
+              "borderRadius": "10px"
+            },
+            "bordered": false
+          },
+          "children": [
+            {
+              "id": "76bbef822f5c4572bb743b98afd913f0",
+              "widget": "flex",
+              "props": {
+                "ref": "flex_f496888172bf5ce",
+                "gap": {
+                  "custom": true,
+                  "number": 0
+                },
+                "vertical": true
+              },
+              "children": [
+                {
+                  "id": "e7b04703ad96400b8043538475b2247f",
+                  "widget": "flex",
+                  "props": {
+                    "ref": "flex_5a7c5add03a11f8",
+                    "gap": {
+                      "custom": true,
+                      "number": 0
+                    },
+                    "justify": "space-between"
+                  },
+                  "children": [
+                    {
+                      "id": "61b27a803bd448e1a37555e6449fac5f",
+                      "widget": "col",
+                      "props": {
+                        "ref": "col_33b15779c94e138"
+                      },
+                      "children": [
+                        {
+                          "id": "ca07320265244e799798de0f3fb37200",
+                          "widget": "text",
+                          "props": {
+                            "ref": "text_2f7ca3affe6c2c5",
+                            "textType": {
+                              "custom": false,
+                              "type": "default"
+                            },
+                            "fontSize": 13,
+                            "value": "APPEON商城",
+                            "strong": true
+                          },
+                          "children": []
+                        }
+                      ]
+                    },
+                    {
+                      "id": "d4750ad614584e35b8a3e9cc0c00068f",
+                      "widget": "col",
+                      "props": {
+                        "ref": "col_56bc6a3803543b4"
+                      },
+                      "children": [
+                        {
+                          "id": "47c5660066944613a1e311c1082caea0",
+                          "widget": "text",
+                          "props": {
+                            "ref": "text_987e18347316763",
+                            "textType": {
+                              "custom": false,
+                              "type": "secondary"
+                            },
+                            "value": {
+                              "kind": "Field",
+                              "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].dataSource.[5743382be64b46a48dae56a93ec335ec].[assign_param_2bfe62f6dc4260e].[d2e12d6ae6c149dcb4526be501715cea]",
+                              "converter": "&(ref)737ead45b2ac4daabd1171f2f3f4e600.[4c1b9372c57548588f57c81765730682].converters.[b48005580912ec7]"
+                            },
+                            "fontSize": 13
+                          },
+                          "children": []
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "b8fa977275e94664996d2294c9cda04a",
+                  "widget": "list",
+                  "props": {
+                    "ref": "list_08aff4b31ce9cc7",
+                    "paginationMode": "scroll",
+                    "loadingText": "加载中...",
+                    "finishedText": "",
+                    "errorText": "加载出错",
+                    "style": {
+                      "paddingLeft": "6px",
+                      "paddingRight": "6px",
+                      "marginLeft": "5px",
+                      "paddingBottom": "6px",
+                      "marginRight": "5px",
+                      "backgroundColor": "#FFFFFFFF"
+                    },
+                    "dataSource": {
+                      "id": "f570de06e507468387edfabbc3f9f909",
+                      "widget": "binding",
+                      "props": {
+                        "target": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].dataSource.[5743382be64b46a48dae56a93ec335ec].[assign_param_2bfe62f6dc4260e].[9f56e81fa82d4812906a3479f737608d_3093965086594c78b15083cb756b8ad4_dependency]"
+                      }
+                    }
+                  },
+                  "children": [
+                    {
+                      "id": "e0e53e0582314409a45fee881d7f3613",
+                      "widget": "flex",
+                      "props": {
+                        "ref": "flex_0dcded224840d2b",
+                        "gap": {
+                          "custom": true,
+                          "number": 0
+                        },
+                        "style": {
+                          "marginTop": "10px"
+                        },
+                        "justify": "space-between"
+                      },
+                      "children": [
+                        {
+                          "id": "flex_14979fd80d26f8d",
+                          "widget": "flex",
+                          "props": {
+                            "ref": "flex_9fb6c5b009f5300",
+                            "gap": {
+                              "custom": true,
+                              "number": 10
+                            },
+                            "align": "flex-start"
+                          },
+                          "children": [
+                            {
+                              "id": "d82fe987d7e14bd88d02391d476510dc",
+                              "widget": "image",
+                              "props": {
+                                "ref": "image_af1a1f718a4e135",
+                                "width": 70,
+                                "height": 70,
+                                "style": {},
+                                "value": {
+                                  "kind": "Field",
+                                  "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].dataSource.[5743382be64b46a48dae56a93ec335ec].[assign_param_2bfe62f6dc4260e].[9f56e81fa82d4812906a3479f737608d_3093965086594c78b15083cb756b8ad4_dependency].[ab6188e7b3e34049a94a661d3ace829b_bcd8e0a799c44b7db32f067a39fa4f50_principal].[a9def5044e604127ad7d394b720723b1]"
+                                },
+                                "preview": false,
+                                "radius": 5
+                              },
+                              "children": []
+                            },
+                            {
+                              "id": "f280e514f7c64cf4aad21d94fc734f86",
+                              "widget": "text",
+                              "props": {
+                                "ref": "text_6f9654b9fd51328",
+                                "textType": {
+                                  "custom": false,
+                                  "type": "default"
+                                },
+                                "fontSize": 14,
+                                "value": {
+                                  "kind": "Field",
+                                  "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].dataSource.[5743382be64b46a48dae56a93ec335ec].[assign_param_2bfe62f6dc4260e].[9f56e81fa82d4812906a3479f737608d_3093965086594c78b15083cb756b8ad4_dependency].[ab6188e7b3e34049a94a661d3ace829b_bcd8e0a799c44b7db32f067a39fa4f50_principal].[d1703919d6904a9f97d48ebf07b98156]"
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
+                        },
+                        {
+                          "id": "4084e04609ea4412ab4cef1040e263c0",
+                          "widget": "flex",
+                          "props": {
+                            "ref": "flex_219fecf5b1cc54f",
+                            "gap": {
+                              "custom": true,
+                              "number": 0
+                            },
+                            "vertical": false,
+                            "style": {
+                              "width": "px"
+                            },
+                            "justify": "flex-start",
+                            "align": "flex-end"
+                          },
+                          "children": [
+                            {
+                              "id": "flex_7eaad0a4a4c3e2f",
+                              "widget": "flex",
+                              "props": {
+                                "ref": "flex_7354bcbc1339581",
+                                "gap": {
+                                  "custom": true,
+                                  "number": 8
+                                },
+                                "justify": "flex-end",
+                                "align": "flex-end",
+                                "vertical": true
+                              },
+                              "children": [
+                                {
+                                  "id": "col_3c8beba1828c5c7",
+                                  "widget": "col",
+                                  "props": {
+                                    "ref": "col_b606e777cae2a79"
+                                  },
+                                  "children": [
+                                    {
+                                      "id": "text_dbbeefe91e74bde",
+                                      "widget": "text",
+                                      "props": {
+                                        "ref": "text_98be07ba3caef5a",
+                                        "textType": {
+                                          "custom": false,
+                                          "type": "default"
+                                        },
+                                        "value": "￥"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "id": "text_561940ef56231d0",
+                                      "widget": "text",
+                                      "props": {
+                                        "ref": "text_f089606d266047a",
+                                        "textType": {
+                                          "custom": false,
+                                          "type": "default"
+                                        },
+                                        "value": {
+                                          "kind": "Field",
+                                          "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].dataSource.[5743382be64b46a48dae56a93ec335ec].[assign_param_2bfe62f6dc4260e].[9f56e81fa82d4812906a3479f737608d_3093965086594c78b15083cb756b8ad4_dependency].[ab6188e7b3e34049a94a661d3ace829b_bcd8e0a799c44b7db32f067a39fa4f50_principal].[9d35d32850664bbaacdaac6c5662e9c2]"
+                                        },
+                                        "fontSize": 17,
+                                        "strong": true
+                                      },
+                                      "children": []
+                                    }
+                                  ]
+                                },
+                                {
+                                  "id": "col_c86faad8f3a2989",
+                                  "widget": "col",
+                                  "props": {
+                                    "ref": "col_e85e502151b6b9c"
+                                  },
+                                  "children": [
+                                    {
+                                      "id": "text_501162d11b50dae",
+                                      "widget": "text",
+                                      "props": {
+                                        "ref": "text_4dce2334d5b9b0b",
+                                        "textType": {
+                                          "custom": false,
+                                          "type": "secondary"
+                                        },
+                                        "value": "×"
+                                      },
+                                      "children": []
+                                    },
+                                    {
+                                      "id": "text_022d64f0c025b70",
+                                      "widget": "text",
+                                      "props": {
+                                        "ref": "text_2140ab5558a1e4d",
+                                        "textType": {
+                                          "custom": false,
+                                          "type": "secondary"
+                                        },
+                                        "value": {
+                                          "kind": "Field",
+                                          "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].dataSource.[5743382be64b46a48dae56a93ec335ec].[assign_param_2bfe62f6dc4260e].[9f56e81fa82d4812906a3479f737608d_3093965086594c78b15083cb756b8ad4_dependency].[2b3685d038db4d43b8795c06e1b88453]"
+                                        }
+                                      },
+                                      "children": []
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          ]
+                        }
+                      ]
+                    }
+                  ]
+                },
+                {
+                  "id": "8acb911ba31846a4964dd53d3b76000e",
+                  "widget": "flex",
+                  "props": {
+                    "ref": "flex_f50d9aa98cf7794",
+                    "gap": {
+                      "custom": true,
+                      "number": 0
+                    },
+                    "style": {
+                      "marginTop": "10px"
+                    },
+                    "justify": "flex-end",
+                    "align": "center"
+                  },
+                  "children": [
+                    {
+                      "id": "d565487698ab4235a7db740dfa0ec9fd",
+                      "widget": "text",
+                      "props": {
+                        "ref": "text_94a72ea5f9976eb",
+                        "textType": {
+                          "custom": false,
+                          "type": "default"
+                        },
+                        "fontSize": 13,
+                        "value": "订单金额："
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "text_bee2e832bb32aea",
+                      "widget": "text",
+                      "props": {
+                        "ref": "text_6bb54216e3ba305",
+                        "textType": {
+                          "color": "#FF6321FF",
+                          "custom": true
+                        },
+                        "fontSize": 13,
+                        "value": "￥",
+                        "strong": true
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "4157ff018b2047d2b1e119bdc8e066ac",
+                      "widget": "text",
+                      "props": {
+                        "ref": "text_6d5d6ecf846ac8f",
+                        "textType": {
+                          "color": "#FF6321FF",
+                          "custom": true
+                        },
+                        "strong": true,
+                        "value": {
+                          "kind": "Field",
+                          "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].dataSource.[5743382be64b46a48dae56a93ec335ec].[assign_param_2bfe62f6dc4260e].[e26566eb004a4e7da29c7cb095aec47f]"
+                        },
+                        "fontSize": 18
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "button_9eb85e974eafdf2",
+                      "widget": "button",
+                      "props": {
+                        "ref": "button_33b1aeedfcb6d76",
+                        "size": "small",
+                        "type": "warning",
+                        "shape": "square",
+                        "style": {
+                          "width": "80px",
+                          "marginLeft": "10px",
+                          "borderRadius": "5px"
+                        },
+                        "label": "去评价",
+                        "events": {
+                          "onClick": {
+                            "id": "event_f23e3bc1e4977ae",
+                            "widget": "event",
+                            "children": [
+                              {
+                                "widget": "action_component",
+                                "id": "action_2e6039de643eefc",
+                                "props": {
+                                  "target": "&(self)[numberInput_b8b3708026867a6].setData",
+                                  "params": [
+                                    {
+                                      "id": "assign_param_0b09a175acd1b44",
+                                      "widget": "assign_param",
+                                      "props": {
+                                        "name": {
+                                          "kind": "Members",
+                                          "value": "&(self)[numberInput_b8b3708026867a6].value"
+                                        },
+                                        "value": {
+                                          "kind": "Members",
+                                          "value": "&(self)[2fbc7d25e5f24589a47fb8941345d20d].currentRow.[3ef52b0bc2d443008a0f3b710ab6f32d]"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              },
+                              {
+                                "widget": "action_component",
+                                "id": "action_224aab4f30db3d8",
+                                "props": {
+                                  "target": "&(self)[drawer_f2255fda7020745].onOpen"
+                                }
+                              }
+                            ],
+                            "props": {}
+                          }
+                        },
+                        "plain": true
+                      },
+                      "children": []
+                    },
+                    {
+                      "id": "button_9e96846543a16bf",
+                      "widget": "button",
+                      "props": {
+                        "ref": "button_303a3a4a275c06e",
+                        "size": "small",
+                        "type": "success",
+                        "shape": "square",
+                        "style": {
+                          "width": "80px",
+                          "marginLeft": "10px",
+                          "borderRadius": "5px"
+                        },
+                        "label": "标记完成",
+                        "events": {
+                          "onClick": {
+                            "id": "event_4d185a727be321b",
+                            "widget": "event",
+                            "children": [
+                              {
+                                "widget": "action_component",
+                                "id": "action_component_d087ea12ee778e3",
+                                "props": {
+                                  "target": "&(self)[modal_2b0d3a279dc0997].onOpen"
+                                }
+                              }
+                            ],
+                            "props": {}
+                          }
+                        },
+                        "plain": true
+                      },
+                      "children": []
+                    }
+                  ]
+                }
+              ]
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "references": {
+    "16e7815bf93a4f9ea8a8321c3065655c": "$(project)Mall_Services/Logics\\Services\\Order.sdlg",
+    "738837970974525": "$(project)Mall_Services/Entities\\Database.sde",
+    "737ead45b2ac4daabd1171f2f3f4e600": "$(project)Mall_Services/Properties\\DataStructures\\OrderType.json",
+    "04bb6a5774c84967859ffe5deabe16d1": "Comments.sdv"
+  }
+}

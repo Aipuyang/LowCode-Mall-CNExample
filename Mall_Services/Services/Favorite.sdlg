@@ -88,7 +88,18 @@
             "next": "$(self)[00946b3d44784fe1983ee817b0a358e7_add_end]",
             "source": "$(ref)da45aabb8241482080f88e8e9db05a9e.[00946b3d44784fe1983ee817b0a358e7]",
             "sourceValue": "$(self)[be785aaef62242f2beba7ec2623419c7].[00946b3d44784fe1983ee817b0a358e7_add_params]"
-          }
+          },
+          "children": [
+            {
+              "id": "44fd45feea904b1ea9e5c55cc47a986b",
+              "widget": "assign_field",
+              "props": {
+                "field": "&(self)[9d7cec14a1144de797379192749ef607].source.[70d4ff1ace1f43b29ba83d495c946420]",
+                "type": "Expression",
+                "value": "$(exp)Now()"
+              }
+            }
+          ]
         },
         {
           "id": "00946b3d44784fe1983ee817b0a358e7_add_end",
@@ -525,8 +536,8 @@
         "requestMethod": "GET",
         "route": "FavoriteAdd",
         "authStrategy": "",
-        "x": -87.552,
-        "y": 132.736
+        "x": 13.447999999999993,
+        "y": 381.736
       },
       "children": [
         {
@@ -721,6 +732,15 @@
                         "value": "&(self)[eff79efafdff45ee92433f4053b118c8].[904d0f45a7ae4504b219398fac7bf732].[33a2ef8198e84999870cac49699ec720]",
                         "type": "Field"
                       }
+                    },
+                    {
+                      "id": "327e5f5bb450443084eadb4d6c9b9515",
+                      "widget": "assign_field",
+                      "props": {
+                        "field": "&(self)[e43136fe48a74d2c9a58ab03220640dc].source.[70d4ff1ace1f43b29ba83d495c946420]",
+                        "type": "Expression",
+                        "value": "$(exp)Now()"
+                      }
                     }
                   ]
                 },
@@ -780,8 +800,8 @@
         "requestMethod": "GET",
         "route": "Judge",
         "authStrategy": "",
-        "x": -106.4,
-        "y": 117.6
+        "x": -37.400000000000006,
+        "y": 118.60000000000002
       },
       "children": [
         {

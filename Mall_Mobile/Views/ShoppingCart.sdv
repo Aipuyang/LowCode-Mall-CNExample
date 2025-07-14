@@ -14,7 +14,7 @@
           "id": "action_5ac7691a8eb4124",
           "widget": "action_api",
           "props": {
-            "target": "&(ref)0487b84901a74d469cf3240f471c14ff.[08999ccc5c75427f8d5721d641448b5e]",
+            "target": "&(ref)0487b84901a74d469cf3240f471c14ff.[2adf12105f084c96a53a98adc401bcd5]",
             "params": []
           }
         },
@@ -39,10 +39,10 @@
           "widget": "action_adapter",
           "children": [
             {
-              "id": "assign_param_2f0b46e72055de5",
+              "id": "assign_param_19d4f9192308a51",
               "widget": "assign_param",
               "props": {
-                "name": "CountOrderNumAmountAdapter",
+                "name": "CountOrderNumAmount1Adapter",
                 "value": {
                   "kind": "Field",
                   "value": "&(self)[page_8dd55b8a0296bca].dataSource.[action_5ac7691a8eb4124].target.result"
@@ -238,183 +238,7 @@
             },
             "ref": "card_662f0f165b564b3",
             "title": "",
-            "hideActions": true,
-            "events": {
-              "onClick": {
-                "id": "event_f4142e1a5c3e6ae",
-                "widget": "event",
-                "children": [
-                  {
-                    "widget": "action_api",
-                    "id": "action_9fed9f3ea445463",
-                    "props": {
-                      "target": "&(ref)0487b84901a74d469cf3240f471c14ff.[7498ec44f6e94d43b9a0031f21478826_update_func]",
-                      "params": [
-                        {
-                          "id": "assign_param_609e75ef2ed7596",
-                          "widget": "assign_param",
-                          "props": {
-                            "name": {
-                              "kind": "Parameter",
-                              "value": "&(self)[card_2b4ca91edb1621b].events.onClick.[action_9fed9f3ea445463].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params]"
-                            }
-                          },
-                          "children": [
-                            {
-                              "id": "assign_param_4d3626b18ce4165",
-                              "widget": "assign_param",
-                              "props": {
-                                "name": {
-                                  "kind": "Parameter",
-                                  "value": "&(self)[card_2b4ca91edb1621b].events.onClick.[action_9fed9f3ea445463].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[0d2a58b6227d48cf8587a8eccec7ac42]"
-                                },
-                                "value": {
-                                  "kind": "Members",
-                                  "value": "&(self)[list_8dff2d98a640c3f].currentRow.[da7763d0c20b4584bd942f470d2111dc]"
-                                }
-                              }
-                            },
-                            {
-                              "id": "assign_param_f90b49d9b68c2b7",
-                              "widget": "assign_param",
-                              "props": {
-                                "name": {
-                                  "kind": "Parameter",
-                                  "value": "&(self)[card_2b4ca91edb1621b].events.onClick.[action_9fed9f3ea445463].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[1f890a60a053475eb0d099ea1ac77958]"
-                                },
-                                "value": {
-                                  "kind": "Members",
-                                  "value": "&(self)[list_8dff2d98a640c3f].currentRow.[9f6c1c73d13b483b9dbcba00db948673]"
-                                }
-                              }
-                            },
-                            {
-                              "id": "assign_param_b26399b5addab3a",
-                              "widget": "assign_param",
-                              "props": {
-                                "name": {
-                                  "kind": "Parameter",
-                                  "value": "&(self)[card_2b4ca91edb1621b].events.onClick.[action_9fed9f3ea445463].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[30564824e321476c98b7540119006f29]"
-                                },
-                                "value": {
-                                  "kind": "Members",
-                                  "value": "&(self)[list_8dff2d98a640c3f].currentRow.[0b5bd7e69ad640e5840b0c265fa21d72]"
-                                }
-                              }
-                            },
-                            {
-                              "id": "assign_param_69dcc9387c052de",
-                              "widget": "assign_param",
-                              "props": {
-                                "name": {
-                                  "kind": "Parameter",
-                                  "value": "&(self)[card_2b4ca91edb1621b].events.onClick.[action_9fed9f3ea445463].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[921e7829cbc4486e8561fd18d0b5dfc8]"
-                                },
-                                "value": {
-                                  "kind": "Members",
-                                  "value": "&(self)[list_8dff2d98a640c3f].currentRow.[5e90226407114200971e75bcfe472731]"
-                                }
-                              }
-                            },
-                            {
-                              "id": "assign_param_23eed060973a848",
-                              "widget": "assign_param",
-                              "props": {
-                                "name": {
-                                  "kind": "Parameter",
-                                  "value": "&(self)[card_2b4ca91edb1621b].events.onClick.[action_9fed9f3ea445463].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[14c117b3c77d4892bac30fed41393de2]"
-                                },
-                                "value": {
-                                  "kind": "Members",
-                                  "value": "&(self)[list_8dff2d98a640c3f].currentRow.[ceb9eb782e74463498d3e5278d93aa1f]"
-                                }
-                              }
-                            },
-                            {
-                              "id": "assign_param_bd0c1c99494c7ef",
-                              "widget": "assign_param",
-                              "props": {
-                                "name": {
-                                  "kind": "Parameter",
-                                  "value": "&(self)[card_2b4ca91edb1621b].events.onClick.[action_9fed9f3ea445463].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[84d21e36f46d4232a521f5df88bd64a3]"
-                                },
-                                "value": {
-                                  "kind": "Members",
-                                  "value": "&(self)[list_8dff2d98a640c3f].currentRow.[47c8743684e442f798be3893ef0be209]"
-                                }
-                              }
-                            }
-                          ]
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "widget": "action_api",
-                    "id": "action_ba2b624524cee6d",
-                    "props": {
-                      "target": "&(ref)0487b84901a74d469cf3240f471c14ff.[08999ccc5c75427f8d5721d641448b5e]",
-                      "params": []
-                    }
-                  },
-                  {
-                    "widget": "action_component",
-                    "id": "action_74779cd710e305f",
-                    "props": {
-                      "target": "&(self)[numberInput_59c0326c990f636].setData",
-                      "params": [
-                        {
-                          "id": "assign_param_2f8ed80229422bb",
-                          "widget": "assign_param",
-                          "props": {
-                            "name": {
-                              "kind": "Members",
-                              "value": "&(self)[numberInput_59c0326c990f636].value"
-                            },
-                            "value": {
-                              "kind": "ActionResult",
-                              "value": "&(self)[card_2b4ca91edb1621b].events.onClick.[action_ba2b624524cee6d].target.result.[6d077f96fa13466c82ce3a54ebce3f67]"
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  },
-                  {
-                    "widget": "action_api",
-                    "id": "action_de63fb698f3ac16",
-                    "props": {
-                      "target": "&(ref)0487b84901a74d469cf3240f471c14ff.[f54a97340e134b93b46a1be8cfbb9756]",
-                      "params": []
-                    }
-                  },
-                  {
-                    "widget": "action_component",
-                    "id": "action_3ac2d22197982b8",
-                    "props": {
-                      "target": "&(self)[switch_e7f8b773a1ae708].setData",
-                      "params": [
-                        {
-                          "id": "assign_param_9a0e5b5aa6bae3b",
-                          "widget": "assign_param",
-                          "props": {
-                            "name": {
-                              "kind": "Members",
-                              "value": "&(self)[switch_e7f8b773a1ae708].value"
-                            },
-                            "value": {
-                              "kind": "ActionResult",
-                              "value": "&(self)[card_2b4ca91edb1621b].events.onClick.[action_de63fb698f3ac16].target.result"
-                            }
-                          }
-                        }
-                      ]
-                    }
-                  }
-                ],
-                "props": {}
-              }
-            }
+            "hideActions": true
           },
           "children": [
             {
@@ -442,7 +266,183 @@
                       "kind": "Field",
                       "value": "&(self)[list_8dff2d98a640c3f].dataSource.[action_05362a93d0c1d05].[assign_param_e5b3e300a276ad9].[5e90226407114200971e75bcfe472731]"
                     },
-                    "checkedColor": "#FF6321FF"
+                    "checkedColor": "#FF6321FF",
+                    "events": {
+                      "onChange": {
+                        "id": "event_66b16049fec43e0",
+                        "widget": "event",
+                        "children": [
+                          {
+                            "widget": "action_api",
+                            "id": "action_383c8fd7ca4f7c3",
+                            "props": {
+                              "target": "&(ref)0487b84901a74d469cf3240f471c14ff.[7498ec44f6e94d43b9a0031f21478826_update_func]",
+                              "params": [
+                                {
+                                  "id": "assign_param_57b4de69649199a",
+                                  "widget": "assign_param",
+                                  "props": {
+                                    "name": {
+                                      "kind": "Parameter",
+                                      "value": "&(self)[checkbox_1966cfb0e1e3aee].events.onChange.[action_383c8fd7ca4f7c3].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params]"
+                                    }
+                                  },
+                                  "children": [
+                                    {
+                                      "id": "assign_param_6ad2b93b9e10195",
+                                      "widget": "assign_param",
+                                      "props": {
+                                        "name": {
+                                          "kind": "Parameter",
+                                          "value": "&(self)[checkbox_1966cfb0e1e3aee].events.onChange.[action_383c8fd7ca4f7c3].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[0d2a58b6227d48cf8587a8eccec7ac42]"
+                                        },
+                                        "value": {
+                                          "kind": "Members",
+                                          "value": "&(self)[list_8dff2d98a640c3f].currentRow.[da7763d0c20b4584bd942f470d2111dc]"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "id": "assign_param_23e645e7b35e2a7",
+                                      "widget": "assign_param",
+                                      "props": {
+                                        "name": {
+                                          "kind": "Parameter",
+                                          "value": "&(self)[checkbox_1966cfb0e1e3aee].events.onChange.[action_383c8fd7ca4f7c3].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[1f890a60a053475eb0d099ea1ac77958]"
+                                        },
+                                        "value": {
+                                          "kind": "Members",
+                                          "value": "&(self)[list_8dff2d98a640c3f].currentRow.[9f6c1c73d13b483b9dbcba00db948673]"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "id": "assign_param_1ec6b998a92f668",
+                                      "widget": "assign_param",
+                                      "props": {
+                                        "name": {
+                                          "kind": "Parameter",
+                                          "value": "&(self)[checkbox_1966cfb0e1e3aee].events.onChange.[action_383c8fd7ca4f7c3].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[30564824e321476c98b7540119006f29]"
+                                        },
+                                        "value": {
+                                          "kind": "Members",
+                                          "value": "&(self)[list_8dff2d98a640c3f].currentRow.[0b5bd7e69ad640e5840b0c265fa21d72]"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "id": "assign_param_8b3cf4afebaa302",
+                                      "widget": "assign_param",
+                                      "props": {
+                                        "name": {
+                                          "kind": "Parameter",
+                                          "value": "&(self)[checkbox_1966cfb0e1e3aee].events.onChange.[action_383c8fd7ca4f7c3].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[921e7829cbc4486e8561fd18d0b5dfc8]"
+                                        },
+                                        "value": {
+                                          "kind": "Members",
+                                          "value": "&(self)[list_8dff2d98a640c3f].currentRow.[5e90226407114200971e75bcfe472731]"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "id": "assign_param_71fa8699e7eafc9",
+                                      "widget": "assign_param",
+                                      "props": {
+                                        "name": {
+                                          "kind": "Parameter",
+                                          "value": "&(self)[checkbox_1966cfb0e1e3aee].events.onChange.[action_383c8fd7ca4f7c3].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[14c117b3c77d4892bac30fed41393de2]"
+                                        },
+                                        "value": {
+                                          "kind": "Members",
+                                          "value": "&(self)[list_8dff2d98a640c3f].currentRow.[ceb9eb782e74463498d3e5278d93aa1f]"
+                                        }
+                                      }
+                                    },
+                                    {
+                                      "id": "assign_param_a3791797d3907be",
+                                      "widget": "assign_param",
+                                      "props": {
+                                        "name": {
+                                          "kind": "Parameter",
+                                          "value": "&(self)[checkbox_1966cfb0e1e3aee].events.onChange.[action_383c8fd7ca4f7c3].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[84d21e36f46d4232a521f5df88bd64a3]"
+                                        },
+                                        "value": {
+                                          "kind": "Members",
+                                          "value": "&(self)[list_8dff2d98a640c3f].currentRow.[47c8743684e442f798be3893ef0be209]"
+                                        }
+                                      }
+                                    }
+                                  ]
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "widget": "action_api",
+                            "id": "action_670055ac5d22a6e",
+                            "props": {
+                              "target": "&(ref)0487b84901a74d469cf3240f471c14ff.[2adf12105f084c96a53a98adc401bcd5]",
+                              "params": []
+                            }
+                          },
+                          {
+                            "widget": "action_component",
+                            "id": "action_23d13ce64ffa3da",
+                            "props": {
+                              "target": "&(self)[numberInput_59c0326c990f636].setData",
+                              "params": [
+                                {
+                                  "id": "assign_param_db77fe1844da79a",
+                                  "widget": "assign_param",
+                                  "props": {
+                                    "name": {
+                                      "kind": "Members",
+                                      "value": "&(self)[numberInput_59c0326c990f636].value"
+                                    },
+                                    "value": {
+                                      "kind": "ActionResult",
+                                      "value": "&(self)[checkbox_1966cfb0e1e3aee].events.onChange.[action_670055ac5d22a6e].target.result.[6d077f96fa13466c82ce3a54ebce3f67]"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          },
+                          {
+                            "widget": "action_api",
+                            "id": "action_e50681d932ffdd5",
+                            "props": {
+                              "target": "&(ref)0487b84901a74d469cf3240f471c14ff.[f54a97340e134b93b46a1be8cfbb9756]",
+                              "params": []
+                            }
+                          },
+                          {
+                            "widget": "action_component",
+                            "id": "action_a3c2235c8e22744",
+                            "props": {
+                              "target": "&(self)[switch_e7f8b773a1ae708].setData",
+                              "params": [
+                                {
+                                  "id": "assign_param_7b9e0c5a084f2e2",
+                                  "widget": "assign_param",
+                                  "props": {
+                                    "name": {
+                                      "kind": "Members",
+                                      "value": "&(self)[switch_e7f8b773a1ae708].value"
+                                    },
+                                    "value": {
+                                      "kind": "ActionResult",
+                                      "value": "&(self)[checkbox_1966cfb0e1e3aee].events.onChange.[action_e50681d932ffdd5].target.result.[ef07a3413ded4e2d93ff2144a0e2c149]"
+                                    }
+                                  }
+                                }
+                              ]
+                            }
+                          }
+                        ],
+                        "props": {}
+                      }
+                    }
                   },
                   "children": []
                 },
@@ -654,21 +654,179 @@
                           ]
                         },
                         {
-                          "id": "stepper_472ec913598d88f",
-                          "widget": "stepper",
+                          "id": "flex_a2ea53e69acc37e",
+                          "widget": "flex",
                           "props": {
-                            "style": {
-                              "width": "100px",
-                              "borderRadius": "10px"
+                            "ref": "flex1",
+                            "gap": {
+                              "custom": true,
+                              "number": 0
                             },
-                            "ref": "stepper_d93af28e798ef07",
-                            "inputWidth": 30,
-                            "value": {
-                              "kind": "Field",
-                              "value": "&(self)[list_8dff2d98a640c3f].dataSource.[action_05362a93d0c1d05].[assign_param_e5b3e300a276ad9].[ceb9eb782e74463498d3e5278d93aa1f]"
+                            "events": {
+                              "onClick": {
+                                "id": "event_10a7614aa029093",
+                                "widget": "event",
+                                "children": [
+                                  {
+                                    "widget": "action_api",
+                                    "id": "action_e90b0147352e94a",
+                                    "props": {
+                                      "target": "&(ref)0487b84901a74d469cf3240f471c14ff.[7498ec44f6e94d43b9a0031f21478826_update_func]",
+                                      "params": [
+                                        {
+                                          "id": "assign_param_cba11f4aa262538",
+                                          "widget": "assign_param",
+                                          "props": {
+                                            "name": {
+                                              "kind": "Parameter",
+                                              "value": "&(self)[flex_a2ea53e69acc37e].events.onClick.[action_e90b0147352e94a].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params]"
+                                            }
+                                          },
+                                          "children": [
+                                            {
+                                              "id": "assign_param_daf2168196e1bc2",
+                                              "widget": "assign_param",
+                                              "props": {
+                                                "name": {
+                                                  "kind": "Parameter",
+                                                  "value": "&(self)[flex_a2ea53e69acc37e].events.onClick.[action_e90b0147352e94a].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[0d2a58b6227d48cf8587a8eccec7ac42]"
+                                                },
+                                                "value": {
+                                                  "kind": "Members",
+                                                  "value": "&(self)[list_8dff2d98a640c3f].currentRow.[da7763d0c20b4584bd942f470d2111dc]"
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "id": "assign_param_89d40d227bbf782",
+                                              "widget": "assign_param",
+                                              "props": {
+                                                "name": {
+                                                  "kind": "Parameter",
+                                                  "value": "&(self)[flex_a2ea53e69acc37e].events.onClick.[action_e90b0147352e94a].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[1f890a60a053475eb0d099ea1ac77958]"
+                                                },
+                                                "value": {
+                                                  "kind": "Members",
+                                                  "value": "&(self)[list_8dff2d98a640c3f].currentRow.[9f6c1c73d13b483b9dbcba00db948673]"
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "id": "assign_param_f3a458b58723159",
+                                              "widget": "assign_param",
+                                              "props": {
+                                                "name": {
+                                                  "kind": "Parameter",
+                                                  "value": "&(self)[flex_a2ea53e69acc37e].events.onClick.[action_e90b0147352e94a].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[30564824e321476c98b7540119006f29]"
+                                                },
+                                                "value": {
+                                                  "kind": "Members",
+                                                  "value": "&(self)[list_8dff2d98a640c3f].currentRow.[0b5bd7e69ad640e5840b0c265fa21d72]"
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "id": "assign_param_72b92dbbc34fcae",
+                                              "widget": "assign_param",
+                                              "props": {
+                                                "name": {
+                                                  "kind": "Parameter",
+                                                  "value": "&(self)[flex_a2ea53e69acc37e].events.onClick.[action_e90b0147352e94a].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[921e7829cbc4486e8561fd18d0b5dfc8]"
+                                                },
+                                                "value": {
+                                                  "kind": "Members",
+                                                  "value": "&(self)[list_8dff2d98a640c3f].currentRow.[5e90226407114200971e75bcfe472731]"
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "id": "assign_param_e21be34dd2c09a8",
+                                              "widget": "assign_param",
+                                              "props": {
+                                                "name": {
+                                                  "kind": "Parameter",
+                                                  "value": "&(self)[flex_a2ea53e69acc37e].events.onClick.[action_e90b0147352e94a].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[14c117b3c77d4892bac30fed41393de2]"
+                                                },
+                                                "value": {
+                                                  "kind": "Members",
+                                                  "value": "&(self)[list_8dff2d98a640c3f].currentRow.[ceb9eb782e74463498d3e5278d93aa1f]"
+                                                }
+                                              }
+                                            },
+                                            {
+                                              "id": "assign_param_55ec4768824ba5b",
+                                              "widget": "assign_param",
+                                              "props": {
+                                                "name": {
+                                                  "kind": "Parameter",
+                                                  "value": "&(self)[flex_a2ea53e69acc37e].events.onClick.[action_e90b0147352e94a].target.params.[7498ec44f6e94d43b9a0031f21478826_update_params].[84d21e36f46d4232a521f5df88bd64a3]"
+                                                },
+                                                "value": {
+                                                  "kind": "Members",
+                                                  "value": "&(self)[list_8dff2d98a640c3f].currentRow.[47c8743684e442f798be3893ef0be209]"
+                                                }
+                                              }
+                                            }
+                                          ]
+                                        }
+                                      ]
+                                    }
+                                  },
+                                  {
+                                    "widget": "action_api",
+                                    "id": "action_12d34e79dea2141",
+                                    "props": {
+                                      "target": "&(ref)0487b84901a74d469cf3240f471c14ff.[2adf12105f084c96a53a98adc401bcd5]",
+                                      "params": []
+                                    }
+                                  },
+                                  {
+                                    "widget": "action_component",
+                                    "id": "action_c9aec8c76f70bd4",
+                                    "props": {
+                                      "target": "&(self)[numberInput_59c0326c990f636].setData",
+                                      "params": [
+                                        {
+                                          "id": "assign_param_d04ba98ec424c76",
+                                          "widget": "assign_param",
+                                          "props": {
+                                            "name": {
+                                              "kind": "Members",
+                                              "value": "&(self)[numberInput_59c0326c990f636].value"
+                                            },
+                                            "value": {
+                                              "kind": "ActionResult",
+                                              "value": "&(self)[flex_a2ea53e69acc37e].events.onClick.[action_12d34e79dea2141].target.result.[6d077f96fa13466c82ce3a54ebce3f67]"
+                                            }
+                                          }
+                                        }
+                                      ]
+                                    }
+                                  }
+                                ],
+                                "props": {}
+                              }
                             }
                           },
-                          "children": []
+                          "children": [
+                            {
+                              "id": "stepper_472ec913598d88f",
+                              "widget": "stepper",
+                              "props": {
+                                "style": {
+                                  "width": "100px",
+                                  "borderRadius": "10px"
+                                },
+                                "ref": "stepper_d93af28e798ef07",
+                                "inputWidth": 30,
+                                "value": {
+                                  "kind": "Field",
+                                  "value": "&(self)[list_8dff2d98a640c3f].dataSource.[action_05362a93d0c1d05].[assign_param_e5b3e300a276ad9].[ceb9eb782e74463498d3e5278d93aa1f]"
+                                }
+                              },
+                              "children": []
+                            }
+                          ]
                         }
                       ]
                     }
@@ -688,7 +846,7 @@
         "placeholder": "请输入",
         "value": {
           "kind": "Field",
-          "value": "&(self)[page_8dd55b8a0296bca].dataSource.[action_479194fd2846c1f].[assign_param_2f0b46e72055de5].[6d077f96fa13466c82ce3a54ebce3f67]"
+          "value": "&(self)[page_8dd55b8a0296bca].dataSource.[action_479194fd2846c1f].[assign_param_19d4f9192308a51].[6d077f96fa13466c82ce3a54ebce3f67]"
         },
         "hide": true
       },
@@ -759,15 +917,15 @@
                         "widget": "action_api",
                         "id": "action_5a843803a92248a",
                         "props": {
-                          "target": "&(ref)0487b84901a74d469cf3240f471c14ff.[0e64e9294e214fb3b0e67ed41af45531]",
+                          "target": "&(ref)0487b84901a74d469cf3240f471c14ff.[c23404c662404775b7fd0cc6c0def448]",
                           "params": [
                             {
-                              "id": "assign_param_0726d277513f75e",
+                              "id": "assign_param_73261076abc0875",
                               "widget": "assign_param",
                               "props": {
                                 "name": {
                                   "kind": "Parameter",
-                                  "value": "&(self)[switch_37f0b8bbcf4bdf4].events.onChange.[action_5a843803a92248a].target.params.[343c7433059048fb9d2f28e8ef0ca45c]"
+                                  "value": "&(self)[switch_37f0b8bbcf4bdf4].events.onChange.[action_5a843803a92248a].target.params.[a384cb1de1b44593981da09e378f5991]"
                                 },
                                 "value": {
                                   "kind": "Members",
@@ -820,7 +978,7 @@
                         "widget": "action_api",
                         "id": "action_9d4786fc9a4100e",
                         "props": {
-                          "target": "&(ref)0487b84901a74d469cf3240f471c14ff.[08999ccc5c75427f8d5721d641448b5e]",
+                          "target": "&(ref)0487b84901a74d469cf3240f471c14ff.[2adf12105f084c96a53a98adc401bcd5]",
                           "params": []
                         }
                       },
@@ -1043,10 +1201,10 @@
     }
   ],
   "references": {
-    "7610f4131cfc4019919fca3b079d77b0": "..\\Order\\Settlement.sdv",
-    "0487b84901a74d469cf3240f471c14ff": "$(project)Mall_Services/Services\\ShoppingCart.sdlg",
-    "738837970974525": "$(project)Mall_Services/Database.sde",
-    "cc4fc538050742009016837abd5abefe": "..\\ShoppingCart\\Manage.sdv",
-    "5699a25c5750450c9555f98704890b99": "..\\Product\\ProductDetail.sdv"
+    "7610f4131cfc4019919fca3b079d77b0": "Order\\Settlement.sdv",
+    "0487b84901a74d469cf3240f471c14ff": "$(project)Mall_Services/Logics\\Services\\ShoppingCart.sdlg",
+    "738837970974525": "$(project)Mall_Services/Entities\\Database.sde",
+    "cc4fc538050742009016837abd5abefe": "ShoppingCart\\Manage.sdv",
+    "5699a25c5750450c9555f98704890b99": "Product\\ProductDetail.sdv"
   }
 }

@@ -33,7 +33,7 @@
               "borderRadius": "25px 25px 25px 25px"
             },
             "ref": "image_5456b0925197dfa",
-            "value": "/static/images/vicogao.jpg",
+            "value": "/static/images/vicogao.svg",
             "width": 50,
             "height": 50
           },
@@ -568,10 +568,10 @@
     }
   ],
   "references": {
-    "50c721b140af42648ea103eb51874dc7": "..\\MinePage\\MyOrders.sdv",
-    "eac5b42755a44462a4baa89beda62ca5": "..\\MinePage\\AfterSales.sdv",
-    "86eb97db8785460e9bcdd085d55f23a7": "..\\MinePage\\Address.sdv",
-    "40115a8193254fdf801acdc998cc6e52": "..\\MinePage\\MyFavorites.sdv",
-    "5fc171b6155d434393a45fa92afbf95e": "..\\MinePage\\About.sdv"
+    "50c721b140af42648ea103eb51874dc7": "MinePage\\MyOrders.sdv",
+    "eac5b42755a44462a4baa89beda62ca5": "MinePage\\AfterSales.sdv",
+    "86eb97db8785460e9bcdd085d55f23a7": "MinePage\\Address.sdv",
+    "40115a8193254fdf801acdc998cc6e52": "MinePage\\MyFavorites.sdv",
+    "5fc171b6155d434393a45fa92afbf95e": "MinePage\\About.sdv"
   }
 }

@@ -118,11 +118,7 @@
                   "kind": "Field",
                   "value": "&(self)[sidebar_fc9af17e6ab6a66].dataSource.[action_a9162586339b62b].[assign_param_297f248b2078cb2].[db9ed88be9d044179dd3c88cf5a59218]"
                 },
-                "badgeType": "dot",
-                "dot": {
-                  "kind": "Field",
-                  "value": ""
-                }
+                "badgeType": "dot"
               },
               "children": []
             }
@@ -308,12 +304,12 @@
                           "target": "navigator.open",
                           "params": [
                             {
-                              "id": "assign_param_7bf3a2ec1ce7b23",
+                              "id": "assign_param_b32950ce5da6fb6",
                               "widget": "assign_param",
                               "props": {
                                 "name": {
                                   "kind": "VParameter",
-                                  "value": "&(ref)20da189cd6e6462297ce667539e39db9.[page_8dd78d687c6d712].params.[aba3854c3d97edd]"
+                                  "value": "&(ref)8c94f1d7cec74e968f36fd115b4685c7.[page_8dd78d687c6d712].params.[aba3854c3d97edd]"
                                 },
                                 "value": {
                                   "kind": "Members",
@@ -324,7 +320,7 @@
                           ],
                           "link": {
                             "kind": "Document",
-                            "value": "$(ref)20da189cd6e6462297ce667539e39db9"
+                            "value": "$(ref)8c94f1d7cec74e968f36fd115b4685c7"
                           }
                         }
                       }
@@ -507,9 +503,9 @@
     }
   ],
   "references": {
-    "738837970974525": "$(project)Mall_Services/Database.sde",
-    "e1072dc2c33b413e8002540f74a60443": "$(project)Mall_Services/Services\\ProductType.sdlg",
-    "97560d459a024e6cbbdc64dcee346be2": "$(project)Mall_Services/Services\\Product.sdlg",
-    "20da189cd6e6462297ce667539e39db9": "..\\Product\\ProductDetail.sdv"
+    "738837970974525": "$(project)Mall_Services/Entities\\Database.sde",
+    "e1072dc2c33b413e8002540f74a60443": "$(project)Mall_Services/Logics\\Services\\ProductType.sdlg",
+    "97560d459a024e6cbbdc64dcee346be2": "$(project)Mall_Services/Logics\\Services\\Product.sdlg",
+    "8c94f1d7cec74e968f36fd115b4685c7": "Product\\ProductDetail.sdv"
   }
 }
